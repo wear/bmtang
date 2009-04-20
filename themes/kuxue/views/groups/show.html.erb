@@ -1,0 +1,17 @@
+<% content_for :tabs do -%> 
+	<%= topnav_tab '动态', {:url => group_path(@group),:section => 'activity'}%>
+	<%= topnav_tab '书签', {:url => group_wiki_bookmarks_path(@group)}%>
+	<% if logged_in? && current_user.becomes(LearnUser).is_mod_of?(@group) -%> 
+	<li><%=link_to '课堂设置',edit_group_path(@group)%></li>
+	<li><%=link_to '成员设置',members_group_path(@group)%></li>
+	<li><%=link_to '权限管理','#'%></li>
+	<li><%=link_to '邀请成员','#'%></li>
+	<% end -%>
+<% end -%>
+<% content_for :sidebar do -%> 
+	<%= render :partial => '/shared/group_sidebar' %>
+<% end -%>
+
+<% @recent_activity.each do |activity| -%>
+   <%=render :partial => "shared/activity", :locals => {:activity => activity }%>
+<% end %>	

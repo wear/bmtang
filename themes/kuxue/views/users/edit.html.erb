@@ -1,0 +1,68 @@
+<div class='span-16'>
+	 <% form_tag user_url(@user), :method => 'put', :multipart =>true, :class => 'MainForm' do -%>
+	<div class='box'>
+		<h3><%=:you_are_editing_your_profile.l%></h3>
+		<%= link_to "&raquo; " + :edit_your_account_settings_instead.l, edit_account_user_path(@user)%>
+	</div>
+	<%= error_messages_for :user%>
+	<p><%=submit_tag :save_changes.l%></p>
+	<div class='box'>
+	   <h3><%=:profile_photo.l%></h3>
+	   <%= @user.vendor ? "<div class='right_corner'><div class='community_pro'></div></div>" : ''%>
+	   <%= image_tag( @user.avatar_photo_url(:thumb), :class => "polaroid" )%><br />
+	   <p><%=:choose_a_photo_for_your_profile.l%>
+		<%= file_field :avatar, :uploaded_data %> </p>
+		<h3><%=:location.l%></h3> 
+		<%= render :partial => 'shared/location_chooser', :locals => {:selected_country => @user.country_id, :selected_state => @user.state_id, :selected_metro_area => @user.metro_area_id, :states => @states, :metro_areas => @metro_areas} %>
+		<h3><%=:birthday_gender.l%></h3>
+		<fieldset >
+			<legend><%=:gender.l%></legend>
+			<p>
+			<%= radio_button :user, :gender, User::MALE%><%=:male.l%>
+			<%= radio_button :user, :gender, User::FEMALE%><%=:female.l%> </p>
+			<%=:birthday.l%><%= date_select :user, :birthday, {:use_month_numbers => true,:start_year => 1949, :end_year => (Time.now.year - 1)}%>
+		</fieldset>
+	</div>
+	<div class='box'>
+		<h3><%=:about_me.l%></h3>
+		<%= text_area :user, :description, :class => "rich_text_editor", :style => "width:98%"%>
+		<%=:tips.l + ":"%> <%= render :partial => 'shared/bio_help'%>
+		<%=:feel_free_to_embed_images_or_videos.l + "("%><a href='faq#images_and_flash', target="new"><%=:how_do_i_do_that.l %></a>)
+		<% if @user.vendor? -%>
+			<%= render :partial => 'offerings/chooser'%>
+		<% end -%>
+	</div>
+	<div class='box'>
+		<h3><%=:tags.l%></h3>
+		<%= text_field_tag 'tag_list', @user.tag_list, {:autocomplete => "off"}%>                                        
+		<em><%=:you_could_tag_yourself.l%>
+		 <% if @user.vendor? -%>
+			<%=:custom_friendly_local.l%>   
+		 <% else -%>
+			<%= AppConfig.meta_keywords.split(",")[0..3].join(", ")%>
+		  <% end -%>
+		 </em><br />
+		<%=:tags_are_comma_separated_keywords_that_describe_you.l %><br />
+		<%=:you_can_browse_all_content_and_users_on.l%>
+		<%= AppConfig.community_name%>
+		<%=:by_looking_at_the.l%>
+		<%= link_to :tags_page.l, tags_path%>
+	</div>
+	<%= submit_tag :save_changes.l%>                                
+	<% end -%>
+</div>  
+<% content_for :sidebar do -%>   
+	<div class='span-6 box'>
+		<h3><%=:why_sign_up.l%></h3>
+		<ul>
+			<li><%= :sign_up_reason_1.l%></li>
+			<li><%= :sign_up_reason_2.l%></li>
+		</ul>
+	</div>
+    <div class='span-6 prepend-top box'>
+    	<h3><%=:tips.l%></h3>
+		<p><%=:after_signing_up_youll_receive_an_e_mail_confirmation_message.l%></p>
+		<p><%=:click_the_activation_link_in_the_e_mail_to_log_in.l%></p>
+		<%= link_to :already_have_an_account.l, "/login"%>
+    </div>
+<% end -%>

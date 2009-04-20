@@ -1,0 +1,33 @@
+<%= render :partial => '/shared/group_header' %> 
+<%= error_messages_for :post %>
+<% form_for(:post, :url => group_posts_path(:category_id => @category,:group_id => @group,:user_id => current_user), :html => {:class => "MainForm", :id => 'post_form'}) do |f| -%>
+ <% unless @post.category || @post.contest -%>
+	<%#= select ("post[category]", "id", Category.find(:all).map {|c| [c.name,c.id]}) %>
+	<%= f.hidden_field :category_id,:value => @category.id %>
+ <% else -%>
+	<%= f.hidden_field :category_id %>
+	<%= f.hidden_field :contest_id %>
+ <% end -%>
+<%= f.hidden_field :group_id,:value => @group.id %> 
+	<p>
+		 <%=label_tag :category.l%>: <strong><%=@category.name%></strong>
+		</p>
+	<p>
+		<%=label_tag :title.l%><em><%='('+:required.l+')'%></em><br />
+		<%= f.text_field :title %>  
+	</p>
+	<p>
+		<%=label_tag :body_text.l%><em><%='('+:required.l+')'%></em><br />
+		<%= f.text_area :raw_post, :style => "width:95%;"  %>
+	</p>
+	<p> 
+		<%=label_tag :tags.l%><em><%='('+:optional_keywords_describing_this_post_separated_by_commas.l+')'%></em><br />
+		<%= text_field_tag 'tag_list', @post.tag_list, {:autocomplete => "off", :size => 35}  %>
+	</p>
+	<p>
+		<%=label_tag :save_post_as.l%><br />
+		<%= f.select(:published_as, [[:published.l, 'live'], [:draft.l, 'draft']]) %> 
+	</p>
+	<%= submit_tag :save.l%>
+<% end -%>   	
+		

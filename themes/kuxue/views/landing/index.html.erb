@@ -1,0 +1,13 @@
+<ul class='group_list'>  
+<% @groups.each do |group| -%>
+	<li>
+		<%= link_to group.title,group %> <br />
+		<%= group_icon_for(group)%><br />
+		<%= truncate(h(group.description),:length => 40) %>
+	</li> 
+<% end -%>
+<li class='new_group'>   
+	<%=link_to :create_group.l, new_group_path%> <br />
+	<%= image_tag("new_group.jpg")%>
+</li>                                 
+</ul>

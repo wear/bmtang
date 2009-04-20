@@ -1,0 +1,369 @@
+quentin:
+    id:                        1
+    login:                     quentin
+    email:                     quentin@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 5.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                quention
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0
+    
+arron:
+    id:                        2
+    login:                     aaron
+    email:                     aaron@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                aaron
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0
+  
+stephen:
+    id:                        3
+    login:                     stephen
+    email:                     wear@gmail.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %> 
+    role_id:                   1  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                stephen
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0                 
+          
+bill:
+    id:                        4
+    login:                     bill
+    email:                     bill@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                bill
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0  
+    
+mashow:
+    id:                        5
+    login:                     mashow
+    email:                     mashow@gmail.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   1  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                mashow
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0  
+    
+tom:
+    id:                        6
+    login:                     tom
+    email:                     tom@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                tom
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0  
+    
+sting:
+    id:                        7
+    login:                     sting
+    email:                     sting@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                sting
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0
+    
+tim:
+    id:                        8
+    login:                     tim
+    email:                     tim@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                tim
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0
+        
+jane:
+    id:                        9
+    login:                     jane
+    email:                     jane@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                jane
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0    
+    
+    
+jimmy:
+    id:                        10
+    login:                     jimmy
+    email:                     jimmy@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                jimmy
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0 
+        
+ozz:
+    id:                        11
+    login:                     ozz
+    email:                     ozz@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                ozz
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0 
+    
+yuanyi:
+    id:                        12
+    login:                     yuanyi
+    email:                     yuanyi@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                yuanyi
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0
+
+daniel:
+    id:                        13
+    login:                     daniel
+    email:                     daniel@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                daniel
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0
+
+scotte:
+    id:                        14
+    login:                     scotte
+    email:                     scotte@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                scotte
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0    
+
+
+Jon:
+    id:                        15
+    login:                     Jon
+    email:                     Jon@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                Jon
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0 
+
+maxime:
+    id:                        16
+    login:                     maxime
+    email:                     maxime@example.com
+    salt:                      9d61f526aea2a220a6775a940411fcdbd5b94abd # SHA1('0')
+    crypted_password:          84381d8d201bf4d9c55d6f7b38662a47a8d150d2 # 'zzzzzz'
+    created_at:                <%= 3.days.ago.to_s :db  %>
+    remember_token_expires_at: <%= 1.days.from_now.to_s %>
+    remember_token:            77de68daecd823babbb58edb1c8e14d7106e83bb
+    activation_code:           
+    activated_at:              <%= 5.days.ago.to_s :db %>
+    role_id:                   3  
+    profile_public:            1
+    view_count:                0
+    vendor:                    0
+    login_slug:                maxime
+    notify_comments:           1
+    notify_friend_requests:    1
+    notify_community_news:     1
+    featured_writer:           0
+    activities_count:          0
+    sb_posts_count:            0

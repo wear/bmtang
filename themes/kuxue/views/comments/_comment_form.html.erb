@@ -1,0 +1,37 @@
+<% if logged_in? || AppConfig.allow_anonymous_comment -%>
+	<script type="text/javascript" charset="utf-8">
+		function scrollToNewestComment(){
+	    loc = document.location.toString();
+	    if (loc.indexOf("#") != -1){
+	    parts = loc.split('#')
+	    loc = parts[0] + "#newest_comment"
+	    } else {
+	    loc = loc + "#newest_comment";
+	    }
+	    document.location.href = loc;
+	    }
+	</script>
+	<div>
+	   <% form_remote_for(:comment, :loading => "$$('div#comments div.errors')[0].innerHTML = ''; $('comment_spinner').show();", :before => "tinyMCE.activeEditor.save();", :url => comments_url(commentable.class.to_s.underscore, commentable.id ), 500 => "$$('div#comments div.errors')[0].update(request.responseText);new Effect.Highlight($$('div#comments div.errors')[0]); return false;", :success => "new Insertion.#{commentable.class.to_s.eql?('User') ? 'After': 'After' }('newest_comment', request.responseText); tinyMCE.activeEditor.setContent(\'\'); scrollToNewestComment();$('emptycomments').hide();", :complete => "$('comment_spinner').hide(); if($('dynamic_recaptcha')){Recaptcha.create('#{AppConfig.recaptcha_pub_key}', $('dynamic_recaptcha') )}", :html => {:class => "MainForm"}) do |f| -%>
+	<label><em><%="(2000 character limit)".l :comment_character_limit%></em></label>
+	<%= text_area :comment, :comment, {:size => "75x5", :class => "rich_text_editor"}%>
+	<% unless logged_in? -%>
+	<div style='margin-top:2em;'>
+		<%= recaptcha_tags :ajax => true%>
+		<label for = 'comment[author_name]'><%="Name:".l%><%="(#{'Optional'.l})"%> </label>
+		<%= f.text_field :author_name, :size => 35%>
+		<label for="comment[author_email]"><%="#{'E-mail'.l}:"%><em><%="(#{"Required; won't be shown on site".l})"%></em></lable>
+		<%= f.text_field :author_email, :size => 35%> 
+		<label for = 'comment[author_email]'><%="Web site (include http://):".l%><%="(#{'Optional'.l})"%> </label>
+		<%= f.text_field :author_url, :size => 35%>
+		<% end -%>
+		<p><%= submit_tag "Add Comment".l  %>
+		  <%= image_tag 'spinner.gif', :plugin => "community_engine", :style => 'display:none;', :id => 'comment_spinner'%>
+			</p>   
+	</div>
+	<% end %> 
+ 
+<% else -%> 
+<%= link_to "Log in to leave a comment".l, new_comment_path(commentable.class, commentable.id) %> 或者
+<%= link_to "Create an account".l, signup_path%>
+<% end %>   

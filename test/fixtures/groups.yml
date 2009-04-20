@@ -1,0 +1,108 @@
+shanghaionrails:
+    id: 1
+    title: shanghaionrails
+    created_by: 1
+    description: for all rubyonrails fans
+    
+python: 
+    id: 2
+    title: phthon-group
+    created_by: 3
+    description: for all python fans
+    
+flash:
+    id: 3
+    title: flash-group
+    created_by: 4
+    description: for all flash fans
+    
+    
+java: 
+    id: 4
+    title: java-group
+    created_by: 2
+    description: for all php fans
+    
+php:  
+    id: 5
+    title: php-group
+    created_by: 3
+    description: for all php fans
+    
+ruby:  
+    id: 6
+    title: ruby-group
+    created_by: 2
+    description: Ruby是一种功能强大的面向对象的脚本语言,她可以使您方便快捷地进行面向对象编程.有时使用像Smalltalk、Eiffel或C++这样正式的面向对象语言来开发一些小项目显得有点"小题大做",而Ruby刚好可以满足这些面向对象编程的需求.当然了,您也可以使用Ruby进行普通的面向过程编程.
+    
+erlang: 
+    id: 7
+    title: erlang-group
+    created_by: 2
+    description: Erlang是一种面向并发(Concurrency Oriented)，面向消息（Message Oriented）的函数式(Functional)编程语言。
+    
+sap:  
+    id: 8
+    title: sap-group
+    created_by: 2
+    description: for all sap fans
+    
+mysql: 
+    id: 9
+    title: mysql-group
+    created_by: 2
+    description: MySQL是一个小型关系型数据库管理系统，开发者为瑞典MySQL AB公司。  
+    
+jquery:  
+    id: 10
+    title: jquery-group
+    created_by: 10
+    description: jQuery 是一个JavaScript 库，它有助于简化 JavaScript™ 以及 Asynchronous JavaScript + XML (Ajax) 编程。与类似的 JavaScript 库不同，jQuery 具有独特的基本原理，可以简洁地表示常见的复杂代码。学习 jQuery 基本原理，探索其特性和功能，执行一些常见的 Ajax 任务并掌握如何使用插件扩展 jQuery。  
+    
+mootools: 
+    id: 11
+    title: mootools-group
+    created_by: 12
+    description: mootools a super lightweight web2.0 javascript framework.
+
+lucene:  
+    id: 12
+    title: lucene-group
+    created_by: 2
+    description: Apache Lucene is a high-performance, full-featured text search engine library written entirely in Java. It is a technology suitable for nearly any
+
+twitter: 
+    id: 13
+    title: twitter-group
+    created_by: 2
+    description: Twitter is a free social messaging utility for staying connected in real-time.
+
+oracle:  
+    id: 14
+    title: oracle-group
+    created_by: 2
+    description: The world's largest enterprise software company, Oracle is the only vendor to offer solutions for every tier of your business -- database, middleware
+    
+struts: 
+    id: 15
+    title: struts-group
+    created_by: 4
+    description: An open source framework for building Servlet/JSP based web applications based on the Model-View-Controller (MVC) design paradigm
+
+netbean:  
+    id: 16
+    title: netbean-group
+    created_by: 7
+    description: Fully-featured Java IDE written completely in Java, with many modules available
+
+rubymine: 
+    id: 17
+    title: rubymine-group
+    created_by: 3
+    description: The most intelligent Ruby on Rails IDE with refactorings and code completion.
+
+google:  
+    id: 18
+    title: google-group
+    created_by: 6
+    description: world' largest search engine

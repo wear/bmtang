@@ -1,0 +1,71 @@
+one:
+    group_id: 1
+    start_page: 'wiki'
+    
+two:
+    group_id: 2
+    start_page: 'wiki' 
+    
+three:
+    group_id: 3
+    start_page: 'wiki'
+
+four:
+    group_id: 4
+    start_page: 'wiki'
+    
+five:
+    group_id: 5
+    start_page: 'wiki'
+
+six:
+    group_id: 6
+    start_page: 'wiki' 
+
+seven:
+    group_id: 7
+    start_page: 'wiki'
+
+eight:
+    group_id: 8
+    start_page: 'wiki'
+    
+ngiht:
+    group_id: 9
+    start_page: 'wiki'
+
+ten:
+    group_id: 10
+    start_page: 'wiki' 
+
+eleven:
+    group_id: 11
+    start_page: 'wiki'
+
+twele:
+    group_id: 12
+    start_page: 'wiki'
+
+thirteen:
+    group_id: 13
+    start_page: 'wiki'
+
+fourteen:
+    group_id: 14
+    start_page: 'wiki' 
+
+fifteen:
+    group_id: 15
+    start_page: 'wiki'
+
+sixteen:
+    group_id: 16
+    start_page: 'wiki'  
+    
+fifteen:
+    group_id: 17
+    start_page: 'wiki'
+
+sixteen:
+    group_id: 18
+    start_page: 'wiki'

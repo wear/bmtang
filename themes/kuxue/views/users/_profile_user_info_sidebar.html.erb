@@ -1,0 +1,19 @@
+<% completeness ||= profile_completeness(user) %> 
+<% percent = completeness[:score] %> 
+
+<table class='poll' width = '100%' style = "margin-bottom: 0" >
+	<tr><td class='bars'>
+		<div class='bar-container' style='width:50%'>
+		   <div class='bar' style="width:<%=percent%>%">
+		   	
+		   </div> 
+		</div>
+		<small><%= number_to_percentage(percent, :precision => 0)%></small>
+		</td>
+		</tr>
+	  <tr><td>Profile Completion Tips:
+		<ul>    
+			<% completeness[:incomplete].each do |line| -%>
+			<li><%= line[:action]%><smaill><%=  "+(#{number_to_percentage((line[:val].to_f/completeness[:total].to_f)*100, :precision => 0)})"%></small></li><% end -%>
+		</td></tr>
+</table>

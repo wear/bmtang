@@ -1,0 +1,28 @@
+<% @section =  @category.id %>
+<% content_for :tabs do -%> 
+   <%= topnav_tab @category.name, {:url => group_category_path(@group,@category.id), :section => @category.id }%>
+<% end -%>
+
+ 
+<div class='span-16'>
+	<%=render :partial => 'posts/post', :collection => @posts%>
+	&nbsp;
+</div>             
+<div class='span-8 last'> 
+	<% if logged_in? -%>
+	<h3><%=:have_something_to_contribute.l%></h3>
+	<ul class='list checks'>
+		<li><%=link_to @category.display_new_post_text() || :write_new_post.l(:category=>@category.name), new_group_post_path( :category_id => @category,:group_id => @group,:user_id => current_user)%>
+		</li>
+	</ul>
+	<% else -%>
+	<h3>注册</h3>
+	<ul class='list checks'>  
+		<li>
+		 <a href="/signup"><%=:sign_up_for_a_.l+" #{AppConfig.community_name} "+:account.l%></a><br />
+		 <%=:have_an_account.l%><a href="/login" title="<%=:log_in_to_your.l+" #{AppConfig.community_name} "+:account.l%>"><%="&raquo; " + :login.l  %> </a>
+		</li>
+	</ul>
+	<% end -%>
+</div>
+  

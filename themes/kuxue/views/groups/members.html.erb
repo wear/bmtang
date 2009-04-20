@@ -1,0 +1,36 @@
+<% content_for :tabs do -%> 
+	<%= topnav_tab '所有成员', {:url => members_group_path(@group),:class => 'current'}%>
+<% end -%>  
+<% content_for :head_tags do -%>
+	<%= stylesheet_link_tag '/tablesorter/themes/blue/style.css' %>
+	<script type="text/javascript" src="/tablesorter/jquery.tablesorter.js"></script> 
+	<script type="text/javascript" charset="utf-8">
+		jQuery(document).ready(function() 
+		    { 
+		        jQuery("#members").tablesorter(); 
+		    } 
+		); 
+	</script>
+<% end -%>
+<table border="0" cellspacing="5" cellpadding="5" id='members' class='tablesorter'>
+	<thead> 
+	<tr><th>用户名</th><th>权限</th><th>email</th><th>加入时间</th><th></th></tr>
+	</thead>
+	<tbody> 
+	<% @members.each do |member| -%>
+		<tr>
+			<td> <%= link_to member.login,user_path(member)%><br /></td> 
+			<td> <%= group_admin?(member.becomes(LearnUser).membership(@group).admin_role) %><br /></td> 
+			<td> <%= member.email %><br /></td>
+			<td> <%= member.created_at.strftime("%Y-%b-%e") %><br /></td>    
+			<td><% if current_user.becomes(LearnUser).is_mod_of?(@group) -%>
+				 <%= link_to '编辑',edit_group_member_path(@group,member.id)%><br />
+				<% end -%>
+				</td>
+		</tr>  
+	<% end -%>
+	</tbody>
+</table>
+<p>    
+     <%= will_paginate @members %>  
+</p>

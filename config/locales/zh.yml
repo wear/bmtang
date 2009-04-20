@@ -1,0 +1,625 @@
+zh:
+    activerecord:
+        errors:
+            models:
+                user: 
+                    attributes:
+                        login: 
+                            blank: 为空
+                            too_short: 太短
+                            invalid: 非法
+                        email:
+                            invalid: 非法
+                        password:
+                            blank: 为空
+                            confirmation: 确认 
+                            too_short: 太短
+                        password_confirmation:
+                            blank: 为空
+                wiki_content:
+                    attributes:
+                      text: 
+                          blank: 为空
+            template:
+                header: 出错了
+                body: 请检查以下项目
+    #en: a_few_seconds_ago:  a few seconds ago
+    a_few_seconds_ago:  刚刚
+    #en: about: About
+    about: 关于
+    #en: about_me: About Me
+    about_me: 关于我
+    #en: about_site: About {{site}}
+    about_site: 关于 {{site}}
+    #en: about_you: About You
+    about_you: 关于你
+    #en: accept: Accept
+    accept: 接受
+    #en: accepted: accepted
+    accepted: 已接受
+    #en: accepted_friendships: Accepted Friendships
+    accepted_friendships: 接受了你的朋友邀请
+    #en: accept_this_request: Accept this request
+    accept_this_request: 接受这个请求
+    #en: account: account
+    account: 帐号
+    #en: account_activation_error: Account activation failed. Your account may already be active. Try logging in or e-mail {{email}} for help.
+    account_activation_error: 帐号认证错误. 此帐号已被认证. 请直接登录或发mail至 {{email}} 要求帮助.
+    #en: account_settings: Account settings
+    account_settings: 帐号设定
+    #en: actions: Actions
+    actions: 动作
+    #en: activate: Activate
+    activate: 认证
+    #en: activation_email_not_sent_message: Activation e-mail could not be sent. Perhaps that user is already active?
+    activation_email_not_sent_message: 认证邮件发送错误. 也许此用户已认证?
+    #en: active: active
+    active: 激活
+    #en: active_users: Active Users
+    active_users: 激活用户
+    #en: activity_from_your_network: Activity from your network
+    activity_from_your_network: 从你的网络种激活
+    #en: ad_was_successfully_created: Ad was successfully created.
+    ad_was_successfully_created: Ad was successfully created.
+    #en: ad_was_successfully_updated: Ad was successfully updated.
+    ad_was_successfully_updated: Ad was successfully updated.
+    #en: add_a_photo: Add a photo
+    add_a_photo: 添加一张照片
+    #en: add_a_poll: Add a poll
+    add_a_poll: 推荐一个投票
+    #en: add_comment: Add Comment
+    add_comment: 推荐一个评论
+    #en: add_from_my_address_book: "Add from my address book"
+    add_from_my_address_book: "添加我的地址簿"
+    #en: add_some_friends_to_get_started: Add some friends to get started!
+    add_some_friends_to_get_started: 开始添加些用户!
+    #en: add_your_comment: Add Your Comment!
+    add_your_comment: 添加你的评论!
+    #en: added_a_clipping: "added a clipping:"
+    added_a_clipping: "添加一个书签:"
+    #en: added_to_a_forum_topic: "added to a forum topic:"
+    added_to_a_forum_topic: "发帖:"
+    #en: admin: Admin
+    admin: 管理员
+    #en: admin_controls: Admin Controls
+    admin_controls: 管理员控制
+    #en: admin_dashboard: Admin dashboard
+    admin_dashboard: 管理员控制面板
+    #en: ads: Ads
+    ads: 广告
+    #en: advertise: Advertise
+    advertise: Advertise
+    #en: advertise_on: Advertise on
+    advertise_on: 刊登广告
+    #en: after_signing_up_youll_receive_an_e_mail_confirmation_message: After signing up, you'll receive an e-mail confirmation message.
+    after_signing_up_youll_receive_an_e_mail_confirmation_message: 注册后你会收到一封确认邮件.  
+
+    posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: Posts saved with 'draft' status won't appear in your blog until you publish them.
+    #en: preview: Preview
+    preview: Preview
+    #en: previewing_your_post: Previewing your post
+    previewing_your_post: 预览您的帖子
+    #en: previous: previous
+    previous: previous
+    #en: print: Print
+    print: 打印
+    #en: print_this_story: "Print this story"
+    print_this_story: "Print this story"
+    #en: profile: Profile
+    profile: 用户资料
+    #en: profile_comments: Profile Comments
+    profile_comments: 用户的评论
+    #en: profile_photo: Profile Photo
+    profile_photo: 用户照片
+    #en: profile_privacy: Profile Privacy
+    profile_privacy: 用户资料权限
+    #en: profile_views: profile views
+    profile_views: 用户资料查看
+    #en: pros: Pros
+    pros: Pros
+    #en: pros_skilled_in: Pros skilled in
+    pros_skilled_in: Pros skilled in
+    #en: published: Published
+    published: 发布
+    #en: question: Question
+    question: 问题
+    #en: re_type_your_password_to_confirm: "Re-type your password to confirm:"
+    re_type_your_password_to_confirm: "再输一遍:"
+    #en: read_more: read more
+    read_more: 更多
+    #en: recent: Recent
+    recent: 最近
+    #en: recent_activity: Recent activity
+    recent_activity: 最近的更新
+    #en: recent_blog_posts: Recent Blog Posts
+    recent_blog_posts: 最新博客帖子
+    #en: recent_posts: Recent Posts
+    recent_posts: 最新的帖子
+    #en: recommended_posts: Recommended Posts
+    recommended_posts: 推荐贴
+    #en: related_clippings_all_members: Related Clippings (all members)
+    related_clippings_all_members: 相关收藏(所有用户)
+    #en: related_photos_all_members: Related Photos (all members)
+    related_photos_all_members: 相关图片(所有用户)
+    #en: related_posts: Related Posts
+    related_posts: 相关帖子
+    #en: related_tags: Related Tags
+    related_tags: 相关标签
+    #en: remember_me: Remember me
+    remember_me: 记住我
+    #en: remember_you_can_always_change_this_later: Remember, you can always change this later.
+    remember_you_can_always_change_this_later: 你可以再以后修改.
+    #en: remove_moderator: Remove moderator
+    remove_moderator: Remove moderator
+    #en: remove_this_friend: Remove this friend
+    remove_this_friend: 删除此朋友
+    #en: reply: Reply
+    reply: 回复
+    #en: reply_to_topic: Reply
+    reply_to_topic: 回复
+    #en: request_friendship: Request friendship
+    request_friendship: 加为朋友
+    #en: requested: requested
+    requested: 已请求
+    #en: requested_friendship_with: Requested friendship with
+    requested_friendship_with: 请求朋友
+    #en: requesting_friendship: Requesting friendship
+    requesting_friendship: 正在请求中
+    #en: required: required
+    required: required
+    #en: required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Required: We will send a confirmation e-mail to the address you enter.)"
+    required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Required: We will send a confirmation e-mail to the address you enter.)"
+    #en: required_you_must_be_at_least_years_old_to_sign_up: "(Required: you must be at least 13 years old to sign up.)"
+    required_you_must_be_at_least_years_old_to_sign_up: "(Required: you must be at least 13 years old to sign up.)"
+    #en: required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Required: Your username must not contain numerals, spaces or special characters.)"
+    required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Required: Your username must not contain numerals, spaces or special characters.)"
+    #en: resend_my_activation_e_mail: Resend my activation e-mail
+    resend_my_activation_e_mail: 重发认证邮件
+    #en: resend_your_activation_e_mail: Resend your activation e-mail
+    resend_your_activation_e_mail: 重发认证邮件
+    #en: reset_my_password: Reset my password
+    reset_my_password: 重置密码
+    #en: rss: RSS
+    rss: RSS
+    #en: rss_feed: RSS feed
+    rss_feed: RSS feed
+    #en: run: Run
+    run: 开始
+    #en: save: Save
+    save: 保存
+    #en: save_and_continue_to_step_three: Save, and continue to step three
+    save_and_continue_to_step_three: 保存, and continue to step three
+    #en: save_changes: Save Changes
+    save_changes: 保存修改
+    #en: save_forum: Save Forum
+    save_forum: Save Forum
+    #en: save_post_as: "Save post as:"
+    save_post_as: "保存帖子为:"
+    #en: save_reply: Save reply
+    save_reply: 保存
+    #en: says: says
+    says: 说
+    #en: sb_post_was_deleted: Post '{{title}}' was deleted.
+    sb_post_was_deleted: Post '{{title}}' was deleted.
+    uh_oh_we_couldnt_log_you_in_with_the_username_and_password_you_entered_try_again: 你输入的用户名/密码不正确,如果你刚刚注册，请查阅你的email, 从确认信中的链接直接登录。
+    #en: un_favorite_this: Un-favorite this
+    un_favorite_this: 不关注
+    #en: unactivated_users: Unactivated users
+    unactivated_users: 未激活用户
+    #en: uncategorized: Uncategorized
+    uncategorized: 未分类
+    #en: update: Update
+    update: 更新
+    #en: update_profile_and_tag_yourself: Update your profile and tag yourself
+    update_profile_and_tag_yourself: 更新你的资料并做标签
+    #en: update_your_profile: update your profile
+    update_your_profile: 更新你的资料
+    #en: updated_at: Updated at
+    updated_at: 更新
+    #en: updated_their_profile: updated their profile
+    updated_their_profile: 更新了他的资料
+    #en: upload_an_image_for_your_post: Upload an image for your post
+    upload_an_image_for_your_post: Upload an image for your post
+    #en: upload_and_continue_to_step_two: Upload, and continue to step two
+    upload_and_continue_to_step_two: 上传, 继续第二步
+    #en: uploaded_a_photo: "uploaded a photo:"
+    uploaded_a_photo: "上传图片:"
+    #en: uploaded_by: uploaded by
+    uploaded_by: 上传
+    #en: url: Url
+    url: Url
+    #en: user_e_mail: "User e-mail:"
+    user_e_mail: "用户e-mail:"
+    #en: username: Username
+    username: 用户名
+    #en: user: User
+    user: 用户
+    #en: users: Users
+    users: 用户
+    #en: users_blog: "{{user}}'s Blog"
+    users_blog: "{{user}}的博客"
+    #en: user_clippings: Clippings of {{user}}
+    user_clippings: "{{user}} 的收藏"
+    #en: user_login: User login
+    user_login: 登录
+    #en: users_online: Users online
+    users_online: 在线用户
+    #en: users_photos: "{{user}}'s Photos"
+    users_photos: "{{user}}的图片"
+    #en: view: View
+    view: 查看
+    #en: views: Views
+    views: 查看
+    #en: view_all_my_clippings: View all my clippings
+    view_all_my_clippings: 查看所有收藏
+    #en: view_all_my_friend_requests: View all my friend requests
+    view_all_my_friend_requests: 查看所有朋友请求
+    #en: view_all_my_photos: View all my photos
+    view_all_my_photos: 查看图片
+    #en: view_comment: View Comment
+    view_comment: 查看评论
+    #en: view_my: "View my:"
+    view_my: "查看我的:"
+    #en: view_my_blog: View my blog
+    view_my_blog: 查看我的博客
+    #en: view_profile: View profile
+    view_profile: 查看资料
+    #en: voice: voice
+    voice: voice
+    #en: voices: Voices
+    voices: Voices
+    #en_ vote: Vote
+    vote: 投票
+    #en: vote_now: Vote now!
+    vote_now: 现在就投票!
+    #en: votes: votes
+    votes: 投票
+    #en: waiting_for: Waiting for
+    waiting_for: 等
+    #en: walkthrough_complete: You've completed the {{site}} walk-through. Now you can continue exploring!
+    walkthrough_complete: You've completed the {{site}} walk-through. Now you can continue exploring!
+    #en: want_to_be_popular: Want to be popular?
+    want_to_be_popular: 想受欢迎?
+    #en: want_to_list_your_services_on: Want to list your services on
+    want_to_list_your_services_on: Want to list your services on
+    #en: want_to_post_in_this_category: Want to post in this category?
+    want_to_post_in_this_category: Want to post in this category?
+    #en: want_to_upload_multiple_files_at_once: Want to upload multiple files at once?
+    want_to_upload_multiple_files_at_once: Want to upload multiple files at once?
+    #en: watch: Watch
+    watch: 查看
+    #en: watch_ing: ing
+    watch_ing: 正
+    #en: watch_topic: Watch topic
+    watch_topic: 查看贴
+    #en: watching_topic: Watching topic
+    watching_topic: 正在查看帖子
+    #en: we_just_sent_an_e_mail_to: "We just sent an e-mail to:"
+    we_just_sent_an_e_mail_to: "我们刚发送了封邮件到:"
+    #en: we_need_you: We need you
+    we_need_you: 我们需要
+    #en: welcome_message: Welcome! {{login_link}} or {{signup_link}}
+    welcome_message: 欢迎! {{login_link}} or {{signup_link}}
+    #en: what_are_tags: 'What are "Tags"?'
+    what_are_tags: '什么是标签?'
+    #en: what_is_popular: What's Popular
+    what_is_popular: 什么是最受欢迎
+    #en: whats_fresh: What's fresh
+    whats_fresh: 什么是最新鲜
+    #en: whats_hot: What's Hot
+    whats_hot: 什么是最热门
+    #en: whats_popular: What's Popular
+    whats_popular: 最受欢迎
+    #en: when_checked_your_profile_will_be_visible_to_anyone: "When checked, your profile will be visible to anyone."
+    when_checked_your_profile_will_be_visible_to_anyone: "When checked, your profile will be visible to anyone."
+    #en: when_unchecked_your_profile_will_only_be_visible_to_people_who_are_logged_in_to: When unchecked, your profile will only be visible to people who are logged in to
+    when_unchecked_your_profile_will_only_be_visible_to_people_who_are_logged_in_to: When unchecked, your profile will only be visible to people who are logged in to
+    #en: when_you_see_an_image_you_like_on_the_web: When you see an image you like on the Web, click the bookmarklet to save it to {{site}}
+    when_you_see_an_image_you_like_on_the_web: When you see an image you like on the Web, click the bookmarklet to save it to {{site}}
+    #en: why_sign_up: Why Sign up?
+    why_sign_up: 为什么注册?
+    #en: write_a_blog_post: Write a blog post!
+    write_a_blog_post: 写篇博客!
+    #en: write_a_message: "Write a message:"
+    write_a_message: "发个短信:"
+    #en: write_new_post: Write a '{{category}}' post
+    write_new_post: 在 '{{category}}' 发言 
+    sign_up: 注册
+    log_in: 登录
+    homepage_banner_signup_prompt: 马上注册
+    create_your_account: 创建你的帐号
+    get_started_banner: 开始
+    homepage_banner_msg: 欢迎欢迎
+    homepage_banner_download_msg: 下载     
+    explore_site: 浏览
+    find_an_expert: 找个老师
+    tags: 标签 
+    all_tags: 所有标签
+    home: 首页
+    faq: 帮助
+    forums: 论坛
+    popular: 热门
+    people: 人群
+    community_tagline: 百学须先立志
+    see_all: 查看所有
+    sign_up_reason_1: 原因1
+    sign_up_reason_2: 原因2
+    birthday: 生日
+    type_your_password: 密码
+    looking_for_most_x: 查看最牛X的
+    sign_up_for_an_account: 注册一个用户
+    have_an_account: 已有帐号?
+    this_month_best: 本月最佳
+    site_members: 本站用户
+    country: 国家  
+    state: 州
+    search_users: 查找
+    metro_areas: 地铁
+    forum: 讨论区
+    last_post: 最后发布
+    metro_area: 地铁
+    yesterday: 昨天
+    logged_into_the_site: 登录了
+    invited_friends: 邀请朋友
+    left_a_comment: 留言
+    email_to_friends: 发送给你的朋友
+    comments: 留言数
+    member_since: 注册日期
+    popular_posts: 受欢迎的帖子
+    all_comments: 所有评论
+    all_comments: 评论的rss
+    plural_posts: 受欢迎的帖子
+    show_category: 显示分类
+    popular_catgory: 受欢迎的分类
+    top_writers: 顶级写手
+    login: 用户名
+    e_mail_address: 电子邮件地址
+    already_have_an_account: 已有帐号?
+    click_the_activation_link_in_the_e_mail_to_log_in: 确认邮件并登录
+    help: 帮助
+    log_in_to_site: 登录
+    password: 密码
+    click_here_to_retrieve_it: 点击找回
+    click_here_to_sign_up: 点击登录
+    dont_have_an_account: 没有帐号
+    forgot_your_password: 忘记密码
+    forgot_your_username: 忘记用户名
+    stats: 状态
+    status: 状态
+    logged_in: ""
+    photos: 照片 
+    my_friends: 我的朋友
+    my_recent_comments: 我最近的留言
+    to: 对         
+    photo_comments: 图片留言
+    comments_rss: 留言rss
+    post_comments: 发布帖子
+    send_this_story_to_friends: 发给朋友
+    enter_a_message: 介绍下
+    this_story_is_awesome: 刚看到这不错,推荐下
+    enter_e_mail_addresses_comma_sep: 输入email地址
+    send: 发送 
+    my_details: 我的详细资料
+    forgot_your_username: 忘记用户名
+    #en: my_profile: My Profile
+    my_profile: 个人中心
+    #en: edit: Edit
+    edit: 编辑
+    #en: edit_account: Edit account
+    edit_account: 编辑帐户
+    #en: edit_contest: Edit Contest
+    edit_contest: Edit Contest
+    #en: edit_event: Edit event
+    edit_event: 编辑活动
+    #en: edit_forum: Edit forum
+    edit_forum: 编辑论坛
+    #en: edit_post: Edit post
+    edit_post: 修改话题
+    #en: edit_profile: Edit profile
+    edit_profile: 修改个人资料
+    author: 作者
+    close_this_message: 关闭此消息
+    you_have_pending_friendship_requests: 你有等待中的朋友邀请
+    browse_all_members: 查看所有用户
+    to_get_recommended_content_on_your_dashboard: 在控制面板找推荐内容
+    dashboard_friends: 面板的朋友
+    this_is_your_dashboard: 这里是你的控制面板
+    blog_posts: 博客帖子
+    manage_my: 管理
+    clippings: 收藏
+    friends: 朋友
+    blog: 博客
+    dashboard: 控制面板
+    you_have_written: 你写了
+    log_out: 注销
+    to_start_adding_friends: 开始邀请朋友
+    manage_posts: 管理帖子
+    notify_of_friend_requests: 朋友请求提醒
+    notify_of_comments: 留言提醒
+    notify_email_updates: 更新提醒
+    make_my_profile_public: 让我的个人资料公开
+    confirm_password: 密码确认
+    deactivate_link: 删除你的帐号
+    deactivate_tip: 提示
+    you_are_editing_your_account: 编辑你的帐号
+    edit_your_user_profile: 编辑你的资料
+    links: 链接
+    new_post: 新帖子
+    category: 分类
+    title: 标题
+    date_published: 发布日期
+    date_created: 创建日期
+    you_have_no_clippings_use_the_bookmarklet_on_the_right_to_add_some: 你还没有添加任何收藏
+    clippings_let_you_to_save_cool_images_from_around_the_web: 让你收藏网上的酷图
+    drag_the_bookmarklet: 拉到收藏工具栏
+    drag_this_to_your_bookmarks_toolbar: 拉到收藏工具栏
+    pending: 待定
+    assume_user_id: 设定此用户 
+    delete_this_user: 删除此用户 
+    toggle_featured_writer: 推荐此人
+    assign_role: 设定角色
+    moderator: 管理员
+    no_profile_photo: 还没有上传图片
+    new_photo: 新图片
+    click_here_to_upload_one: 点击这里上传
+    no_tags: 没有标签
+    need_some_help_contact_our: 如需帮助请联系
+    faq_section: 帮助中心
+    body_text: 内容
+    cancel_and_go_back_to_my_posts: 取消
+    singular_posts: 单贴
+    no_tags: 无标签
+    optional: 可选的
+    youve_been_logged_out_hope_you_come_back_soon: 你已注销
+    tips: 提示
+    loading_recnet_content: 正在加载最近更新
+    your_about_text_goes_here: 关于我们
+    need_to_contact_us: 需要联系我们
+    dont_wait_its: 就在
+    frequently_asked_questions: 常见问题
+    tagged: 标记为 
+    all_posts_tagged: 所有标记的帖子
+    posts: 帖子
+    items: 条目
+    thanks_youre_now_logged_in: 欢迎登录
+    you_last_logged_in_on: 最后登录 
+    bookmarklet: 收藏夹 
+    tags_page: 标签页
+    male: 男
+    female: 女
+    zippostal_code: 邮编
+    choose_a_photo_for_your_profile: 选择一个个人头像
+    location: 地区
+    edit_your_account_settings_instead: 编辑你的帐号
+    you_could_tag_yourself: 你可以标记你
+    tags_are_comma_separated_keywords_that_describe_you: 用来描述你的标签
+    you_can_browse_all_content_and_users_on: 你可以选择所有的内容和用户
+    by_looking_at_the: 看着
+    how_do_i_do_that: 我怎么做
+    you_are_editing_your_profile: 你可以编辑你的资料
+    features: 推荐
+    categories: 分类
+    contests: 竞赛
+    events: 活动
+    statistics: 统计
+    no_messages: 没有消息
+    index: 收件箱
+    new_homepage_feature: 首页推荐
+    date_title: 标题
+    description: 描述
+    image: 图
+    show: 显示
+    destroy: 删除
+    new_category: 新分类
+    name: 名称
+    find_out_where_to_be_and_when_to_be_there: 合适合地到达
+    start_time: 开始时间
+    end_time: 结束时间
+    create: 创建  
+    post_an_event: 发起一个活动
+    total_users: 所有用户
+    new_today: 今天新增
+    new_yesterday: 昨天新增
+    month: 月 
+    most_active_1_month: 最活跃的月份
+    estimated_writers_costs_this_month: 最活跃的用户花费了
+    new_ad: 新广告  
+    new_event: 新活动
+    feel_free_to_embed_images_or_videos: 你可以嵌入图片或视频
+    gender: 性别            
+    invite_a_friend: 邀请朋友 
+    the_friendship_was_accepted: 此邀请已接受！
+    pending_friendships: 待定中的朋友邀请！ 
+    create_new_forum: 新建论坛
+    position: 位置
+    cancel: 取消
+    post_a_new_topic: 发个帖子
+    new_topic: 发新帖
+    by: 由
+    sticky: 固定
+    locked: 锁定
+    post_topic: 发布
+    post: 帖子
+    delete: 删除
+    minutes_ago: 分钟之前
+    get_popular: 获得欢迎
+    assume_id: 进入此用户
+    share_the_love: 分享快乐
+    invite_your_friends_to_join: 邀请你的朋友加入
+    joined: 加入日期
+    started_a_topic: 发了个帖子
+    loading_recent_content: 加载最近的帖子
+    email_signup_thanks: 确认邮件已发送
+    look_for_a_message_from: 请检查确认邮件
+    see_you_back_here_in_a_short_while: 我们期待您的归来
+    resend_activation_email: 重发激活邮件
+    go_check_your_e_mail: 请到您填写的邮件检查确认邮件
+    no_activation_email: 无激活邮件
+    small_profile: 小型中心
+    birthday_gender: 生日和性别
+    photo_tip_1: 提示1
+    photo_tip_2: 提示2
+    cancel_and_go_back_to_my_photos: 取消并回到我的图片
+    back_to_my_photos: 回到我的图片
+    or: 或者
+    delete_this_photo: 删除
+    edit_this_photo_details: 编辑
+    make_this_my_profile_photo: 设为头像 
+    inbox: 索引
+    category_was_successfully_created: 分类创建成功 
+    have_something_to_contribute: 想做点什么
+    draft: 草稿
+    optional_keywords_describing_this_post_separated_by_commas: 可选的标签 
+    new_post_for_category: 在此分类下发帖
+    post_created_for_category: 发帖成功
+    group: 小组
+    create_group: 创建小组
+    groupicon: 小组图标 
+    sign_up_for_a_: 注册一个
+    already_group_member: 已经是成员了
+    your_changes_were_saved: 修改已保存
+    my_tags: 我的标签
+    new_group: 新小组
+    label_help: 帮助    
+    setting_text_formatting: 设置格式
+    field_comments: 说明
+    button_save: 保存
+    label_preview: 预览
+    button_edit: 编辑
+    label_history: 历史
+    button_delete: 删除
+    button_rename: 重命名
+    button_lock: 锁定
+    field_title: 标题
+    field_redirect_existing_links: 链接跳转
+    field_parent_title: 父标题 
+    notice_successful_update: 修改成功
+    field_updated_on: 更新于
+    field_author: 更新者
+    button_annotate: 注解
+    label_display_per_page: 分页
+    label_view_dif: 比较
+    label_version:  版本
+    button_rollback: 回滚
+    button_unloc: 解锁
+    text_are_you_sure: 你确定吗?
+    label_index_by_title: 按标题索引
+    label_no_data: 无数据
+    notice_file_not_found: 文件未找到
+    showing: 显示
+    label_export_to: 导出
+    wiki: 资料库
+    label_previous: 上
+    label_next: 下
+    label_current_version: 目前
+    wrote_a_post: 发了贴
+    label_loading: 载入中
+    comment_save_error: 评论保存出错
+    are_you_sure_you_want_to_permanently_delete_this_comment: 你确定要删除此评论嘛
+    group_request_send: 请求已送出
+    enter_your_email_address: 请输入你的email
+    back: 返回
+    you_have_uploaded: 你上传了
+    notice_locking_conflict: 页面冲突
+    group_join_succesfully: 你加入了 '{{group}}'
+    content: 内容

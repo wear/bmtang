@@ -1,0 +1,19 @@
+<% content_for :tabs do -%>
+	<%= topnav_tab '成员编辑', {:url => '#',:class => 'current'}%> 
+	<%= topnav_tab '所有成员', {:url => members_group_path(@group),:section => 'activity'}%>
+	<%= topnav_tab '管理员', {:url => managers_group_path(@group),:section => 'activity'}%>
+	<%= topnav_tab '待定成员', {:url => pending_members_group_path(@group),:section => 'activity'}%>
+<% end -%>     
+
+<p>用户名: <%= @member.login %></p>  
+<p>Email: <%= @member.email %></p>
+<% unless @member.is_member_of?(@group) -%>
+	<%=link_to '加此用户为会员',accpet_pending_group_member_path(@group,@member.id) %> 
+<% else -%>
+    <% if @group.created_by?(current_user) && @member.is_mod_of?(@group) -%> 
+		<%=link_to '取消此用户的管理员权限',reset_group_admin_path(@group,@member.id)%>
+	<% else -%>
+		<%=link_to '加此用户为管理员',add_group_admin_path(@group,@member.id) %>
+	<% end %>
+	<%=link_to '踢此用户出课堂',kick_group_member_path(@group,@member.id)%>
+<% end -%>

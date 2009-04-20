@@ -1,0 +1,383 @@
+one:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    那些漂亮的触摸屏手机对盲人来说一无是处，他们需要的是触觉。不过 Google 有两位科学家一直在努力解决这个问题，他们是 T.V. Raman 和  Charles Chen，其中 Raman 是一位盲人。他们研制出一种软件，让 T-Mobile G1 触摸屏手机中的 Android 系统可以为盲人所用。正常人在驾驶期间也可以使用这种技术。
+    post:        那些漂亮的触摸屏手机对盲人来说一无是处，他们需要的是触觉。不过 Google 有两位科学家一直在努力解决这个问题，他们是 T.V. Raman 和  Charles Chen，其中 Raman 是一位盲人。他们研制出一种软件，让 T-Mobile G1 触摸屏手机中的 Android 系统可以为盲人所用。正常人在驾驶期间也可以使用这种技术。
+    title:       Google 盲人科学家推出盲人手机软件
+    category_id:  1
+    user_id:      2
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+    
+two:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    Kyle Hayes 同学做了一个JavaScript 框架调查，他通过twitter和email以及博客的方式发布消息请用户填写调查报告，总共有超过600位用户提交了报告，下面是调查结果，仅供参考 
+    post:        Kyle Hayes 同学做了一个JavaScript 框架调查，他通过twitter和email以及博客的方式发布消息请用户填写调查报告，总共有超过600位用户提交了报告，下面是调查结果，仅供参考
+    title:       JavaScript 框架调查
+    category_id:  1
+    user_id:      2
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+    
+three:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    Python 3.1 alpha 2 发布。这是一个开发发布版本，不推荐使用于生产环境
+    post:        Python 3.1 alpha 2 发布。这是一个开发发布版本，不推荐使用于生产环境
+    title:       Python 3.1 alpha 2 发布
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+four:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    那些漂亮的触摸屏手机对盲人来说一无是处，他们需要的是触觉。不过 Google 有两位科学家一直在努力解决这个问题，他们是 T.V. Raman 和  Charles Chen，其中 Raman 是一位盲人。他们研制出一种软件，让 T-Mobile G1 触摸屏手机中的 Android 系统可以为盲人所用。正常人在驾驶期间也可以使用这种技术。
+    post:        那些漂亮的触摸屏手机对盲人来说一无是处，他们需要的是触觉。不过 Google 有两位科学家一直在努力解决这个问题，他们是 T.V. Raman 和  Charles Chen，其中 Raman 是一位盲人。他们研制出一种软件，让 T-Mobile G1 触摸屏手机中的 Android 系统可以为盲人所用。正常人在驾驶期间也可以使用这种技术。
+    title:       Google 盲人科学家推出盲人手机软件
+    category_id:  1
+    user_id:      4
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1     
+    
+five:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    2008年中国企业即时通讯市场终端用户规模达到2236万人，与2007年的1813万人相比，同比增长23.3%。由于受到全球范围金融危机影响，中国企业即时通讯市场增速有所放缓，但是市场的潜在需求仍然没有全部释放，一旦经济回暖，市场将延续前期快速增长的趋势。
+    post:        2008年中国企业即时通讯市场终端用户规模达到2236万人，与2007年的1813万人相比，同比增长23.3%。由于受到全球范围金融危机影响，中国企业即时通讯市场增速有所放缓，但是市场的潜在需求仍然没有全部释放，一旦经济回暖，市场将延续前期快速增长的趋势。
+    title:       赛迪顾问：08-09年中国企业IM市场发展综述
+    category_id:  1
+    user_id:      5
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+six:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    过去几周IT行业最大的事情就是，IBM 对Sun 的收购。JavaLobby 目前得到消息，这件收购案已经进入最后阶段。IBM 将支付每股 9.55美金给Sun，比Sun 希望的价格每股少 1美金，IBM 总共需要支付70亿美金。这对于IBM是件合算的买卖，因为在2002年，IBM还动过用400亿美金收购Sun的念头。 。
+    post:        过去几周IT行业最大的事情就是，IBM 对Sun 的收购。JavaLobby 目前得到消息，这件收购案已经进入最后阶段。IBM 将支付每股 9.55美金给Sun，比Sun 希望的价格每股少 1美金，IBM 总共需要支付70亿美金。这对于IBM是件合算的买卖，因为在2002年，IBM还动过用400亿美金收购Sun的念头。 
+    title:       IBM 对 Sun 的收购进入最后阶段
+    category_id:  1
+    user_id:      6
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+seven:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    刚从E-TextEditor作者的博客看到，这款号称Windows下的Textmate开源了！ 使用的感受的确是不亚于Textmate，配合cygwin大部分的Bundle都是兼容的。 
+    post:        刚从E-TextEditor作者的博客看到，这款号称Windows下的Textmate开源了！ 使用的感受的确是不亚于Textmate，配合cygwin大部分的Bundle都是兼容的。 
+    title:       E-Text Editor开源啦！
+    category_id:  1
+    user_id:      7
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+eight:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    为庆祝Ext发布了三周年，我们立即释出Ext Core 3.0 给大家下载。所谓ExtCore，那就是提供了一系列针对Web页面日常开发使用的这一个API，ExtCore采用MIT的许可，——该许可，，没啥大问题，直接用就是了。
+    post:        为庆祝Ext发布了三周年，我们立即释出Ext Core 3.0 给大家下载。所谓ExtCore，那就是提供了一系列针对Web页面日常开发使用的这一个API，ExtCore采用MIT的许可，——该许可，，没啥大问题，直接用就是了。
+    title:       发布Ext Core Beta了
+    category_id:  1
+    user_id:      8
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1     
+    
+nine:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    NetBeans 团队非常自豪的宣布 NetBeans IDE 6.7 M3 正式发布！
+    post:        NetBeans 团队非常自豪的宣布 NetBeans IDE 6.7 M3 正式发布！
+    title:       NetBeans 6.7 M3 发布！
+    category_id:  1
+    user_id:      9
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+ten:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    那些漂亮的触摸屏手机对盲人来说一无是处，他们需要的是触觉。不过 Google 有两位科学家一直在努力解决这个问题，他们是 T.V. Raman 和  Charles Chen，其中 Raman 是一位盲人。他们研制出一种软件，让 T-Mobile G1 触摸屏手机中的 Android 系统可以为盲人所用。正常人在驾驶期间也可以使用这种技术。
+    post:        那些漂亮的触摸屏手机对盲人来说一无是处，他们需要的是触觉。不过 Google 有两位科学家一直在努力解决这个问题，他们是 T.V. Raman 和  Charles Chen，其中 Raman 是一位盲人。他们研制出一种软件，让 T-Mobile G1 触摸屏手机中的 Android 系统可以为盲人所用。正常人在驾驶期间也可以使用这种技术。
+    title:       Google 盲人科学家推出盲人手机软件
+    category_id:  1
+    user_id:      10
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+tenone:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    jRails是一个替代Rails 中的Prototype/script.aculo.us 为jQuery的项目。使用jRails，你能获得所有缺省的Rails helpers 来使用jQuery库。 
+    post:        jRails是一个替代Rails 中的Prototype/script.aculo.us 为jQuery的项目。使用jRails，你能获得所有缺省的Rails helpers 来使用jQuery库。 
+    title:        介绍jRails：替代Rails 中的Prototype为jQuery
+    category_id:  1
+    user_id:      11
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+tentwo:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    如果你对这个消息感到高兴，这份高兴应该是双倍的，第一，ASP.NET MVC 是一个很好的框架，它将Ruby on Rails的理念带到ASP.NET领域，第二，开源ASP.NET MVC 意味着能够容易的在使用Mono的 Linux环境下使用。
+    post:        如果你对这个消息感到高兴，这份高兴应该是双倍的，第一，ASP.NET MVC 是一个很好的框架，它将Ruby on Rails的理念带到ASP.NET领域，第二，开源ASP.NET MVC 意味着能够容易的在使用Mono的 Linux环境下使用。
+    title:       ASP.Net MVC 1.0 现在已经开源了
+    category_id:  1
+    user_id:      12
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1     
+
+thirteen:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    Peter Cooper 说道：5个月以前，JetBrains（Java IDE IntellJ IDEA背后的公司） 发布了RubyMine的公开预览版本，一个新的Ruby 和Rails IDE，现在，他们正式发布RubyMine 1.0 Beta版本，作为1.0正式版的预先版本。你能够马上下载：OS X版本大概75MB，Windows和Linux版本也同时提供下载。 
+    post:        Peter Cooper 说道：5个月以前，JetBrains（Java IDE IntellJ IDEA背后的公司） 发布了RubyMine的公开预览版本，一个新的Ruby 和Rails IDE，现在，他们正式发布RubyMine 1.0 Beta版本，作为1.0正式版的预先版本。你能够马上下载：OS X版本大概75MB，Windows和Linux版本也同时提供下载。 
+    title:       RubyMine 1.0 Beta发布：一个稳定的基于IntelliJ的Ruby和Rails IDE
+    category_id:  1
+    user_id:      13
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+fourteen:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    GWT Designer v7.0 Beta 发布，这是一个支持GWT UI设计的软件，能够运行在Windows，Linux，OS X平台上，这个发布版本将完全支持GWT-Ext (widgets, panels, menus 和layouts)以及UI组件。
+    post:        GWT Designer v7.0 Beta 发布，这是一个支持GWT UI设计的软件，能够运行在Windows，Linux，OS X平台上，这个发布版本将完全支持GWT-Ext (widgets, panels, menus 和layouts)以及UI组件。
+    title:        GWT Designer v7.0 Beta 发布
+    category_id:  1
+    user_id:      14
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+fifteen:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    SAP实验室的一些研究者正在 实现一个能够在SAP NetWeaver 应用服务器ABAP 内运行Ruby 的虚拟机。这个项目名称为：Blue Ruby。这些研究者之前既使用Ruby 也在 SAP 内使用Rails 产品。对于这些开发者，“Blue Ruby 研究项目主要用来创建一个企业级动态语言环境，可以在ABAP虚拟机内使用和运行Ruby编程语言。” 
+    post:        SAP实验室的一些研究者正在 实现一个能够在SAP NetWeaver 应用服务器ABAP 内运行Ruby 的虚拟机。这个项目名称为：Blue Ruby。这些研究者之前既使用Ruby 也在 SAP 内使用Rails 产品。对于这些开发者，“Blue Ruby 研究项目主要用来创建一个企业级动态语言环境，可以在ABAP虚拟机内使用和运行Ruby编程语言。” 
+    title:       Blue Ruby 一个ABAP内的Ruby 虚拟机
+    category_id:  1
+    user_id:      15
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+sixteen:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    今天，Palm Pre 在Web 2.0展会上展示，宣布大部分开发者将获得Palm提供的软件开发工具Mojo SDK for WebOS，用来为Palm Pre手机创建应用。在未来，其他的移动设备也能运行Palm webOS。 。
+    post:        今天，Palm Pre 在Web 2.0展会上展示，宣布大部分开发者将获得Palm提供的软件开发工具Mojo SDK for WebOS，用来为Palm Pre手机创建应用。在未来，其他的移动设备也能运行Palm webOS。 
+    title:       Palm Pre 在Web 2.0展会上展示
+    category_id:  1
+    user_id:      5
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1   
+    
+seventeen:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    Portable Python 1.1 发布。Portable Python 是为便携设备预先设置的Python 语言，让你能够在任何便携设备上拥有python 环境，只需要下载并解压到你的便携设备上，10分钟之内就能写一个python 应用。 
+    post:        Portable Python 1.1 发布。Portable Python 是为便携设备预先设置的Python 语言，让你能够在任何便携设备上拥有python 环境，只需要下载并解压到你的便携设备上，10分钟之内就能写一个python 应用。 
+    title:       Portable Python 1.1 发布：针对便携设备
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+eighteen:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    研究表明，如果偶尔上网做一些与工作无关的事，员工的工作效率就会更高，Brent Coker博士领导的团队对300位工作人员进行了调查研究，其中70%的人会在工作时上网做一些私人活动，比如看新闻、玩游戏或是上YouTube，但是这并不会影响他们的工作效率，相反，其工作效率比其它人整体高出9%。
+    post:        研究表明，如果偶尔上网做一些与工作无关的事，员工的工作效率就会更高，Brent Coker博士领导的团队对300位工作人员进行了调查研究，其中70%的人会在工作时上网做一些私人活动，比如看新闻、玩游戏或是上YouTube，但是这并不会影响他们的工作效率，相反，其工作效率比其它人整体高出9%。
+    title:       研究表明上班时适度上网可以提高工作效率
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+ninteen:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    据纳斯达克官方网站报道，搜狐旗下网络游戏公司畅游（股票交易代码为“CYOU”）今天登陆纳斯达克全球精选市场，北京时间晚上9点30分，畅游董事兼首席执行官王滔敲响了纳斯达克开市钟。此次融资发行价16美元，开盘价22.06美元，畅游圈回 1亿多美元，虽然低于巨人集团的10亿美金，但是在经济低迷情况下，已属不错。
+    post:        据纳斯达克官方网站报道，搜狐旗下网络游戏公司畅游（股票交易代码为“CYOU”）今天登陆纳斯达克全球精选市场，北京时间晚上9点30分，畅游董事兼首席执行官王滔敲响了纳斯达克开市钟。此次融资发行价16美元，开盘价22.06美元，畅游圈回 1亿多美元，虽然低于巨人集团的10亿美金，但是在经济低迷情况下，已属不错。
+    title:       畅游成功上市纳斯达克 搜狐旗帜下首次拥有两家上市公司
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+twenty:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    ICEfaces 1.8 包含主题功能，这是一个完善。不必担心，除了350处修复和增强外，我们也加入了大量的新特性。但很多的开发时间我们花在让ICEfaces比以往任版本候都要更好，更简单，更健壮。在这方面，我们已经取得了重大进展。
+    post:        ICEfaces 1.8 包含主题功能，这是一个完善。不必担心，除了350处修复和增强外，我们也加入了大量的新特性。但很多的开发时间我们花在让ICEfaces比以往任版本候都要更好，更简单，更健壮。在这方面，我们已经取得了重大进展。
+    title:       ICEFaces 1.8 正式发布！
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1     
+
+twentyone:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    据国外媒体报道，Twitter联合创始人比兹·斯通(Biz Stone)近日对外证实，前谷歌首席视觉设计师道格·鲍曼(Doug Bowman)将出任微型博客服务Twitter创意总监。截至目前，斯通一直担任创意总监一职。 
+    post:        据国外媒体报道，Twitter联合创始人比兹·斯通(Biz Stone)近日对外证实，前谷歌首席视觉设计师道格·鲍曼(Doug Bowman)将出任微型博客服务Twitter创意总监。截至目前，斯通一直担任创意总监一职。 
+    title:       前谷歌首席视觉设计师出任Twitter创意总监
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+twentytow:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    你是否是一个不会管理自己社会网络数据的人呢？chi.mp的到来将会给你带来新的亮点。之前只有内部测试，目前chi.mp已经面向公众开放了。 chi.mp取content Hub & Identity Management Platform能够让人们将自己所有在网络上的东西聚合在一起，chi.mp目前提供给每个用户一个顶级域名（**.mp，不错哟，赶紧去申请吧）,并且用户可以完全控制在这个域名上要放置的内容，也就是建立一个"social hub"。
+    post:        你是否是一个不会管理自己社会网络数据的人呢？chi.mp的到来将会给你带来新的亮点。之前只有内部测试，目前chi.mp已经面向公众开放了。 chi.mp取content Hub & Identity Management Platform能够让人们将自己所有在网络上的东西聚合在一起，chi.mp目前提供给每个用户一个顶级域名（**.mp，不错哟，赶紧去申请吧）,并且用户可以完全控制在这个域名上要放置的内容，也就是建立一个"social hub"。
+    title:       chi.mp存储你的网络身份证!
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+twentythree:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    据iSuppli统计，Intel的全球处理器市占率在08年的所有四个季度里都表现出增长趋势，而AMD则变化不大。分析者认为Intel市占率持续增 加的最大功臣是Atom系列处理器。其它产品特别是高端桌面平台和服务器平台的产品也长势喜人。截至去年第四季度，Intel的市占率为81.8%。
+    post:        据iSuppli统计，Intel的全球处理器市占率在08年的所有四个季度里都表现出增长趋势，而AMD则变化不大。分析者认为Intel市占率持续增 加的最大功臣是Atom系列处理器。其它产品特别是高端桌面平台和服务器平台的产品也长势喜人。截至去年第四季度，Intel的市占率为81.8%。
+    title:       Intel对AMD 81.8%:10.6%
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+twentyfour:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    昨日，VMware 将旗下的虚拟机软件 VMware Workstation 更新到了 6.5.2 版本。该版本支持一些新的客户系统和 Intel 的 Nehalem 处理器，并且修正了之前版本中存在的安全性问题及其他已知问题。
+    post:        昨日，VMware 将旗下的虚拟机软件 VMware Workstation 更新到了 6.5.2 版本。该版本支持一些新的客户系统和 Intel 的 Nehalem 处理器，并且修正了之前版本中存在的安全性问题及其他已知问题。
+    title:       VMware Workstation 更新到 6.5.2
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1     
+
+twentyfive:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    根据《广告时代》报道，微软已经选择了广告代理商智威汤逊（JWT），来负责其新搜索引擎的广告推广工作。这款新搜索引擎将采用Kumo品牌。预计广告最早将从今年6月开始投放，内容涵盖电视广告、在线广告、印刷品广告和广播广告。
+    post:        根据《广告时代》报道，微软已经选择了广告代理商智威汤逊（JWT），来负责其新搜索引擎的广告推广工作。这款新搜索引擎将采用Kumo品牌。预计广告最早将从今年6月开始投放，内容涵盖电视广告、在线广告、印刷品广告和广播广告。
+    title:       微软花费1亿美元为新搜索引擎做广告
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+twentysix:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    最初版本只是博客（http://hantsy.cublog.cn）文章的集合，一些关于 Stripes 框架使用的简单介绍。为了阅读方便，现在提供 pdf 版本以下载。
+    post:        最初版本只是博客（http://hantsy.cublog.cn）文章的集合，一些关于 Stripes 框架使用的简单介绍。为了阅读方便，现在提供 pdf 版本以下载。
+    title:       我的第一本免费书籍《Stripes 快速入门》正式提供下载
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+twentyseven:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    各大视频网站在如今已经成了网友在线收看美剧、日韩剧的“捷径”，也造就了不少在内地拥有超高人气的海外明星。不过，影视剧品种丰富、内容新鲜的各大视频网站的逍遥日子，随着国家广电总局日前出台的《关于加强互联网视听节目内容管理的通知》而走到了尽头。《通知》中明确规定，“未取得许可证的电影、电视剧、动画片、理论文献影视片，一律不得在互联网上传播”。
+    post:        各大视频网站在如今已经成了网友在线收看美剧、日韩剧的“捷径”，也造就了不少在内地拥有超高人气的海外明星。不过，影视剧品种丰富、内容新鲜的各大视频网站的逍遥日子，随着国家广电总局日前出台的《关于加强互联网视听节目内容管理的通知》而走到了尽头。《通知》中明确规定，“未取得许可证的电影、电视剧、动画片、理论文献影视片，一律不得在互联网上传播”。
+    title:       广电总局出台通知 无证影视剧网上禁播
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+twentyeight:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    据国外媒体报道，《福布斯》杂志网络版周三评出了2009年最值得期待的20款游戏，其中包括《蝙蝠侠》、《模拟人生》和《战神》等经典游戏的最新力作。
+    post:        据国外媒体报道，《福布斯》杂志网络版周三评出了2009年最值得期待的20款游戏，其中包括《蝙蝠侠》、《模拟人生》和《战神》等经典游戏的最新力作。
+    title:       福布斯:09年最令人期待20款游戏/组图
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1     
+
+thirty:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    DotProject是一个免费的开源软件，一个基于WEB的PHP软件系统，做为一个项目管理的Framework，它包含了如下模块：公司、项目、任务（带甘特图）、论坛、文档、工作日历、联系人表、投票、帮助和多语言支持、用户/模块权限、主题等等模块，以简洁统一的界面满足了多种复杂的管理需求。
+    post:        DotProject是一个免费的开源软件，一个基于WEB的PHP软件系统，做为一个项目管理的Framework，它包含了如下模块：公司、项目、任务（带甘特图）、论坛、文档、工作日历、联系人表、投票、帮助和多语言支持、用户/模块权限、主题等等模块，以简洁统一的界面满足了多种复杂的管理需求。
+    title:       sourceforge优秀项目介绍之五十一：DotProject 项目管理工具
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+thirtyone:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    Grails Flex Scaffold 0.1.1发布，这次发布的唯一目标是支持Grails 1.1，所以这个版本没有什么新的特性，我们将会把我们的重点放在GFSv0.2。
+    post:        Grails Flex Scaffold 0.1.1发布，这次发布的唯一目标是支持Grails 1.1，所以这个版本没有什么新的特性，我们将会把我们的重点放在GFSv0.2。
+    title:        Grails Flex Scaffold 0.1.1发布
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 1 
+
+thirtytwo:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  live
+    raw_post:    TeamDev宣布QuipuKit 1.6发布。QuipuKit是一款高端的JSF商业类库。这次发布致力于将QuipuKit和Jboss的RichFaces类库的兼容性问题。除先前与Ajax4jsf的Ajax特性兼容后 (现在已经属于RichFaces了)，这次还保证了RichFaces组件与QuipuKit组件的任意整合。现在你可以在同一个页面或组件容器中，随意引用这两个类库中各种组件，开发起来更加得心应手。
+    post:        TeamDev宣布QuipuKit 1.6发布。QuipuKit是一款高端的JSF商业类库。这次发布致力于将QuipuKit和Jboss的RichFaces类库的兼容性问题。除先前与Ajax4jsf的Ajax特性兼容后 (现在已经属于RichFaces了)，这次还保证了RichFaces组件与QuipuKit组件的任意整合。现在你可以在同一个页面或组件容器中，随意引用这两个类库中各种组件，开发起来更加得心应手。
+    title:       QuipuKit 1.6发布——可兼容RichFaces组件
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 3 
+
+thirtythree:   
+    created_at:  <%= 1.days.ago.to_s :db  %>
+    updated_at:  <%= 1.days.ago.to_s :db  %>
+    raw_post:    国外媒体报道，作为全球最大的搜索引擎，谷歌拥有拥有数量众多、规模庞大的服务器系统，但外界却知之甚少。周三，谷歌首次公开了其服务器设计的神秘面纱。 
+    post:        国外媒体报道，作为全球最大的搜索引擎，谷歌拥有拥有数量众多、规模庞大的服务器系统，但外界却知之甚少。周三，谷歌首次公开了其服务器设计的神秘面纱。 
+    title:       揭秘谷歌服务器设计：用电池做备用电源
+    category_id:  1
+    user_id:      3
+    published_as: live
+    published_at: <%= 1.days.ago.to_s :db  %>
+    group_id: 5

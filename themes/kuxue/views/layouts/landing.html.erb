@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>半亩方塘 - 学如驾车登山，不进就退；学如逆水行舟，不进则退</title>
+	<%= javascript_include_tag :defaults %> 
+	<%=javascript_include_tag "prototip-min", :plugin => "community_engine"%>
+	<%=stylesheet_link_tag 'prototip', :media => 'screen', :plugin => "community_engine"%>
+	<link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
+	<link rel="stylesheet" href="/stylesheets/landing.css" type="text/css" media="screen, projection">
+<body>
+	<div class='container'>
+		<div class='head'> 
+			<div class='span-8'>
+			  <span class='logo'><img src="/images/logo.gif" width="280" height="70" alt="半亩方塘" /></span>  
+			</div>
+			<div class='span-16 last login'>
+	  		   	<% if logged_in? -%>
+				    	<%= render :partial => 'shared/user_menu'%>
+				    <% else -%>
+				      <h2><%=:welcome_message.l(:login_link => (link_to :log_in.l, login_path), :signup_link => (link_to :sign_up.l, signup_path))%></h2>
+					<% end -%>
+			</div>
+		</div> 
+
+		<div class='content'>
+			 <%= yield %> 
+		</div>  
+		
+		<%= render :partial => '/shared/footer' %>
+
+	</div>
+</body>
+</head> 
+</html>

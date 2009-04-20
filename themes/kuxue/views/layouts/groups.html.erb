@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title><%= page_title %></title> 
+	<link href="/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+	<%= yield :head_tags %>
+	<%= render :partial => '/shared/stylesheets_and_scripts' %>
+</head> 
+<body>
+	<div class='container'>
+		<div class='span-24'>
+			<%= render :partial => '/shared/header' %>
+		</div>
+		<div class='span-24'> 
+			<%= render :partial => '/shared/notice' %> 
+        </div> 
+		<%= render :partial => '/shared/group_header' %>
+        <div class='span-16'> 
+         	<%= render :partial => '/shared/nav_bar' %>
+			<div class='span-16 last'>
+	 		 <%= yield %>  
+			</div> 
+        </div>   
+		 <div class='span-7 last sidebar'> 
+           <%= yield :sidebar %>
+		 </div>
+		<div class='span-24'> 
+		 <%= render :partial => '/shared/footer' %>  
+        </div>
+
+	</div>
+	<div id="ajax-indicator" style="display:none;"><span><%= :label_loading.l %></span></div>
+
+</body>
+</html>

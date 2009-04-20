@@ -1,0 +1,32 @@
+<div class="contextual">
+<%= link_to(:button_edit.l, {:action => 'edit', :page => @page.title}, :class => 'icon icon-edit') %>
+<%= link_to(:label_history.l, {:action => 'history', :page => @page.title}, :class => 'icon icon-history') %>
+</div>
+
+<h2><%= @page.pretty_title %></h2>
+
+<p>
+<%= :label_version.l %> <%= link_to @annotate.content.version, :action => 'index', :page => @page.title, :version => @annotate.content.version %>
+<em>(<%= @annotate.content.author ? @annotate.content.author.login : "anonyme" %>, <%= @annotate.content.updated_on.to_s(:db) %>)</em>
+</p>
+
+<% colors = Hash.new {|k,v| k[v] = (k.size % 12) } %>
+
+<table class="filecontent annotate CodeRay ">
+<tbody>
+<% line_num = 1 %>
+<% @annotate.lines.each do |line| -%>
+<tr class="bloc-<%= colors[line[0]] %>">
+    <th class="line-num"><%= line_num %></th>
+    <td class="revision"><%= link_to line[0], :controller => 'wikis', :action => 'page', :group_id => @group, :page => @page.title, :version => line[0] %></td>
+    <td class="author"><%= line[1].login if line[1] %></td>
+    <td class="line-code"><pre><%=h line[2] %></pre></td>
+</tr>
+<% line_num += 1 %>
+<% end -%>
+</tbody>
+</table>
+
+<% content_for :header_tags do %>
+<%= stylesheet_link_tag 'scm' %>
+<% end %>

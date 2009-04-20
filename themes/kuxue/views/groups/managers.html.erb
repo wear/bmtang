@@ -1,0 +1,5 @@
+<% content_for :tabs do -%> 
+	<%= topnav_tab '所有成员', {:url => members_group_path(@group),:section => 'activity'}%>
+	<%= topnav_tab '管理员', {:url => managers_group_path(@group),:class => 'current'}%>
+	<%= topnav_tab '待定成员', {:url => pending_members_group_path(@group),:section => 'activity'}%>
+<% end -%> 

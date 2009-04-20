@@ -1,0 +1,17 @@
+<% content_for :tabs do -%>
+	<%= topnav_tab '<<返回', {:url => page_group_wiki_path(@group,:page => @page.pretty_title) }%> 
+	<%= topnav_tab '重命名', {:url => '#',:section => 'wiki'}%>
+<% end -%>
+
+<h2><%= :button_rename.l %>: <%= @original_title %></h2>
+
+<%= error_messages_for 'page' %>
+
+<% labelled_tabular_form_for :wiki_page, @page, :url => { :action => 'rename' } do |f| %>
+<div class="box">
+<p><%= f.text_field :title, :required => true, :size => 40  %></p>
+<p><%= f.check_box :redirect_existing_links %></p>
+<p><%= f.text_field :parent_title, :size => 40  %></p>
+</div>
+<%= submit_tag :button_rename.l %>
+<% end %>

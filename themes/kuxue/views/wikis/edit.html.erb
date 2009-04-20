@@ -1,0 +1,25 @@
+<% content_for :tabs do -%>
+	<%= topnav_tab '<<返回', {:url => page_group_wiki_path(@group,:page => @page.pretty_title) }%> 
+	<%= topnav_tab '编辑', {:url => '#',:section => 'wiki'}%>
+<% end -%>
+
+<h2><%= @page.pretty_title %></h2>
+<% form_for :content, @content, :url => group_wiki_path(@group,:page => @page.pretty_title ), :html => {:id => 'wiki_form',:method => :put} do |f| %>   
+<%= render :partial => 'wiki_form',:locals => { :f => f } %> 
+<p><label><%= :field_comments.l %></label><br /><%= f.text_field :comments,:value => nil, :size => 40 %></p> 
+<p><%= submit_tag :button_save.l %>
+   <%#= link_to_remote :label_preview.l,{:url => preview_group_wiki_path(@group,:page => @page.pretty_title), 
+                         :method => 'post',
+                         :update => 'preview',
+                         :with => "Form.serialize('wiki_form')",
+                         :complete => "Element.scrollTo('preview')"},
+                         :accesskey => accesskey(:preview) %></p>
+<% end %>
+<% if false %>
+<div id="preview" class="wiki"></div>
+<% end %>
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'scm' %>
+<% end %>
+
+<% html_title @page.pretty_title %>

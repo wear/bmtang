@@ -1,0 +1,10 @@
+<% content_for :tabs do -%>
+	<%=topnav_tab "目录",{:url => page_list_group_wiki_path(@group),:section => 'wiki'}%>
+	<%=topnav_tab '新建页面',{:url => new_page_group_wiki_path(@group)} %>                                                      
+<% end -%>
+<h3>目录</h3>
+	<ul>
+	<% @group.wiki.pages.each do |page| -%>
+		<li><%=link_to page.title,page_group_wiki_path(@group,:page => page.title) %></li>
+	<% end -%>
+	</ul>

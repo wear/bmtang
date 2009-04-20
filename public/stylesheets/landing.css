@@ -1,0 +1,52 @@
+/*
+   landing.css
+   elearning
+   
+   Created by Stephen kong on 2009-04-01.
+   Copyright 2009 __MyCompanyName__. All rights reserved.
+*/                               
+
+@import url('common.css');     
+
+body {  
+   background: #E2E2E2 url('/images/bg/header-main.gif') repeat-x top ;
+} 
+
+.logo{ 
+	font-weight: bold; 
+}
+
+.head{          
+	height: 69px;
+	margin-top:180px;
+}
+
+.login{
+	padding-top:40px;
+} 
+
+.login h2{
+	font-size:14px;
+	color:white;
+}
+
+.content{
+  background: #F2F2F2;
+  height: 280px;
+}
+
+.group_list{
+   margin:10px 100px 10px 10px;
+}            
+
+.group_list li{ 
+	float:left;
+	list-style-type: none;
+	padding:10px;
+	width:80px; 
+	text-align:center;
+}  
+
+li.new_group{
+	float:right;
+}

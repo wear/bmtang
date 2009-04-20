@@ -1,0 +1,18 @@
+<div class="contextual">
+<%= link_to(:button_edit.l, {:action => 'edit', :page => @page.title}, :class => 'icon icon-edit') %>
+<%= link_to(:label_history.l, {:action => 'history', :page => @page.title}, :class => 'icon icon-history') %>
+</div>
+
+<h2><%= @page.pretty_title %></h2>
+
+<p>
+<%= :label_version.l %> <%= link_to @diff.content_from.version, :action => 'page', :page => @page.title, :version => @diff.content_from.version %>
+<em>(<%= @diff.content_from.author ? @diff.content_from.author.login : "anonyme" %>, <%= @diff.content_from.updated_on.to_s(:db) %>)</em>
+&#8594;
+<%= :label_version.l %> <%= link_to @diff.content_to.version, :action => 'page', :page => @page.title, :version => @diff.content_to.version %>/<%= @page.content.version %>
+<em>(<%= @diff.content_to.author ? @diff.content_to.author.login : "anonyme" %>, <%= @diff.content_to.updated_on.to_s(:db) %>)</em>
+</p>
+
+<hr />
+
+<%= html_diff(@diff) %>

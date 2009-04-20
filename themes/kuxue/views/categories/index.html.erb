@@ -1,0 +1,16 @@
+<h3><%= :categories.l %></h3>
+<table border="0" cellspacing="5" cellpadding="5">
+	<tr>
+		<th><%=:name.l%></th>
+		<th><%=:posts.l%></th>
+		<th><%=:actions.l%></th>
+	</tr> 
+	 <% for category in @categories -%>
+	<tr>
+		<td><%=category.name %></td>
+		<td><%=category.posts.size %></td>
+		<td><%=link_to :show.l, category_path(category) %> | <%=link_to :edit.l, edit_category_path(category) %> | <%=link_to :destroy.l, category_path(category), :confirm => :are_you_sure.l, :method => :delete%></td> 
+	</tr> 
+	 <% end -%>
+</table>
+<p><%= link_to :new_category.l, new_category_path%></p>

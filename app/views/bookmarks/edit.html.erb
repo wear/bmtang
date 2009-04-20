@@ -1,0 +1,20 @@
+<h1>Editing bookmark</h1>
+
+<% form_for(@bookmark) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :page %><br />
+    <%= f.text_field :page %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bookmark %> |
+<%= link_to 'Back', bookmarks_path %>

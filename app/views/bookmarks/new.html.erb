@@ -1,0 +1,16 @@
+<h1>新书签</h1>
+<% remote_form_for @bookmark,:url =>  group_wiki_bookmarks_path(@group),:method => :post do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :group_id,:value => @group.id %>
+  <%= f.hidden_field :wiki_page_id,:value => @page.id %>
+  <p>
+    <%=label_tag 'content', :content.l%><br />
+    <%= f.text_area :content,:class=>'bookmark_content' %>
+  </p>
+	<p><%=label_tag 'tags', :tags.l%><br />
+	<%= f.text_field :tag_list %></p>
+  <p>
+    <%= f.submit '保存' %>
+  </p>
+<% end %>
+

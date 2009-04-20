@@ -1,0 +1,16 @@
+			<h3>学堂</h3>
+		 		<ul class='menu'> 
+		 			<li><%=link_to '动态', @group %></li>
+		 			<li><%=link_to '资料库', page_group_wiki_path(@group,:page => @group.wiki.start_page) %>(<%=@group.wiki.pages.size%>)</li>
+					<li><%=link_to '同学',  members_group_path(@group) %>&nbsp;(<%=@group.members.size%>)</li> 
+		 			<% @categories.each do |c| -%>
+		 				<li><%=link_to c.name, group_category_path(@group,c.id) %>&nbsp;(<%=@group.post_count(c)%>)</li>
+		 			<% end -%>
+		 		</ul>
+		 	 <hr />
+			<h3>最新加入学员</h3>
+			  <ul class='recnet_join'>
+				<% @group.recent_members.each do |membership| -%>
+				<li><%=link_to image_tag(membership.avatar_photo_url(:thumb),:height => 48,:width=> 48),membership %><br /><%=link_to membership.login,membership %></li>
+				<% end -%>
+			  </ul>        

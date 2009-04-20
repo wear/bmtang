@@ -1,0 +1,39 @@
+
+<% content_for :tabs do -%>
+	<%= topnav_tab '<<返回', {:url => page_group_wiki_path(@group,:page => @page.pretty_title) }%> 
+	<%= topnav_tab '历史', {:url => '#',:section => 'wiki'}%>
+<% end -%>
+
+<h3><%= @page.pretty_title %> - <%= :label_history.l %></h3>
+
+<% form_tag({:action => "diff"}, :method => :get) do %>
+<table class="list">
+<thead><tr>
+    <th>#</th>
+    <th></th>
+    <th></th>    
+    <th><%= :field_updated_on.l %></th>
+    <th><%= :field_author.l %></th>
+    <th><%= :field_comments.l %></th>
+    <th></th>
+</tr></thead>
+<tbody>
+<% show_diff = @versions.size > 1 %>
+<% line_num = 1 %>
+<% @versions.each do |ver| %>
+<tr class="<%= cycle("odd", "even") %>">
+    <td class="id"><%= link_to ver.version, :action => 'page', :page => @page.title, :version => ver.version %></td>
+    <td class="checkbox"><%= radio_button_tag('version', ver.version, (line_num==1), :id => "cb-#{line_num}", :onclick => "$('cbto-#{line_num+1}').checked=true;") if show_diff && (line_num < @versions.size) %></td>
+    <td class="checkbox"><%= radio_button_tag('version_from', ver.version, (line_num==2), :id => "cbto-#{line_num}", :onclick => "if ($('cb-#{line_num}').checked==true || $('version_from').value > #{ver.version}) {$('cb-#{line_num-1}').checked=true;}") if show_diff && (line_num > 1) %></td>
+    <td align="center"><%= ver.updated_on.to_s(:db) %></td>
+    <td><em><%=  ver.author.login %></em></td>
+    <td><%=h ver.comments %></td>
+    <td align="center"><%= link_to :button_annotate.l, :action => 'annotate', :page => @page.title, :version => ver.version %></td>
+</tr>
+<% line_num += 1 %>
+<% end %>
+</tbody>
+</table>
+<%= submit_tag :label_view_dif.l, :class => 'small' if show_diff %>
+<span class="pagination"><%= pagination_links_full @version_pages, @version_count, :page_param => :p %></span>
+<% end %>

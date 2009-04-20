@@ -1,0 +1,14 @@
+<%= render :partial => '/shared/group_header' %> 
+<div class='span-16'>
+<%=render :partial => 'posts/post'%> 
+<div class='span-13 box prepend-top push-1 pull-1'>
+	<div class="clear"/>
+	<a id="newest_comment"/> 
+	<%=render :partial => 'comments/comment', :collection => @comments%>       
+	<h2><%= :add_your_comment.l%></h2>
+	<%=render :partial => 'comments/comment_form', :locals => {:commentable => @post}%>
+</div>
+</div>             
+<div class='span-8 last'>
+right-bar
+</div>

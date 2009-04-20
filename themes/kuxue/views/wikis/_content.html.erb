@@ -1,0 +1,38 @@
+<%= breadcrumb(@page.ancestors.reverse.collect {|parent| link_to h(parent.pretty_title), {:page => parent.title}}) %>   
+
+<% if @content.version != @page.content.version %>
+    <p>    
+    <%= link_to(('&#171; ' + :label_previous.l), :action => 'group', :page => @page.title, :version => (@content.version - 1)) + " - " if @content.version > 1 %>
+    <%= "#{:label_version.l} #{@content.version}/#{@page.content.version}" %>
+    <%= '(' + link_to('diff', :controller => 'wikis', :action => 'diff', :page => @page.title, :version => @content.version) + ')' if @content.version > 1 %> - 
+    <%= link_to((:label_next.l + ' &#187;'), :action => 'index', :page => @page.title, :version => (@content.version + 1)) + " - " if @content.version < @page.content.version %>
+    <%= link_to(:label_current_version.l, :action => 'page', :page => @page.title) %>
+    <br />
+    <em><%= @content.author ? @content.author.login : "anonyme" %>, <%= @content.updated_on.to_s(:db) %> </em><br />
+    <%=h @content.comments %>
+    </p>
+    <hr />
+<% end %>
+
+<%=@page.ancestors.reverse.collect {|parent|  parent.title }%> 
+<div class="wiki">
+  <%= content.text %>
+</div>     
+
+<% if controller.action_name == 'page' && @member -%>                                   
+	<% content_for :header_tags do -%>
+	
+	<script src="/facebox/facebox.js" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8">
+		jQuery(document).ready(function($) {
+		  $('a[rel*=facebox]').facebox()
+		})
+	</script>
+	<% end -%> 
+	<%=link_to '书签',new_group_wiki_bookmark_path(@group,:page => @page.pretty_title),:rel => "facebox[.bolder]"%>
+<% end -%>
+
+<% other_formats_links do |f| %>
+	<%= f.link_to 'HTML', :url => {:page => @page.title, :version => @content.version} %>
+	<%= f.link_to 'TXT', :url => {:page => @page.title, :version => @content.version} %>
+<% end %>

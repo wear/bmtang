@@ -1,0 +1,12 @@
+	<p><%=label_tag 'name', :name.l%><br />
+	<%= f.text_field :title %></p><p>
+	<%=label_tag 'description', :description.l%><br />
+	<%= f.text_area :description%></p> 
+	<p><%=label_tag 'tags', :tags.l%><br />
+ 	<%= f.text_field :tag_list %></p>
+	<p><%=label_tag 'groupicon', :groupicon.l%><br />
+ 	<%= f.file_field :icon_data %></p>
+<p><%=label_tag 'group-level', '小组权限'%><br />
+	<%= f.check_box :member_auth %>需要认证</p>
+<p><%=label_tag 'content-level', '内容权限'%><br />
+	<%= f.check_box :content_auth %>仅管理员可编辑</p>     
