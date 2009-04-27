@@ -1,4 +1,10 @@
 # Here goes readme
 Production sever:
 
-http://bmtang.cn
+http://bmtang.cn        
+
+CE modify log:
+
+1: user.rb: remove trace
+2: session.rb: remove trace at line 27 
+3: remove activity_tracker, use custom activity_tracker plugin
