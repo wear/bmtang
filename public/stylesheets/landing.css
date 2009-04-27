@@ -9,20 +9,20 @@
 @import url('common.css');     
 
 body {  
-   background: #E2E2E2 url('/images/bg/header-main.gif') repeat-x top ;
+	FONT-SIZE: 12px;
+	COLOR: #222227;
+	LINE-HEIGHT: 150%;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	background-color: #efefef;   
 } 
 
 .logo{ 
-	font-weight: bold; 
+   text-align:center;
 }
 
-.head{          
-	height: 69px;
-	margin-top:180px;
-}
 
 .login{
-	padding-top:40px;
+	padding-top:10px;
 } 
 
 .login h2{
@@ -43,9 +43,17 @@ body {
 	float:left;
 	list-style-type: none;
 	padding:10px;
-	width:80px; 
+	width:100px; 
 	text-align:center;
-}  
+} 
+
+.title{
+	font-size:14px;
+} 
+
+.group_list li img{
+	margin:10px 0px;
+}
 
 li.new_group{
 	float:right;

@@ -1,0 +1,41 @@
+- @meta = { :description => AppConfig.meta_description, :keywords => AppConfig.meta_keywords, :robots => AppConfig.robots_meta_list_content }
+
+-unless logged_in?
+  =render :partial => 'base/homepage_banner_message'
+
+#yui-main
+  .yui-b
+    .box.hfeed
+      %h3
+        =:recent_posts.l
+      = render :partial => 'posts/post', :collection => @posts
+
+.yui-b  
+  .box
+    %h3= :explore_site.l :site => AppConfig.community_name
+    %ul.list.checks
+      - Category.find(:all).each do |c|
+        %li= link_to c.name, category_path(c)
+      %li= link_to :whats_popular.l, popular_url, {:class => 'popular'}
+      %li= link_to :find_an_expert.l, skills_path, {:class => 'users'}
+
+  .box.alt
+    %h3
+      = :whats_hot.l
+      
+    %ul.list.page
+      -@popular_posts.each do |post|
+        =render :partial => 'posts/sidebar_post', :locals => {:post => post}
+    %h6.all
+      %a{:href=>"/popular"}= :see_all.l
+
+  .box.alt
+    %h3
+      =:featured_writer.l
+    -@featured_writers.each do |user|
+      =render :partial => "users/sidebar_user", :locals => {:user => user}
+
+  .box.alt
+    %h3= :active_users.l
+    -@active_users.each do |user|    
+      =render :partial => "users/sidebar_user", :locals => {:user => user}      

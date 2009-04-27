@@ -1,10 +1,21 @@
-			<div class='span-18'>
-			   <h1><%=link_to AppConfig.community_name,'/',:class=>'logo'%></h1>    
-			</div>
-			<div class='span-6 last login'>
-			   	<% if logged_in? -%>
-			    	<%= render :partial => 'shared/user_menu'%>
-			    <% else -%>
-			      <h2><%=:welcome_message.l(:login_link => (link_to :log_in.l, login_path), :signup_link => (link_to :sign_up.l, signup_path))%></h2>
-				<% end -%> 
-			</div>
+<div class='nav span-24'>
+	<div class='span-5 logo'>
+		<%=link_to image_tag('logo.png'),root_path %>
+	</div>
+	<div class='line span-1'>
+		<%= image_tag 'bg/line_1.gif'%> 
+	</div>
+	<div class='span-10 login'>
+		 <h2><%=link_to '首页',root_path %> <%=link_to '课堂','#'%> <%=link_to '同学','#'%> <%=link_to '便条','#'%></h2>
+	</div>
+	<div class='line span-1'>
+		<%= image_tag 'bg/line_1.gif'%> 
+	</div>
+	<div class='span-6 last login'>
+	   	<% if logged_in? -%>
+		    	<%= render :partial => 'shared/user_menu'%>
+		    <% else -%>
+		      <h2><%=:welcome_message.l(:login_link => (link_to :log_in.l, login_path), :signup_link => (link_to :sign_up.l, signup_path))%></h2>
+			<% end -%>
+	</div>
+</div>

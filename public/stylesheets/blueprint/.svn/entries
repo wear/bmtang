@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="10"
+   name=""
+   committed-date="2009-03-20T05:11:29.601643Z"
+   url="http://www.skung.com/svn/elearning/trunk/public/stylesheets/blueprint"
+   last-author="wear"
+   kind="dir"
+   repos="http://www.skung.com/svn/elearning"
+   revision="46"/>
+<entry
+   committed-rev="10"
+   name="print.css"
+   text-time="2009-03-02T10:35:48.000000Z"
+   committed-date="2009-03-20T05:11:29.601643Z"
+   checksum="ab3584eb957750055a3201a5dd5f79c9"
+   last-author="wear"
+   kind="file"
+   prop-time="2009-03-20T04:54:22.000000Z"/>
+<entry
+   committed-rev="10"
+   name="ie.css"
+   text-time="2009-03-02T10:35:48.000000Z"
+   committed-date="2009-03-20T05:11:29.601643Z"
+   checksum="c026bf7db7e7d26ff19a96323ca7e646"
+   last-author="wear"
+   kind="file"
+   prop-time="2009-03-20T04:54:22.000000Z"/>
+<entry
+   committed-rev="10"
+   name="screen.css"
+   text-time="2009-03-02T10:35:48.000000Z"
+   committed-date="2009-03-20T05:11:29.601643Z"
+   checksum="e2f7ce82db886da8f91e983a4a15b782"
+   last-author="wear"
+   kind="file"
+   prop-time="2009-03-20T04:54:22.000000Z"/>
+</wc-entries>

@@ -1,18 +1,13 @@
 @import url('common.css');   
 
 body { 
-    background:  url('/images/bg/header-application.gif') repeat-x top ;
+	FONT-SIZE: 12px;
+	COLOR: #222227;
+	LINE-HEIGHT: 150%;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	background-color: #efefef;
 }    
 
-a.logo{
-display: block;
-font-size: 108%;
-padding: 15px 10px;
-text-transform: uppercase;
-font-weight: bold;
-color: white;
-text-decoration: none;
-} 
 
 .group_name li{
    list-style:none;

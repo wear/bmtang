@@ -1,13 +1,17 @@
 <ul class='group_list'>  
 <% @groups.each do |group| -%>
 	<li>
-		<%= link_to group.title,group %> <br />
-		<%= group_icon_for(group)%><br />
+		<%= link_to group.title,group,:class=> 'title' %> <br />
+		<div class='group_logo'>
+		   <%= group_icon_for(group)%> 
+		</div>
 		<%= truncate(h(group.description),:length => 40) %>
 	</li> 
 <% end -%>
 <li class='new_group'>   
-	<%=link_to :create_group.l, new_group_path%> <br />
+	<%=link_to :create_group.l, new_group_path,:class=> 'title'%> <br /> 
+	<div class='group_logo'>
 	<%= image_tag("new_group.jpg")%>
+	</div>
 </li>                                 
 </ul>

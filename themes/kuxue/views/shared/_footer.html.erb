@@ -1,12 +1,17 @@
-		<div id="CommunityFooter">
-	    	<ul>
-				<li><a href="/" title="<%=AppConfig.community_name + :home.l%>"><%= :home.l%></a></li>
-					<%if !logged_in? -%>
-					<li><%=link_to :log_in.l , login_path %></li>
-					<% else -%>
-					<li><a href="/logout" title="<%=:log_out_of_your.l + AppConfig.community_name  + :account.l%>" ><%=:log_out.l%></a></li> 
-					<% end -%>
-					<li><a href="/about" title="<%=:what_is.l + AppConfig.community_name%>?"><%=:about.l%> </li>
-				   <li><a href="/faq" title="<%=:frequent_asked_questions.l%>"><%=:faq.l%></a></li>
-			</ul>	
-	    </div>     
+<div id="footer" class='span-24'> 
+	<div class='span-16' id='copyright'>
+		半亩方塘 © 2008-2009    中文(简体)
+	</div> 
+	<div class='span-7 last'>
+	<ul>
+		<li><a href="/" title="<%=AppConfig.community_name + :home.l%>"><%= :home.l%></a></li>
+			<%if !logged_in? -%>
+			<li><%=link_to :log_in.l , login_path %></li>
+			<% else -%>
+			<li><a href="/logout" title="<%=:log_out_of_your.l + AppConfig.community_name  + :account.l%>" ><%=:log_out.l%></a></li> 
+			<% end -%>
+			<li><a href="/about" title="<%=:what_is.l + AppConfig.community_name%>?"><%=:about.l%> </li>
+		   <li><a href="/faq" title="<%=:frequent_asked_questions.l%>"><%=:faq.l%></a></li>
+	</ul>
+	</div>	
+</div>
