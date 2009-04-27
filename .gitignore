@@ -3,3 +3,7 @@ log/*.log
 tmp/**/*
 config/database.yml
 db/*.sqlite3
+public/javascripts/all.js
+public/javascripts/app.js
+public/stylesheets/all.css
+public/stylesheets/app.css
