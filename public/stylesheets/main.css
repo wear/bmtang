@@ -5,24 +5,27 @@ body {
 	COLOR: #222227;
 	LINE-HEIGHT: 150%;
 	FONT-FAMILY: Arial, Helvetica, sans-serif;
-	background-color: #efefef;
+	background-image: url(/images/bg/bg.png);
 }    
 
-
+.container{
+   background-color: #f2f2f2;
+}
 .group_name li{
    list-style:none;
    float:left;
    padding:10px;
 }
 
-.title{
-	font-size:14px;
+.title{ 
+	line-height:56px;
+	font-size:18px;
 }
      
 
 #NavBar{
 	margin-top:5px;
-	border-bottom: 1px solid #103D3A;
+	border-bottom: 1px solid #CCCCCC;
 	height:29px;
 }
 
@@ -37,10 +40,10 @@ display: block;
 padding: 5px 10px;
 text-transform: uppercase;
 font-weight: bold; 
-border-right: 1px solid #103D3A;
-border-left: 1px solid #103D3A;
-border-top: 1px solid #103D3A;
-background: #103D3A;  
+border-right: 1px solid #CCCCCC;
+border-left: 1px solid #CCCCCC;
+border-top: 1px solid #CCCCCC;
+background: #999999;  
 color: white;
 text-decoration: none;
 }
@@ -48,7 +51,7 @@ text-decoration: none;
 #NavBar ul li#active a, #NavBar ul li.current a{
 background: #ECEAEB;
 text-decoration: none !important; 
-color:#103D3A;
+color:black;
 }
 
 #NavBar ul li a:hover{text-decoration: underline;} 
@@ -64,6 +67,13 @@ color:#103D3A;
   list-style:none;
   margin-left:15px;
 }
+
+.a6 {
+	color: #999999;
+	font-size: 12px;
+	letter-spacing: 1px;  
+}
+
 .menu li{ 
    width:90px;
    float:left; 
@@ -312,4 +322,10 @@ vertical-align: bottom;
 .bookmark_content{
 	width:300px;
 	height:100px;
+}  
+
+.ag{
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: bold;
 }

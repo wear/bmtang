@@ -12,7 +12,7 @@ body {
 	COLOR: #222227;
 	LINE-HEIGHT: 150%;
 	FONT-FAMILY: Arial, Helvetica, sans-serif;
-	background-color: #efefef;   
+	background-image: url(/images/bg/bg.png); 
 } 
 
 .logo{ 

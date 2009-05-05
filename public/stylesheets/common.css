@@ -1,6 +1,6 @@
 a {
-	color: #6F1600;
 	font-size: 12px;
+	text-decoration: none;
 }
 a:link {
 	color: #333333;
@@ -8,14 +8,31 @@ a:link {
 }
 a:hover {
 	text-decoration: underline;
-	color: #333333;
+	color: #009900;
 }
 a:active {
 	text-decoration: none;
 	color: #000000;
 }
 a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+.ag:link {
+	color: #009900;
+	text-decoration: none;
+}
+.ag:hover {
 	text-decoration: underline;
+	color: #009900;
+}
+.ag:active {
+	text-decoration: none;
+}
+.ag:visited {
+	text-decoration: none;
+	color: #009900;
 }
 
 .group_logo{
@@ -33,8 +50,26 @@ a:visited {
 }
 
 .login a{
-	color:white;
+	color: #FFFFFF;
+	font-size: 14px;
 } 
+
+.login a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.login a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+.login a:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.login a:visited {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
 
 .login h2{
 	font-size:14px;
@@ -69,19 +104,23 @@ a:visited {
 /* 8. COMMUNITY FOOTER                             */
 /* =============================================== */
 
-#footer{    
+#footer{   
+	margin-top:10px;
+	height:60px;
+	line-height:60px;    
 	background:#cccccc;
-	margin-bottom:10px;
-} 
+
+}
 
 #copyright{
    padding:5px;    
 }
 
-#footer ul li{float: left;list-style:none;}
+#footer ul li{
+	float: right;
+	list-style:none;}
 
 #footer li a{
-padding-top: 5px;
 padding-right:10px;
 display: block;
 border-left: 1px solid #ccc;
