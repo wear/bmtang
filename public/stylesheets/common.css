@@ -86,7 +86,7 @@ a:visited {
 	background:url('/images/bg/index_top.jpg') ;
 }
  
-
+th, td, caption {padding:0px;}
 /* =============================================== */
 /* 8. user-menu                             */
 /* =============================================== */

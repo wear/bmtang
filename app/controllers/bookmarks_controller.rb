@@ -51,9 +51,10 @@ class BookmarksController < BaseController
         format.html { redirect_to(@bookmark) }
         format.js { }
         format.xml  { render :xml => @bookmark, :status => :created, :location => @bookmark }
-      else
+      else 
         format.html { render :action => "new" }
-        format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity } 
+        format.js { }
       end
     end
   end

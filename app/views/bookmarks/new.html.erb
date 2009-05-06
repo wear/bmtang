@@ -1,6 +1,8 @@
 <h1>新书签</h1>
 <% remote_form_for @bookmark,:url =>  group_wiki_bookmarks_path(@group),:method => :post do |f| %>
-  <%= f.error_messages %>
+  <div id="errors">
+  	<%= f.error_messages %>
+  </div>
   <%= f.hidden_field :group_id,:value => @group.id %>
   <%= f.hidden_field :wiki_page_id,:value => @page.id %>
   <p>

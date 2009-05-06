@@ -23,7 +23,7 @@
 			<td> <%= group_admin?(member.becomes(LearnUser).membership(@group).admin_role) %><br /></td> 
 			<td> <%= member.email %><br /></td>
 			<td> <%= member.created_at.strftime("%Y-%b-%e") %><br /></td>    
-			<td><% if current_user.becomes(LearnUser).is_mod_of?(@group) -%>
+			<td><% if current_user && current_user.becomes(LearnUser).is_mod_of?(@group) -%>
 				 <%= link_to '编辑',edit_group_member_path(@group,member.id)%><br />
 				<% end -%>
 				</td>

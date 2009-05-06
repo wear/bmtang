@@ -96,6 +96,11 @@ zh:
             tb: "TB"
       
     activerecord:
+        models:
+            bookmark: 书签
+        attributes:
+            bookmark:
+                content: 内容
         errors:
             models:
                 user: 
@@ -116,6 +121,11 @@ zh:
                     attributes:
                       text: 
                           blank: 为空
+                bookmark:
+                    attributes:
+                        content:
+                            blank: 为空
+                            too_short: 太短
             template:
                 header: 出错了
                 body: 请检查以下项目
