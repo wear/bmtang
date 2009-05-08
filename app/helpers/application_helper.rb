@@ -9,11 +9,11 @@ module ApplicationHelper
 
   extend Forwardable
 	
-	def group_icon_for(group)
+	def group_icon_for(group,size)
     if group.icon_exists?
-      image_tag group.asset.public_filename(:thumb)
-    else
-      image_tag('/images/icon/icon_missing_thumb.gif')
+      link_to image_tag(group.asset.public_filename(size.to_sym)),group
+    else  
+      link_to image_tag('/images/unknow-group.gif',:size => calc_size(size)),group
     end
   end 
   
@@ -30,4 +30,14 @@ module ApplicationHelper
     end
   end
   
+  protected
+  
+  def calc_size(size) 
+    case size
+    when 'large'
+      '64x64'
+    else
+      '32x32'
+    end
+  end
 end

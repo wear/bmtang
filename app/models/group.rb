@@ -42,7 +42,7 @@ class Group < ActiveRecord::Base
   end
   
   def recent_members
-    self.members.find(:all,:order => 'accepted_at DESC',:limit => 3)
+    self.members.find(:all,:order => 'accepted_at DESC',:limit => 2)
   end
   
   def set_mod(user)

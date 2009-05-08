@@ -1,25 +1,27 @@
-<div class='span-24 prepend-top'>  
-	<div class='span-15 prepend-1 append-2'>
-		<%= show_description(@group) %>  
-		<% unless logged_in? && current_user.becomes(LearnUser).is_member_of?(@group)%>
-		   - <%=link_to '加入小组',join_group_path(@group),:class=>'ag'%>
-		<% end -%>
+<div id='group_header'>  
+	<div class='g_left'>
+		<div class='title_left'></div>
+		<div class='title_m'>
+		  	<ul>
+				<li class='g-logo'><%= group_icon_for(@group,'thumb') %></li>
+			    <li><%=link_to @group.title,@group,:class=>'title' %> </li>
+			</ul>  
+		</div> 
+		<div class='title-right'></div>	  
 	</div> 
-	<div id='colborder'>
-	<div class='span-2'>  
-		<%= group_icon_for(@group) %>
-	</div>
-	<div class='span-3 last'>  
-	    <%=link_to @group.title,@group,:class=>'title' %>
+	<div class='group_description'>
+		<%= show_description(@group) %>
 		<%= @group.tag_list %><br />
 		<% if logged_in? && current_user.becomes(LearnUser).is_mod_of?(@group) %>
 			<%=link_to '编辑',edit_group_path(@group) %>
 		<% end %>
 		<% if logged_in? && current_user.id == @group.created_by  -%>
 			<%=link_to '删除',group_path(@group),:method => 'delete'%>
+		<% end -%> 
+		<% unless logged_in? && current_user.becomes(LearnUser).is_member_of?(@group)%>
+		   - <%=link_to '加入小组',join_group_path(@group),:class=>'ag'%>
 		<% end -%>
-	</div>
-    	</div>  
+	</div> 
 </div>
 
                 

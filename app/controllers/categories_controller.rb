@@ -15,7 +15,8 @@ class CategoriesController < BaseController
   
   # GET /categories/1
   # GET /categories/1.xml
-  def show  
+  def show 
+    @categories = Category.find(:all) 
     @group = Group.find(params[:id])
     @category = Category.find(params[:category_id])
     @sidebar_right = true

@@ -17,15 +17,20 @@
 			<%= render :partial => '/shared/notice' %> 
         </div> 
 		<%= render :partial => '/shared/group_header' %>
-        <div class='span-15 prepend-1'> 
+		 <div class='span-4 sidebar roundedBox '> 
+          	<%= yield :sidebar %>
+	    	<div class="corner topLeft"></div>
+	    	<div class="corner topRight"></div>
+	    	<div class="corner bottomLeft"></div>
+	    	<div class="corner bottomRight"></div>
+		 </div>
+        <div class='span-16 content'> 
          	<%= render :partial => '/shared/nav_bar' %>
 			<div class='span-15 last'>
 	 		 <%= yield %>  
 			</div> 
         </div>   
-		 <div class='span-7 last sidebar'> 
-           <%= yield :sidebar %>
-		 </div>  
+
 		 <%= render :partial => '/shared/footer' %>
 	</div>
 	<div id="ajax-indicator" style="display:none;"><span><%= :label_loading.l %></span></div>

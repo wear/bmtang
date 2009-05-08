@@ -3,7 +3,7 @@
 		 			<li><%=link_to '动态', @group %></li>
 		 			<li><%=link_to '资料库', page_group_wiki_path(@group,:page => @group.wiki.start_page) %><span class='a6'>(<%=@group.wiki.pages.size%>)</span></li>
 					<li><%=link_to '同学',  members_group_path(@group) %><span class='a6'>(<%=@group.members.size%>)</span></li> 
-		 			<% @categories.each do |c| -%>
+		 			<% Category.find(:all).each do |c| -%>
 		 				<li><%=link_to c.name, group_category_path(@group,c.id) %><span class='a6'>(<%=@group.post_count(c)%>)</span></li>
 		 			<% end -%>
 		 		</ul>

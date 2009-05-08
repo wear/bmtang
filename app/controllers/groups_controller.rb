@@ -13,7 +13,10 @@ class GroupsController < BaseController
   end 
   
   def new
-    @group = Group.new
+    @group = Group.new 
+    respond_to do |wants|
+      wants.html { render :layout => 'application' }
+    end
   end
   
   def edit

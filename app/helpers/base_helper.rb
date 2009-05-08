@@ -21,6 +21,8 @@ module BaseHelper
   			case @controller.action_name
   				when 'activity'
   					title = :activity.l + ' &raquo; ' + app_base + tagline
+  				when 'new'
+  				  title = '新建小组' + ' &raquo; ' + app_base + tagline
   				else 
   					title = @group.title + ' &raquo; ' + app_base + tagline
   			 end

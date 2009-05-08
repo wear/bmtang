@@ -1,3 +1,7 @@
+<% content_for :sidebar do -%> 
+	<%= render :partial => '/shared/group_sidebar' %>
+<% end -%>
+
 <% content_for :tabs do -%>
 	<%=topnav_tab "目录",{:url => page_list_group_wiki_path(@group)}%>
  	<%=topnav_tab "'#{@page.pretty_title}'",{:url => '#',:section => 'wiki'} %> 

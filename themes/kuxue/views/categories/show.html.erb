@@ -3,6 +3,9 @@
    <%= topnav_tab @category.name, {:url => group_category_path(@group,@category.id), :section => @category.id }%>
 <% end -%>
 
+<% content_for :sidebar do -%> 
+	<%= render :partial => '/shared/group_sidebar' %>
+<% end -%>
  
 <div class='span-16'>
 	<%=render :partial => 'posts/post', :collection => @posts%>

@@ -19,7 +19,7 @@ body {
 
 .title{ 
 	line-height:56px;
-	font-size:18px;
+	font-size:28px;
 }
      
 
@@ -40,32 +40,35 @@ display: block;
 padding: 5px 10px;
 text-transform: uppercase;
 font-weight: bold; 
+
+}
+
+#NavBar ul li#active a, #NavBar ul li.current a{ 
 border-right: 1px solid #CCCCCC;
 border-left: 1px solid #CCCCCC;
 border-top: 1px solid #CCCCCC;
-background: #999999;  
-color: white;
-text-decoration: none;
-}
-
-#NavBar ul li#active a, #NavBar ul li.current a{
-background: #ECEAEB;
+padding: 5px 15px;
 text-decoration: none !important; 
 color:black;
 }
 
-#NavBar ul li a:hover{text-decoration: underline;} 
+#NavBar ul li a:hover{text-decoration: underline;color: #009900;} 
 
 
 /*----sidebar------*/ 
-.sidebar{ 
-	padding:10px;
-	border:1px solid #CCCCCC;
+.sidebar{
+	padding:17px; 
+	margin:0px 20px;
+	background-color:#F9F9F9; 
+	border:1px solid #CCCCCC;     
+}
+
+.content{
+	margin-left:10px;
 }    
 
 .sidebar li{
   list-style:none;
-  margin-left:15px;
 }
 
 .a6 {
@@ -84,53 +87,20 @@ color:black;
 .recnet_join li{ 
    text-align:center;  
    float:left;
-   margin:10px 15px; 
+   margin:10px 3px; 
 }
 
-.spiffy{
-	display:block;
-	}
-.spiffy *{
-  display:block;
-  height:1px;
-  overflow:hidden;
-  font-size:.01em;
-  background:#EEEEEE}
-.spiffy1{
-  margin-left:3px;
-  margin-right:3px;
-  padding-left:1px;
-  padding-right:1px;
-  border-left:1px solid #ededed;
-  border-right:1px solid #ededed;
-  background:#ededed}
-.spiffy2{
-  margin-left:1px;
-  margin-right:1px;
-  padding-right:1px;
-  padding-left:1px;
-  border-left:1px solid #ededed;
-  border-right:1px solid #ededed;
-  background:#ededed}
-.spiffy3{
-  margin-left:1px;
-  margin-right:1px;
-  border-left:1px solid #ededed;
-  border-right:1px solid #ededed;}
-.spiffy4{
-  border-left:1px solid #ededed;
-  border-right:1px solid #ededed}
-.spiffy5{
-  border-left:1px solid #ededed;
-  border-right:1px solid #ededed}
-.spiffyfg{
-  background:#EEEEEE;
-  padding:0px 20px;   
-}
+.roundedBox {position:relative;}
 
-.spiffyfg ul { margin:0px;padding:0px 30px;}
+.corner {position:absolute; width:17px; height:17px;}
 
-.spiffyfg ul li{ list-style:none;}
+.topLeft {top:-1px; left:-1px; background-position:-1px -1px;}
+.topRight {top:-1px; right:-1px; background-position:-19px -1px;}
+.bottomLeft {bottom:-1px; left:-1px; background-position:-1px -19px;}
+.bottomRight {bottom:-1px; right:-1px; background-position:-19px -19px;}
+
+.sidebar .corner {background-image:url(/images/bg/corners.gif)};
+
 /* ---- recnt activity ---- */
 dl{   
 	border-bottom: 1px solid #D9D9D9;
@@ -313,7 +283,7 @@ html>body #ajax-indicator { position: fixed; }
 #ajax-indicator span {
 background-position: 0% 40%;
 background-repeat: no-repeat;
-background-image: url(../images/loading.gif);
+background-image: url(/images/loading.gif);
 padding-left: 26px;
 vertical-align: bottom;
 }
@@ -328,4 +298,53 @@ vertical-align: bottom;
 	font-size: 12px;
 	text-decoration: none;
 	font-weight: bold;
+}
+
+/*---- group -------*/
+#group_header{
+	clear:both;
+	padding:10px;
+	height:65px;
+	width:100%;
+} 
+
+.g_left{ 
+	float:left;
+	background: url(/images/bg/title_bg_m.jpg) repeat-x;
+} 
+
+.title_left{  
+	float:left; 
+	width:26px; 
+	height:58px;
+  background: url(/images/bg/title_bg_l.jpg); 
+} 
+
+.title_m{
+	float:left; 
+}
+
+.title-right{ 
+	float:left;
+	width:26px; 
+	height:58px;
+   background: url(/images/bg/title_bg_r.jpg);  
+}
+.g_left ul li{
+	float:left;
+	list-style:none;
+	margin-left:10px;
+}
+
+.group_description{
+	float:left; 
+	margin-left:30px;
+}
+
+.g-logo{   
+	height:48px; 
+	width:54px;   
+	text-align:center;
+    padding-top:3px;
+	background:#cbcbcb;
 }
