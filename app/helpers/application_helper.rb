@@ -37,7 +37,7 @@ module ApplicationHelper
     when 'large'
       '64x64'
     else
-      '32x32'
+      '48x48'
     end
   end
 end
