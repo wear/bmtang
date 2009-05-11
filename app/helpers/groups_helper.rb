@@ -4,7 +4,7 @@ module GroupsHelper
   end
   
   def show_description(group)
-    group.description ? '暂无介绍' : h(group.description)
+    group.description.nil? ? '暂无介绍' : h(group.description)
   end
 
 end

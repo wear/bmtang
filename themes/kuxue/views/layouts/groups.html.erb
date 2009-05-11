@@ -3,37 +3,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title><%= page_title %></title> 
-	<link href="/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
-	<%= yield :head_tags %>
-	<%= render :partial => '/shared/stylesheets_and_scripts' %>
+	<title><%= page_title %></title>
+	<%= render :partial => '/shared/stylesheets_and_scripts' %>     
+	<%= javascript_include_tag 'ui.tabs' %>
+	<%= stylesheet_link_tag 'jQuery-ui-theme','/facebox/facebox' %>
+	<script type="text/javascript" charset="utf-8">       
+	 $j(document).ready(function() {
+		$j("#tabs").tabs({ ajaxOptions: { async: false } });
+	 });
+	</script>
+	<%= yield :head_tags %> 
+
 </head> 
 <body>
 	<div class='container'>
 		<div class='span-24'>
 			<%= render :partial => '/shared/header' %>
 		</div>       
-		<div class='span-24'> 
+		<div class='span-24 '>   
 			<%= render :partial => '/shared/notice' %> 
         </div> 
+
 		<%= render :partial => '/shared/group_header' %>
-		 <div class='span-4 sidebar roundedBox '> 
-          	<%= yield :sidebar %>
-	    	<div class="corner topLeft"></div>
-	    	<div class="corner topRight"></div>
-	    	<div class="corner bottomLeft"></div>
-	    	<div class="corner bottomRight"></div>
-		 </div>
-        <div class='span-16 content'> 
-         	<%= render :partial => '/shared/nav_bar' %>
-			<div class='span-15 last'>
-	 		 <%= yield %>  
-			</div> 
+		  
+        <%= yield :sidebar %>
+
+        <div class='span-17 last'> 
+         	<div id="tabs">
+			     <ul>  
+					<%= yield :tabs %>
+			     </ul>
+				<div id="tabs-content"> 
+					<div class='ui-widget'>
+					    <div id="ajax-indicator" style="display:none;" class='ui-state-highlight ui-corner-all'><span><%= :label_loading.l %></span></div> 
+					</div>
+					<%= yield %> 
+				</div>
+			</div>  
         </div>   
 
 		 <%= render :partial => '/shared/footer' %>
 	</div>
-	<div id="ajax-indicator" style="display:none;"><span><%= :label_loading.l %></span></div>
-
 </body>
 </html>

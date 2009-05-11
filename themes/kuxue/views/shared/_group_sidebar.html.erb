@@ -1,16 +1,24 @@
-			<span class='a6'>学堂</span>
-		 		<ul class='menu'> 
-		 			<li><%=link_to '动态', @group %></li>
-		 			<li><%=link_to '资料库', page_group_wiki_path(@group,:page => @group.wiki.start_page) %><span class='a6'>(<%=@group.wiki.pages.size%>)</span></li>
-					<li><%=link_to '同学',  members_group_path(@group) %><span class='a6'>(<%=@group.members.size%>)</span></li> 
-		 			<% Category.find(:all).each do |c| -%>
-		 				<li><%=link_to c.name, group_category_path(@group,c.id) %><span class='a6'>(<%=@group.post_count(c)%>)</span></li>
+<div class='span-5'>	
+	<div class='span-4 sidebar ui-corner-all'>
+			<h4 id='service'>课堂</h4>
+		 		<ul > 
+					<%= topnav_tab('动态', :url => @group,:section => 'activity') %> 
+					<%= topnav_tab('资料库', :url => page_group_wiki_path(@group,:page => @group.wiki.start_page),:section => 'wiki') %>
+					<%= topnav_tab('同学', :url => members_group_path(@group),:section => 'member') %>
+		 			<% Category.find(:all).each do |c| -%> 
+						<%= topnav_tab(c.name, :url => group_category_path(@group,c.id),:section => c.name) %>
 		 			<% end -%>
 		 		</ul>
-		 	 <hr />
-			<span class='a6'>最新加入学员</span>
-			  <ul class='recnet_join'>
-				<% @group.recent_members.each do |membership| -%>
-				<li><%=link_to image_tag(membership.avatar_photo_url(:thumb),:height => 48,:width=> 48),membership %><br /><%=link_to membership.login,membership %></li>
-				<% end -%>
-			  </ul>        
+	</div>
+	<div class='span-4 sidebar ui-corner-all'>
+		<span class='a6'>最新加入学员</span>
+		  <ul class='recnet_join'>
+			<% @group.recent_members.each do |membership| -%>
+			<li><%=link_to image_tag(membership.avatar_photo_url(:thumb),:height => 48,:width=> 48),membership %><%=link_to membership.login,membership %></li>
+			<% end -%>
+		  </ul>        
+	</div> 
+</div> 
+			
+
+   

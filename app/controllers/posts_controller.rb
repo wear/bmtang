@@ -23,7 +23,7 @@ class PostsController < BaseController
       :order => 'created_at DESC')
   end
 
-  def index
+  def index   
     @user = User.find(params[:user_id])            
     @category = Category.find_by_name(params[:category_name]) if params[:category_name]
     cond = Caboose::EZ::Condition.new

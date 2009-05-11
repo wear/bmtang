@@ -1,23 +1,27 @@
-<% content_for :tabs do -%> 
-	<%= topnav_tab '动态', {:url => group_path(@group),:section => 'activity'}%>
-	<%= topnav_tab '资料库', {:url => page_group_wiki_path(@group,:page => @group.wiki.start_page) }%> 
+<% content_for :tabs do -%>
+ <li><%=link_to('全部','#tabs-content') %></li>  
+ <li><%=link_to('资料库',"/groups/show/#{@group.id}?type=wiki") %></li>
 	<% @categories.each do |c| -%>
-		<li><%= topnav_tab c.name, {:url => group_category_path(@group,c.id)}%>
-	<% end -%>
-	<% if logged_in? &&  current_user.becomes(LearnUser).is_member_of?(@group) -%>
-		<%= topnav_tab '书签', {:url => group_wiki_bookmarks_path(@group)}%>
-	<% end -%>
-	<% if logged_in? && current_user.becomes(LearnUser).is_mod_of?(@group) -%> 
-	<li><%=link_to '课堂设置',edit_group_path(@group)%></li>
-	<li><%=link_to '成员设置',members_group_path(@group)%></li>
-	<li><%=link_to '权限管理','#'%></li>
-	<li><%=link_to '邀请成员','#'%></li>
-	<% end -%>
-<% end -%>
+		<li><%=link_to c.name, "/groups/show/#{@group.id}?type=#{c.name}" %></li>
+		<% end -%>
+ 		<% if logged_in? &&  current_user.becomes(LearnUser).is_member_of?(@group) -%>
+		   <li> <%=link_to '书签', group_wiki_bookmarks_path(@group) %> </li>
+		<% end -%> 
+		<% if logged_in? && current_user.becomes(LearnUser).is_mod_of?(@group) -%> 
+		<li><%=link_to '课堂设置',edit_group_path(@group)%></li>
+		<li><%=link_to '成员设置',members_group_path(@group)%></li>
+		<li><%=link_to '权限管理','#'%></li>
+		<li><%=link_to '邀请成员','#'%></li>
+		<% end -%> 
+<% end -%>     
+
 <% content_for :sidebar do -%> 
 	<%= render :partial => '/shared/group_sidebar' %>
 <% end -%>
 
-<% @recent_activity.each do |activity| -%>
-   <%=render :partial => "shared/activity", :locals => {:activity => activity }%>
-<% end %>	
+<script type="text/javascript" charset="utf-8">
+	$j.get("/groups/show/<%=@group.id%>", { type: "all" },
+	function(data){
+     $j('#tabs-content').append(data);
+  	});
+</script>

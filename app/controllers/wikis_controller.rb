@@ -39,8 +39,13 @@ class WikisController < BaseController
     end
   @member = member?
 	@editable = editable?
-    render :action => 'show'
-  end 
+	  respond_to do |wants|
+	    wants.html { render :action => 'show' }
+	    wants.js { render :partial => "wikis/page" } 
+	  end
+    
+  end
+  
   
   def create_page
     @page = WikiPage.new(params[:page])
@@ -185,7 +190,10 @@ class WikisController < BaseController
   end 
   
   def page_list
-    
+     respond_to do |wants|
+      wants.html {  } 
+      wants.js { render :partial => "shared/pages" }
+     end
   end
 
 private

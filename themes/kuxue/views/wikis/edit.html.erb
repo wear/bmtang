@@ -1,6 +1,8 @@
+<% content_for :head do -%>
+	<%= javascript_include_tag 'prototype','effects','dragdrop','controls' %>
+<% end -%>
 <% content_for :tabs do -%>
-	<%= topnav_tab '<<返回', {:url => page_group_wiki_path(@group,:page => @page.pretty_title) }%> 
-	<%= topnav_tab '编辑', {:url => '#',:section => 'wiki'}%>
+  <a href='#'>sf</a>    
 <% end -%>
 
 <h2><%= @page.pretty_title %></h2>

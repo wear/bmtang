@@ -1,29 +1,30 @@
 <% content_for :sidebar do -%> 
 	<%= render :partial => '/shared/group_sidebar' %>
+<% end -%>  
+
+<% content_for :head_tags do -%>
+	<script type="text/javascript" charset="utf-8"> 
+	$j(document).ready(function() {          
+		$j('#tabs').tabs('option', 'selected', 1);
+	 });    
+	</script>
 <% end -%>
 
 <% content_for :tabs do -%>
-	<%=topnav_tab "目录",{:url => page_list_group_wiki_path(@group)}%>
- 	<%=topnav_tab "'#{@page.pretty_title}'",{:url => '#',:section => 'wiki'} %> 
-	<%=topnav_tab '新建页面',{:url => new_page_group_wiki_path(@group)} %>                                                      
+  <li><a href='#tabs-content'>目录</a></li>
+  <li><%=link_to @page.pretty_title,page_group_wiki_path(@group,:page => @page.title) %></li>
+	<% (@group.wiki.pages - @page.to_a).each do |page| -%>
+		<li><%=link_to page.title,page_group_wiki_path(@group,:page => page.title) %></li>
+	<% end -%>                                                 
 <% end -%>   
 
-<div class="contextual">
-	<% if @editable %> 
-	<%= link_to_if_authorized(@group,:button_edit.l, {:action => 'edit', :page => @page.title }, :class => 'icon icon-edit', :accesskey => accesskey(:edit)) if @content.version == @page.content.version %> 
-	<%= link_to_if_authorized(@group,:button_lock.l, {:action => 'protect', :page => @page.title, :protected => 1}, :method => :post, :class => 'icon icon-lock') if !@page.protected? %>
-	<%= link_to_if_authorized(@group,:button_unloc.l, {:action => 'protect', :page => @page.title, :protected => 0}, :method => :post, :class => 'icon icon-unlock') if @page.protected? %>
-	<%= link_to_if_authorized(@group,:button_rename.l, {:action => 'rename', :page => @page.title}, :class => 'icon icon-move') if @content.version == @page.content.version %>
-	<%= link_to_if_authorized(@group,:button_delete.l, {:action => 'destroy', :page => @page.title}, :method => :delete, :confirm => :text_are_you_sure.l, :class => 'icon icon-del') %>
-	<%= link_to_if_authorized(@group,:button_rollback.l, {:action => 'edit', :page => @page.title, :version => @content.version }, :class => 'icon icon-cancel') if @content.version < @page.content.version %>
-    <%= link_to_if_authorized(@group,:label_history.l, {:action => 'history', :page => @page.title}, :class => 'icon icon-history') %>
-<% end -%> 
-	<h1 class='title'><%=@page.pretty_title %></h1>
-	<%= render(:partial => "wikis/content", :locals => {:content => @content}) %> 
-</div>
-
-<% content_for :header_tags do -%>
-  <%= stylesheet_link_tag 'scm' %>
+<h3>目录</h3>
+<ul>
+<% @group.wiki.pages.each do |page| -%>
+	<li><%=link_to page.title,page_group_wiki_path(@group,:page => page.title) %></li>
 <% end -%>
+</ul>
+
+
 
 <% html_title @page.pretty_title %>

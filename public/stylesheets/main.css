@@ -23,53 +23,47 @@ body {
 }
      
 
-#NavBar{
-	margin-top:5px;
-	border-bottom: 1px solid #CCCCCC;
-	height:29px;
-}
-
-#NavBar ul,#NavBar ul li{
-	float: left;
-	list-style:none;
-	margin:0px 5px 10px 5px;
-	}
-
-#NavBar ul li a{
-display: block;
-padding: 5px 10px;
-text-transform: uppercase;
-font-weight: bold; 
-
-}
-
-#NavBar ul li#active a, #NavBar ul li.current a{ 
-border-right: 1px solid #CCCCCC;
-border-left: 1px solid #CCCCCC;
-border-top: 1px solid #CCCCCC;
-padding: 5px 15px;
-text-decoration: none !important; 
-color:black;
-}
-
-#NavBar ul li a:hover{text-decoration: underline;color: #009900;} 
-
-
 /*----sidebar------*/ 
-.sidebar{
-	padding:17px; 
-	margin:0px 20px;
+.sidebar{ 
+	padding:5px;
+	margin: 0px 20px 10px 20px;
 	background-color:#F9F9F9; 
 	border:1px solid #CCCCCC;     
 }
+
+#service{    
+	font-weight:bold;
+	margin:0px;
+	color:#FFFFFF;
+	font-size:12px;
+	padding:5px;
+	background: #00BF00 url(/images/ui/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+}
+
 
 .content{
 	margin-left:10px;
 }    
 
-.sidebar li{
-  list-style:none;
+.sidebar ul{
+	margin:0px;
 }
+.sidebar li{ 
+	padding:3px;   
+  	list-style:none;
+} 
+
+.sidebar li a{ 
+	display:block;
+	width:90%; 
+	padding-left:10px; 
+	padding:2px 0px 2px 10px;
+   } 
+
+.sidebar li a:hover{ 
+	background: #00BF00; 
+	color:#ffffff;       
+   }  
 
 .a6 {
 	color: #999999;
@@ -77,17 +71,19 @@ color:black;
 	letter-spacing: 1px;  
 }
 
-.menu li{ 
-   width:90px;
-   float:left; 
-   list-style:none;
-   padding: 5px 5px;
-}
-
 .recnet_join li{ 
    text-align:center;  
    float:left;
-   margin:10px 3px; 
+   margin:5px 3px;
+}  
+
+.sidebar ul li#active a, .sidebar ul li.current a{
+	display:block;
+	width:90%; 
+	border:1px solid #FFE375;
+    background-color:#FFFFAA;	  
+	text-decoration: none !important;
+	color:black;
 }
 
 .roundedBox {position:relative;}
@@ -103,15 +99,20 @@ color:black;
 
 /* ---- recnt activity ---- */
 dl{   
-	border-bottom: 1px solid #D9D9D9;
-}         
+	border-bottom: 1px solid #D7D7D7; 
+}  
+
+.activity_user_avatar{
+	float:left;
+	padding-right:10px;
+}       
 
 dt{
 	font-size:12px;
 }
 
 dd{
-  padding-bottom:20px;  
+  padding-bottom:20px;
 }
 
 /*--- end ----*/
@@ -262,31 +263,8 @@ h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display
  
 #preview fieldset {margin-top: 1em; background: url(../images/draft.png)}  
 
-/***** Ajax indicator ******/
-#ajax-indicator {
-position: absolute; /* fixed not supported by IE */
-background-color:#eee;
-border: 1px solid #bbb;
-top:35%;
-left:40%;
-width:20%;
-font-weight:bold;
-text-align:center;
-padding:0.6em;
-z-index:100;
-filter:alpha(opacity=50);
-opacity: 0.5;
-}
 
 html>body #ajax-indicator { position: fixed; }
-
-#ajax-indicator span {
-background-position: 0% 40%;
-background-repeat: no-repeat;
-background-image: url(/images/loading.gif);
-padding-left: 26px;
-vertical-align: bottom;
-}
 
 /* -------  bookmark ------  */
 .bookmark_content{
@@ -316,7 +294,7 @@ vertical-align: bottom;
 .title_left{  
 	float:left; 
 	width:26px; 
-	height:58px;
+	height:56px;
   background: url(/images/bg/title_bg_l.jpg); 
 } 
 
@@ -327,7 +305,7 @@ vertical-align: bottom;
 .title-right{ 
 	float:left;
 	width:26px; 
-	height:58px;
+	height:56px;
    background: url(/images/bg/title_bg_r.jpg);  
 }
 .g_left ul li{

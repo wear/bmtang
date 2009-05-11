@@ -142,7 +142,7 @@ class UsersController < BaseController
     @user.tag_list = params[:tag_list] || ''
 
     if @user.save!
-      @user.track_activity(:updated_profile)
+   #   @user.track_activity(:updated_profile)
       
       flash[:notice] = :your_changes_were_saved.l
       unless params[:welcome] 

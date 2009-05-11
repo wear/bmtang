@@ -1,13 +1,14 @@
-<% @section =  @category.id %>
+<% @section = @category.name %>
 <% content_for :tabs do -%> 
-   <%= topnav_tab @category.name, {:url => group_category_path(@group,@category.id), :section => @category.id }%>
+	<li><a href='#'>最新讨论</a></li>
+	<li><a href='#'>待回答问题</a></li>
 <% end -%>
 
 <% content_for :sidebar do -%> 
 	<%= render :partial => '/shared/group_sidebar' %>
 <% end -%>
  
-<div class='span-16'>
+<div class='span-16'>    
 	<%=render :partial => 'posts/post', :collection => @posts%>
 	&nbsp;
 </div>             

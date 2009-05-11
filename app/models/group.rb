@@ -15,7 +15,14 @@ class Group < ActiveRecord::Base
   
   def recent_activity(page = {}, options = {})
     page.reverse_merge! :size => 10, :current => 1
-    Activity.recent.find(:all,:conditions => ['group_id = ?',self.id], :page => page, *options)      
+    case options[:type]
+    when 'all'
+      Activity.recent.find(:all,:conditions => ['group_id = ?',self.id], :page => page)      
+    when 'wiki'
+      Activity.recent.find(:all,:conditions => ['group_id = ? and action = ?',self.id,"wiki_content/version"], :page => page)
+    when '讨论区'
+      Activity.recent.find(:all,:conditions => ['group_id = ? and action = ?',self.id,"post"], :page => page) 
+    end
   end
   
   def membership(user)

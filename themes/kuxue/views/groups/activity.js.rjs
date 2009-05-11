@@ -1,0 +1,2 @@
+page.replace "id", :partial => "template"
+render :partial => "shared/activity", :collection => @recent_activity

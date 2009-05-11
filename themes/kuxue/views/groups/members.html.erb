@@ -1,6 +1,12 @@
 <% content_for :tabs do -%> 
-	<%= topnav_tab '所有成员', {:url => members_group_path(@group),:class => 'current'}%>
-<% end -%>  
+  <a href='#'>sf</a>
+<% end -%>     
+
+<% content_for :sidebar do -%> 
+	<%= render :partial => '/shared/group_sidebar' %>
+<% end -%>
+
+
 <% content_for :head_tags do -%>
 	<%= stylesheet_link_tag '/tablesorter/themes/blue/style.css' %>
 	<script type="text/javascript" src="/tablesorter/jquery.tablesorter.js"></script> 

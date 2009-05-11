@@ -190,7 +190,7 @@ zh:
     #en: admin_controls: Admin Controls
     admin_controls: 管理员控制
     #en: admin_dashboard: Admin dashboard
-    admin_dashboard: 管理员控制面板
+    admin_dashboard: 管理员面板
     #en: ads: Ads
     ads: 广告
     #en: advertise: Advertise
@@ -369,7 +369,7 @@ zh:
     #en: view_my_blog: View my blog
     view_my_blog: 查看我的博客
     #en: view_profile: View profile
-    view_profile: 查看资料
+    view_profile: "{{name}}"
     #en: voice: voice
     voice: voice
     #en: voices: Voices
@@ -512,7 +512,7 @@ zh:
     #en: edit: Edit
     edit: 编辑
     #en: edit_account: Edit account
-    edit_account: 编辑帐户
+    edit_account: 设置
     #en: edit_contest: Edit Contest
     edit_contest: Edit Contest
     #en: edit_event: Edit event

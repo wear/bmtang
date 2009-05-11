@@ -1,6 +1,10 @@
 <dl class="<%=activity.item_type && activity.item_type.humanize.downcase%>">
-	<dt><%=time_ago_in_words_or_date(activity.created_at)%></dt>
-	<dd><%=link_to activity.user.login.capitalize, user_path(activity.user.login_slug)%>
+	<div class='activity_user_avatar'>
+		   <%=link_to image_tag(activity.user.avatar_photo_url(:thumb),:height => 48,:width=> 48),activity.user %> 
+		</div>
+	 
+	<dd>
+ <%=link_to activity.user.login.capitalize, user_path(activity.user.login_slug)%>
 		<% if activity.item %>  
 			<%case activity.item_type 
 				when 'Post' %> 
@@ -39,5 +43,7 @@
 			<%= " #{activity.action.sub("_", " ") }"%>
 			<% end %>
 	   <% end %>
-	 </dd>
+	 </dd>  
+	<dt><%=time_ago_in_words_or_date(activity.created_at)%></dt>
+    <hr />
 </dl>

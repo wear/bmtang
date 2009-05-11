@@ -9,7 +9,11 @@ class GroupsController < BaseController
   def show
     @section = 'activity'
     @categories = Category.find(:all)
-    get_recent_group_activity
+    get_recent_group_activity(params[:type])  
+    respond_to do |wants|
+      wants.html {  }
+      wants.js { render :partial => "shared/activity", :collection => @recent_activity }
+    end
   end 
   
   def new
@@ -88,7 +92,8 @@ class GroupsController < BaseController
     end
   end
   
-  def members
+  def members 
+    @section = 'member' 
     @members = @group.members.paginate  :page => params[:page], :order => 'created_at DESC'
   end  
   
@@ -148,7 +153,7 @@ class GroupsController < BaseController
     @group = Group.find(params[:id],:include => [:asset])
   end
   
-  def get_recent_group_activity
-    @recent_activity = @group.recent_activity(:size => 15, :current => 1)
+  def get_recent_group_activity(type = 'all')
+    @recent_activity = @group.recent_activity({:size => 15, :current => 1},{:type => type})
   end
 end
