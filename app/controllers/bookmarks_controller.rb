@@ -10,6 +10,7 @@ class BookmarksController < BaseController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @bookmarks }
+      format.js { render :partial => 'bookmarks/list'}
     end
   end
 

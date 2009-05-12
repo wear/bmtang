@@ -1,14 +1,17 @@
-class Post < ActiveRecord::Base
-  acts_as_commentable
-  acts_as_taggable
-  acts_as_activity :user, :if => Proc.new{|r| r.is_live?}
-  acts_as_publishable :live, :draft
-
+class Post < ActiveRecord::Base   
   belongs_to :user
   belongs_to :category
   belongs_to :contest
+  belongs_to :group
   has_many   :polls, :dependent => :destroy
   has_many :favorites, :as => :favoritable, :dependent => :destroy
+  
+  acts_as_commentable
+  acts_as_taggable
+  acts_as_activity :user,:group => Proc.new{|c| c.group },:if => Proc.new{|r| r.is_live?} 
+  acts_as_publishable :live, :draft
+
+
   
   validates_presence_of :raw_post
   validates_presence_of :title

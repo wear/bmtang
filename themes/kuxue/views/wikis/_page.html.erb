@@ -1,5 +1,5 @@
 <div class="contextual">
-	<% if @editable %> 
+	<% if @editable -%> 
 	<%= link_to_if_authorized(@group,:button_edit.l, {:action => 'edit', :page => @page.title }, :class => 'icon icon-edit', :accesskey => accesskey(:edit)) if @content.version == @page.content.version %> 
 	<%= link_to_if_authorized(@group,:button_lock.l, {:action => 'protect', :page => @page.title, :protected => 1}, :method => :post, :class => 'icon icon-lock') if !@page.protected? %>
 	<%= link_to_if_authorized(@group,:button_unloc.l, {:action => 'protect', :page => @page.title, :protected => 0}, :method => :post, :class => 'icon icon-unlock') if @page.protected? %>
@@ -8,6 +8,15 @@
 	<%= link_to_if_authorized(@group,:button_rollback.l, {:action => 'edit', :page => @page.title, :version => @content.version }, :class => 'icon icon-cancel') if @content.version < @page.content.version %>
     <%= link_to_if_authorized(@group,:label_history.l, {:action => 'history', :page => @page.title}, :class => 'icon icon-history') %>
 <% end -%> 
-	<h1 class='title'><%=@page.pretty_title %></h1>
-	<%= render(:partial => "wikis/content", :locals => {:content => @content}) %> 
+	<div class='span-14'>
+	   <h1 id='wiki-title'><%=@page.pretty_title %></h1> 
+	</div>
+	 <div class='span-1 last'> 
+	 <%=facebox_link_to image_tag('icon/edit.gif'), :url => '/login_box' %>   
+
+	 </div>    
+	<div class='span-17'>
+	   <%= render(:partial => "wikis/content", :locals => {:content => @content}) %>  
+	</div>
+	
 </div>

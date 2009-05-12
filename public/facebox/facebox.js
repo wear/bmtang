@@ -38,14 +38,14 @@
  *  allowing for a better ajax experience.
  *
  */
-(function($) {
-  $.facebox = function(data) {
-    $.facebox.init()
-    $.facebox.loading()
-    $.isFunction(data) ? data.call() : $.facebox.reveal(data)
+(function($j) {
+  $j.facebox = function(data) {
+    $j.facebox.init()
+    $j.facebox.loading()
+    $j.isFunction(data) ? data.call() : $j.facebox.reveal(data)
   }
 
-  $.facebox.settings = {
+  $j.facebox.settings = {
     loading_image : '/facebox/loading.gif',
     close_image   : '/facebox/closelabel.gif',
     image_types   : [ 'png', 'jpg', 'jpeg', 'gif' ],
@@ -79,47 +79,47 @@
   </div>'
   }
 
-  $.facebox.loading = function() {
-    if ($('#facebox .loading').length == 1) return true
+  $j.facebox.loading = function() {
+    if ($j('#facebox .loading').length == 1) return true
 
-    $('#facebox .content').empty()
-    $('#facebox .body').children().hide().end().
-      append('<div class="loading"><img src="'+$.facebox.settings.loading_image+'"/></div>')
+    $j('#facebox .content').empty()
+    $j('#facebox .body').children().hide().end().
+      append('<div class="loading"><img src="'+$j.facebox.settings.loading_image+'"/></div>')
 
-    var pageScroll = $.facebox.getPageScroll()
-    $('#facebox').css({
-      top:	pageScroll[1] + ($.facebox.getPageHeight() / 10),
+    var pageScroll = $j.facebox.getPageScroll()
+    $j('#facebox').css({
+      top:	pageScroll[1] + ($j.facebox.getPageHeight() / 10),
       left:	pageScroll[0]
     }).show()
 
-    $(document).bind('keydown.facebox', function(e) {
-      if (e.keyCode == 27) $.facebox.close()
+    $j(document).bind('keydown.facebox', function(e) {
+      if (e.keyCode == 27) $j.facebox.close()
     })
   }
 
-  $.facebox.reveal = function(data, klass) {
-    if (klass) $('#facebox .content').addClass(klass)
-    $('#facebox .content').append(data)
-    $('#facebox .loading').remove()
-    $('#facebox .body').children().fadeIn('normal')
+  $j.facebox.reveal = function(data, klass) {
+    if (klass) $j('#facebox .content').addClass(klass)
+    $j('#facebox .content').append(data)
+    $j('#facebox .loading').remove()
+    $j('#facebox .body').children().fadeIn('normal')
   }
 
-  $.facebox.close = function() {
-    $(document).unbind('keydown.facebox')
-    $('#facebox').fadeOut(function() {
-      $('#facebox .content').removeClass().addClass('content')
+  $j.facebox.close = function() {
+    $j(document).unbind('keydown.facebox')
+    $j('#facebox').fadeOut(function() {
+      $j('#facebox .content').removeClass().addClass('content')
     })
     return false
   }
 
-  $.fn.facebox = function() {
-    $.facebox.init()
+  $j.fn.facebox = function() {
+    $j.facebox.init()
 
-    var image_types = $.facebox.settings.image_types.join('|')
-    image_types = new RegExp('\.' + image_types + '$', 'i')
+    var image_types = $j.facebox.settings.image_types.join('|')
+    image_types = new RegExp('\.' + image_types + '$j', 'i')
 
     function click_handler() {
-      $.facebox.loading(true)
+      $j.facebox.loading(true)
 
       // support for rel="facebox[.inline_popup]" syntax, to add a class
       var klass = this.rel.match(/facebox\[\.(\w+)\]/)
@@ -129,19 +129,19 @@
       if (this.href.match(/#/)) {
         var url    = window.location.href.split('#')[0]
         var target = this.href.replace(url,'')
-        $.facebox.reveal($(target).clone().show(), klass)
+        $j.facebox.reveal($j(target).clone().show(), klass)
 
       // image
       } else if (this.href.match(image_types)) {
         var image = new Image()
         image.onload = function() {
-          $.facebox.reveal('<div class="image"><img src="' + image.src + '" /></div>', klass)
+          $j.facebox.reveal('<div class="image"><img src="' + image.src + '" /></div>', klass)
         }
         image.src = this.href
 
       // ajax
       } else {
-        $.get(this.href, function(data) { $.facebox.reveal(data, klass) })
+        $j.get(this.href, function(data) { $j.facebox.reveal(data, klass) })
       }
 
       return false
@@ -151,30 +151,30 @@
     return this
   }
 
-  $.facebox.init = function() {
-    if ($.facebox.settings.inited) {
+  $j.facebox.init = function() {
+    if ($j.facebox.settings.inited) {
       return true
     } else {
-      $.facebox.settings.inited = true
+      $j.facebox.settings.inited = true
     }
 
-    $('body').append($.facebox.settings.facebox_html)
+    $j('body').append($j.facebox.settings.facebox_html)
 
     var preload = [ new Image(), new Image() ]
-    preload[0].src = $.facebox.settings.close_image
-    preload[1].src = $.facebox.settings.loading_image
+    preload[0].src = $j.facebox.settings.close_image
+    preload[1].src = $j.facebox.settings.loading_image
 
-    $('#facebox').find('.b:first, .bl, .br, .tl, .tr').each(function() {
+    $j('#facebox').find('.b:first, .bl, .br, .tl, .tr').each(function() {
       preload.push(new Image())
-      preload.slice(-1).src = $(this).css('background-image').replace(/url\((.+)\)/, '$1')
+      preload.slice(-1).src = $j(this).css('background-image').replace(/url\((.+)\)/, '$j1')
     })
 
-    $('#facebox .close').click($.facebox.close)
-    $('#facebox .close_image').attr('src', $.facebox.settings.close_image)
+    $j('#facebox .close').click($j.facebox.close)
+    $j('#facebox .close_image').attr('src', $j.facebox.settings.close_image)
   }
 
   // getPageScroll() by quirksmode.com
-  $.facebox.getPageScroll = function() {
+  $j.facebox.getPageScroll = function() {
     var xScroll, yScroll;
     if (self.pageYOffset) {
       yScroll = self.pageYOffset;
@@ -190,7 +190,7 @@
   }
 
   // adapter from getPageSize() by quirksmode.com
-  $.facebox.getPageHeight = function() {
+  $j.facebox.getPageHeight = function() {
     var windowHeight
     if (self.innerHeight) {	// all except Explorer
       windowHeight = self.innerHeight;

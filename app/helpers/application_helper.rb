@@ -28,7 +28,7 @@ module ApplicationHelper
       @html_title ||= []
       @html_title += args
     end
-  end
+  end            
   
   protected
   

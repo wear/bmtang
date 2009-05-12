@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include LocalizedApplication  
+  include FaceboxRender
 
   helper :all # include all helpers, all the time
 

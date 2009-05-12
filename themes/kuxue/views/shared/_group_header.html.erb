@@ -19,7 +19,7 @@
 			<%=link_to '删除',group_path(@group),:method => 'delete'%>
 		<% end -%> 
 		<% unless logged_in? && current_user.becomes(LearnUser).is_member_of?(@group)%>
-		   - <%=link_to '加入小组',join_group_path(@group),:class=>'ag'%>
+		   -<%=facebox_link_to '加入小组', :url => join_group_path(@group),:class=>'ag'%> 
 		<% end -%>
 	</div> 
 </div>

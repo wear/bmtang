@@ -82,14 +82,16 @@ module BaseHelper
 
   def truncate_words(text, length = 30, end_string = '...')
     return if text.blank?
-    words = strip_tags(text).split()
-    words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
+    words = strip_tags(text)
+   # words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
+    truncate(words,length, end_string)
   end
   
   def truncate_words_with_highlight(text, phrase)
     t = excerpt(text, phrase)
     highlight truncate_words(t, 18), phrase
-  end
+  end 
+  
 
   def excerpt_with_jump(text, end_string = ' ...')
     return if text.blank?

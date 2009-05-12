@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Page</th>
+    <th>Content</th>
+  </tr>
+
+<% for bookmark in @bookmarks %>
+  <tr>
+    <td><%= bookmark.wiki_page.pretty_title %></td>
+    <td><%=h bookmark.content %></td>
+    <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
+    <td><%= link_to 'Destroy', bookmark, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

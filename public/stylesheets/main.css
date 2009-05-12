@@ -68,7 +68,8 @@ body {
 .a6 {
 	color: #999999;
 	font-size: 12px;
-	letter-spacing: 1px;  
+	letter-spacing: 1px; 
+	font-weight:normal; 
 }
 
 .recnet_join li{ 
@@ -113,6 +114,10 @@ dt{
 
 dd{
   padding-bottom:20px;
+}
+
+#activity-item a{
+   text-decoration: underline;    
 }
 
 /*--- end ----*/
@@ -199,7 +204,7 @@ padding-bottom: 3px;
 .diff_out { background: #fcc; }
 .diff_in { background: #cfc; }
 
-/***** Wiki *****/
+/***** Wiki *****/ 
 div.wiki table {
     border: 1px solid #505050;
     border-collapse: collapse;
@@ -325,4 +330,17 @@ html>body #ajax-indicator { position: fixed; }
 	text-align:center;
     padding-top:3px;
 	background:#cbcbcb;
+}
+
+/***** Entry *****/  
+.entry {
+  margin-bottom:10px;
+} 
+
+.entry img{
+	margin:5px 10px;
+}
+
+a.read-more{
+   text-decoration: underline;  
 }

@@ -2,9 +2,8 @@
 	<div class='activity_user_avatar'>
 		   <%=link_to image_tag(activity.user.avatar_photo_url(:thumb),:height => 48,:width=> 48),activity.user %> 
 		</div>
-	 
-	<dd>
- <%=link_to activity.user.login.capitalize, user_path(activity.user.login_slug)%>
+	<dd id='activity-item'>
+		<%=link_to activity.user.login.capitalize, user_path(activity.user.login_slug),:class => 'ag'%>
 		<% if activity.item %>  
 			<%case activity.item_type 
 				when 'Post' %> 
@@ -22,7 +21,7 @@
 				<% when 'Invitation' %>
 				<%=:invited_friends.l %>
 				<% when 'WikiContent::Version' %>
-				更新了资料库页面 <%=link_to "#{activity.item.page.pretty_title}",page_group_wiki_path(@group,:page => activity.item.page.pretty_title)%>到版本<%= link_to "#{activity.item.version}", page_group_wiki_path(@group,:page => activity.item.page.pretty_title, :version => activity.item.version) %> 
+				更新了资料库页面 <%=link_to "#{activity.item.page.pretty_title}",page_group_wiki_path(@group,:page => activity.item.page.pretty_title)%> 到版本<%= link_to "#{activity.item.version}", page_group_wiki_path(@group,:page => activity.item.page.pretty_title, :version => activity.item.version) %> 
 				<% when 'Bookmark' %>
 				添加了<%=link_to '书签',group_wiki_bookmark_path(@group,activity.item) %>
 			<% else %>
@@ -42,8 +41,10 @@
 			<% else %>
 			<%= " #{activity.action.sub("_", " ") }"%>
 			<% end %>
-	   <% end %>
+	   <% end %> 
+	<br /> 
+	<span style='color:#999999'><%=time_ago_in_words_or_date(activity.created_at)%></span>
 	 </dd>  
-	<dt><%=time_ago_in_words_or_date(activity.created_at)%></dt>
+	
     <hr />
 </dl>

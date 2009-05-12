@@ -5,12 +5,21 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title><%= page_title %></title>
 	<%= render :partial => '/shared/stylesheets_and_scripts' %>     
-	<%= javascript_include_tag 'ui.tabs' %>
-	<%= stylesheet_link_tag 'ui-theme','/facebox/facebox' %>
+	<%= javascript_include_tag 'ui.tabs','/facebox/facebox' %> 
+	<%= stylesheet_link_tag 'ui-theme' %> 
 	<script type="text/javascript" charset="utf-8">       
 	 $j(document).ready(function() {
-		$j("#tabs").tabs({ ajaxOptions: { async: false } });
-	 });
+		$j("#tabs").tabs({ajaxOptions: {success: function() {}}});
+	 });    
+	$j(document).ready(function($j) {
+	  $j('a[rel*=facebox]').facebox() 
+	});
+	$j(document).ready(function($j) {    
+	$('ul#icons li').hover(
+		function() { $(this).addClass('ui-state-hover'); }, 
+		function() { $(this).removeClass('ui-state-hover'); }
+	);
+	 }); 
 	</script>
 	<%= yield :head_tags %> 
 
