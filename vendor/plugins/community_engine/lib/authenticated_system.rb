@@ -134,7 +134,7 @@ module AuthenticatedSystem
     # Inclusion hook to make #current_user and #logged_in?
     # available as ActionView helper methods.
     def self.included(base)
-      base.send :helper_method, :current_user, :logged_in?, :admin?, :moderator?
+      base.send :helper_method, :current_user, :logged_in?, :admin?, :moderator?, :store_location
     end
 
     # When called with before_filter :login_from_cookie will check for an :auth_token

@@ -8,7 +8,6 @@
 		   <li> <%=link_to '书签', group_wiki_bookmarks_path(@group) %> </li>
 		<% end -%> 
 <% end -%>     
-
 <script type="text/javascript" charset="utf-8">
 	$j.get("/groups/show/<%=@group.id%>", { type: "all" },
 	function(data){

@@ -11,3 +11,4 @@ CE modify log:
 4: user_controller line 145, comment trace action 
 5: set post belongs to group
 6: reset base helper truncate_words function
+7: make :store_location as application helper

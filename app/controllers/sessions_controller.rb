@@ -32,7 +32,7 @@ class SessionsController < BaseController
       # current_user.track_activity(:logged_in)
       respond_to do |wants|
         wants.html { redirect_back_or_default(dashboard_user_path(current_user)) }
-        wants.js { redirect_from_facebo(request.request_uri) }
+        wants.js { redirect_from_facebox(session[:return_to]) }
       end
     else
       flash.now[:error] = :uh_oh_we_couldnt_log_you_in_with_the_username_and_password_you_entered_try_again.l

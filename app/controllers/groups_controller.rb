@@ -6,7 +6,8 @@ class GroupsController < BaseController
   def index
   end      
   
-  def show
+  def show 
+    store_location
     @section = 'activity'
     @categories = Category.find(:all)
     get_recent_group_activity(params[:type])  

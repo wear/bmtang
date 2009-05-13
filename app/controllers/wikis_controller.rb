@@ -12,6 +12,7 @@ class WikisController < BaseController
   
   # display a page (in editing mode if it doesn't exist)
   def page  
+    store_location
     page_title = params[:page]
     @page = @wiki.find_or_new_page(page_title)
     if @page.new_record?

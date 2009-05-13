@@ -11,8 +11,10 @@
 	<div class='span-14'>
 	   <h1 id='wiki-title'><%=@page.pretty_title %></h1> 
 	</div>
-	 <div class='span-1 last'> 
-	 <%=facebox_link_to image_tag('icon/edit.gif'), :url => '/login_box' %>   
+	 <div class='span-1 last'>
+		<% unless logged_in? -%>
+	 		<%=facebox_link_to image_tag('icon/edit.gif'), :url => login_box_path %>   
+		<% end %>
 
 	 </div>    
 	<div class='span-17'>
