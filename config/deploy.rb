@@ -22,6 +22,11 @@ set :use_sudo, false
 set :deploy_to, "/home/#{user}/site/#{application}"    
 
 namespace :deploy do
+  task :finishing_touches, :roles => :app do
+   # run "cp -pf #{deploy_to}/to_copy/environment.rb #{current_path}/config/environment.rb"
+    run "cp -pf #{deploy_to}/config/database.yml.example #{current_path}/config/database.yml"
+  end
+  
  desc "Restart Application"
  task :restart, :roles => :app do
    run "touch #{current_path}/tmp/restart.txt"
