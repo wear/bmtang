@@ -37,7 +37,7 @@ namespace :deploy do
   
  desc "Restart Application"
  task :restart, :roles => :app do
-   run "touch #{deploy_to}/tmp/restart.txt"
+   run "touch #{current_path}/tmp/restart.txt"
  end   
  
  desc "override start/stop Application to fit mod_rails" 
