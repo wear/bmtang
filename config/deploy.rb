@@ -29,15 +29,15 @@ namespace :deploy do
   
   desc "remove all cached file" 
   task :delete_cache, :roles => :app do
-    run "rm -rf public/index.html"
-    run "rm -rf public/cache"
-    run "rm -rf public/public/stylesheets/all.css"
-    run "rm -rf public/public/javascripts/all.js"
+    run "rm -rf #{deploy_to}/public/index.html"
+    run "rm -rf #{deploy_to}/public/cache"
+    run "rm -rf #{deploy_to}/public/public/stylesheets/all.css"
+    run "rm -rf #{deploy_to}/public/public/javascripts/all.js"
   end
   
  desc "Restart Application"
  task :restart, :roles => :app do
-   run "touch #{current_path}/tmp/restart.txt"
+   run "touch #{deploy_to}/tmp/restart.txt"
  end   
  
  desc "override start/stop Application to fit mod_rails" 
