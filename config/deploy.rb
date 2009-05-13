@@ -3,7 +3,7 @@ set :user, 'wear'
 
 set :git_account, 'wear'
 
-set :scm_passphrase,  Proc.new { Capistrano::CLI.password_prompt('zzzzzz') }
+set :scm_passphrase,  Proc.new { Capistrano::CLI.password_prompt('Git Password:') }
 
 role :web, '221.130.199.22'
 role :app, '221.130.199.22'
@@ -25,11 +25,25 @@ namespace :deploy do
   task :finishing_touches, :roles => :app do
    # run "cp -pf #{deploy_to}/to_copy/environment.rb #{current_path}/config/environment.rb"
     run "cp -pf #{deploy_to}/config/database.yml.example #{current_path}/config/database.yml"
+  end                        
+  
+  desc "remove all cached file" 
+  task :delete_cache, :roles => :app do
+    run "rm -rf public/index.html"
+    run "rm -rf public/cache"
+    run "rm -rf public/public/stylesheets/all.css"
+    run "rm -rf public/public/javascripts/all.js"
   end
   
  desc "Restart Application"
  task :restart, :roles => :app do
    run "touch #{current_path}/tmp/restart.txt"
- end 
+ end   
+ 
+ desc "override start/stop Application to fit mod_rails" 
+ [:start, :stop].each do |t|
+     desc "#{t} task is a no-op with mod_rails"
+     task t, :roles => :app do ; end
+ end
 
 end
