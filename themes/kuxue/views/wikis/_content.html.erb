@@ -16,7 +16,7 @@
 
 <%=@page.ancestors.reverse.collect {|parent|  parent.title }%> 
 <div class="wiki">
-  <%= content.text %>
+  <%= simple_format content.text %>
 </div>     
 
 <%=image_tag 'icon/bot_shuqian.gif'%>  

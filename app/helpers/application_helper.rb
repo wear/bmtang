@@ -28,7 +28,11 @@ module ApplicationHelper
       @html_title ||= []
       @html_title += args
     end
-  end            
+  end 
+  
+  def state_type(type)
+    (type == 'error') ? 'error' : 'highlight'
+  end           
   
   protected
   

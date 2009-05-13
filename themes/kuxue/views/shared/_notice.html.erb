@@ -1,8 +1,11 @@
-              	<% %w(info notice error).each do |type| -%>
-				   <% if flash[type.to_sym] -%>
-				     <div class="flash_message <%=type.to_s%>">
-				     	<span><%= h(flash[type.to_sym]) %></span>
-						<small><a href='#'  onclick="jQuery('div.flash_message').hide();return false"><%=:close_this_message.l%></a></small>
-				     </div>
-					<% end -%>
-				<% end -%>     
+        <% %w(info notice error).each do |type| -%>
+		   <% if flash[type.to_sym] -%>
+				<div id='flash-message' class='ui-widget'>
+				        <div class="ui-state-<%=state_type(type)%>  ui-corner-all"  style="padding: 3px;margin:10px">
+						<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
+				     	<%= h(flash[type.to_sym]) %>
+						<small><a href='#'  onclick="$j('#flash-message').hide();return false"><%=:close_this_message.l%></a></small>
+				     </div> 
+				</div>
+	   	<% end -%>
+	   <% end -%>     

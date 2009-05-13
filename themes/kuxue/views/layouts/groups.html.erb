@@ -6,7 +6,6 @@
 	<title><%= page_title %></title>
 	<%= render :partial => '/shared/stylesheets_and_scripts' %>     
 	<%= javascript_include_tag 'ui.tabs','/facebox/facebox' %> 
-	<%= stylesheet_link_tag 'ui-theme' %> 
 	<script type="text/javascript" charset="utf-8">       
 	 $j(document).ready(function() {
 		$j("#tabs").tabs({ajaxOptions: {success: function() {}}});
