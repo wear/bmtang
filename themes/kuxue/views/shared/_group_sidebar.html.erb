@@ -1,6 +1,7 @@
 <div class='span-5'>	
 	<div class='span-4 sidebar ui-corner-all'>
-			<h4 id='service'>课堂</h4>
+			<h4 id='service'>课堂</h4> 
+			<h5>服务</h5>
 		 		<ul > 
 					<%= topnav_tab('动态', :url => @group,:section => 'activity') %> 
 					<%= topnav_tab('资料库', :url => page_group_wiki_path(@group,:page => @group.wiki.start_page),:section => 'wiki') %>
@@ -8,7 +9,16 @@
 		 			<% Category.find(:all).each do |c| -%> 
 						<%= topnav_tab(c.name, :url => group_category_path(@group,c.id),:section => c.name) %>
 		 			<% end -%>
-		 		</ul>
+		 		</ul> 
+		<% if logged_in? && current_user.becomes(LearnUser).is_mod_of?(@group) -%>
+			 <h5>设置</h5>
+				<ul > 
+					<%= topnav_tab('课堂设置', :url => edit_group_path(@group),:section => 'group-setting') %> 
+					<%= topnav_tab('成员设置', :url => members_group_path(@group),:section => 'member-setting') %>    
+					<%= topnav_tab('邀请成员', :url => members_group_path(@group),:section => 'member') %>                   
+		 			
+		 		</ul>  
+		<% end -%>
 	</div>
 	<div class='span-4 sidebar ui-corner-all'>
 		<span class='a6'>最新加入学员</span>

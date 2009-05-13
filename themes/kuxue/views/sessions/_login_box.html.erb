@@ -1,0 +1,12 @@
+<div id="login-box">   
+	<h3><%=:log_in_to_site.l(:site => AppConfig.community_name)%></h3>
+	<%= render :partial => '/shared/notice' %> 
+	<% form_remote_tag :url => sessions_path do -%>
+	<p><label for="username"><%=:username.l%></label><br />
+	<%= text_field_tag 'login', nil, :size => 35%></p> 
+	<p><label for="password"><%=:password.l%></label><br />
+	<%= password_field_tag 'password', nil, :size => 35%></p>
+	<p><label for="remember_me"><%=:remember_me.l%><%= check_box_tag 'remember_me'%></label></p>
+	<p><%= submit_tag :log_in.l %></p>
+	<% end -%>
+</div>

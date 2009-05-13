@@ -24,6 +24,7 @@ class GroupsController < BaseController
   end
   
   def edit
+    @section = 'group-setting'
     respond_to do |wants|
       if current_user.becomes(LearnUser).is_mod_of?(@group)
         wants.html {  } 
@@ -82,7 +83,7 @@ class GroupsController < BaseController
         flash[:notice] = :group_request_send.l
       else
       @user.become_member_of(@group)   
-      flash[:notice] = :group_join_succesfully.l :group => @group.name
+      flash[:notice] = :group_join_succesfully.l :group => @group.title
     end
     else
       flash[:error] = :already_group_member.l

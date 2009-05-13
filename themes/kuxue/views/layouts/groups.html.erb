@@ -25,7 +25,9 @@
 
 		<%= render :partial => '/shared/group_header' %>
 		  
-        <%= yield :sidebar %>
+        <% unless @render_sidebar -%> 
+			<%= render :partial => '/shared/group_sidebar' %>
+		<% end -%>
 
         <div class='span-17 last'> 
          	<div id="tabs">

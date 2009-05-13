@@ -18,8 +18,12 @@
 		<% if logged_in? && current_user.id == @group.created_by  -%>
 			<%=link_to '删除',group_path(@group),:method => 'delete'%>
 		<% end -%> 
-		<% unless logged_in? && current_user.becomes(LearnUser).is_member_of?(@group)%>
-		   -<%=facebox_link_to '加入小组', :url => join_group_path(@group),:class=>'ag'%> 
+		<% unless logged_in? -%>
+		   -<%=facebox_link_to '加入小组',  :url => login_box_path ,:class=>'ag' ,:method => 'get'%>
+		<% else -%>        
+		   <% unless current_user.becomes(LearnUser).is_member_of?(@group) || (current_user.id == @group.created_by) -%>
+			-<%=link_to '加入小组', join_group_path(@group),:class=>'ag'%>
+		    <% end -%>
 		<% end -%>
 	</div> 
 </div>

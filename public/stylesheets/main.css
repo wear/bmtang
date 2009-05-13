@@ -6,7 +6,11 @@ body {
 	LINE-HEIGHT: 150%;
 	FONT-FAMILY: Arial, Helvetica, sans-serif;
 	background-image: url(/images/bg/bg.png);
-}    
+} 
+
+h4,h5 {
+	margin:0px;
+}   
 
 .container{
    background-color: #f2f2f2;
@@ -39,8 +43,7 @@ table{
 	font-weight:bold;
 	margin:0px;
 	color:#FFFFFF;
-	font-size:12px;
-	padding:5px;
+	padding:1px 5px;
 	background: #00BF00 url(/images/ui/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
 }
 
@@ -49,11 +52,12 @@ table{
 	margin-left:10px;
 }    
 
-.sidebar ul{
-	margin:0px;
+.sidebar ul{ 
+	margin:5px;
 }
-.sidebar li{ 
-	padding:3px;   
+.sidebar li{   
+    letter-spacing:2px;
+	padding:1px 3px;   
   	list-style:none;
 } 
 
@@ -61,7 +65,7 @@ table{
 	display:block;
 	width:90%; 
 	padding-left:10px; 
-	padding:2px 0px 2px 10px;
+	padding:1px 0px 1px 10px;
    } 
 
 .sidebar li a:hover{ 

@@ -7,17 +7,7 @@
  		<% if logged_in? &&  current_user.becomes(LearnUser).is_member_of?(@group) -%>
 		   <li> <%=link_to '书签', group_wiki_bookmarks_path(@group) %> </li>
 		<% end -%> 
-		<% if logged_in? && current_user.becomes(LearnUser).is_mod_of?(@group) -%> 
-		<li><%=link_to '课堂设置',edit_group_path(@group)%></li>
-		<li><%=link_to '成员设置',members_group_path(@group)%></li>
-		<li><%=link_to '权限管理','#'%></li>
-		<li><%=link_to '邀请成员','#'%></li>
-		<% end -%> 
 <% end -%>     
-
-<% content_for :sidebar do -%> 
-	<%= render :partial => '/shared/group_sidebar' %>
-<% end -%>
 
 <script type="text/javascript" charset="utf-8">
 	$j.get("/groups/show/<%=@group.id%>", { type: "all" },
