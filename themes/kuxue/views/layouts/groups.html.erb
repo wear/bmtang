@@ -10,15 +10,6 @@
 	 $j(document).ready(function() {
 		$j("#tabs").tabs({ajaxOptions: {success: function() {}}});
 	 });    
-	$j(document).ready(function($j) {
-	  $j('a[rel*=facebox]').facebox() 
-	});
-	$j(document).ready(function($j) {    
-	$('ul#icons li').hover(
-		function() { $(this).addClass('ui-state-hover'); }, 
-		function() { $(this).removeClass('ui-state-hover'); }
-	);
-	 }); 
 	</script>
 	<%= yield :head_tags %> 
 

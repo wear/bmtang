@@ -22,15 +22,17 @@ body {
 	font-size:28px;
 }
      
-#flash-message{
+table{ 
 	width:auto;
+	margin:0 auto; 
 }
+
 /*----sidebar------*/ 
 .sidebar{ 
 	padding:5px;
 	margin: 0px 20px 10px 20px;
 	background-color:#F9F9F9; 
-	border:1px solid #CCCCCC;     
+	border:1px solid #CCCCCC; 
 }
 
 #service{    

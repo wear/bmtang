@@ -1,11 +1,15 @@
         <% %w(info notice error).each do |type| -%>
 		   <% if flash[type.to_sym] -%>
 				<div id='flash-message' class='ui-widget'>
-				        <div class="ui-state-<%=state_type(type)%>  ui-corner-all"  style="padding: 3px;margin:10px">
+					<table border="0" cellspacing="5" cellpadding="5">
+						<tr><td>
+							<div class="ui-state-<%=state_type(type)%>  ui-corner-all"  style="padding:3px;margin:10px;">
 						<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
 				     	<%= h(flash[type.to_sym]) %>
 						<small><a href='#'  onclick="$j('#flash-message').hide();return false"><%=:close_this_message.l%></a></small>
-				     </div> 
+				     </div>
+				</td></tr>
+					</table>
 				</div>
 	   	<% end -%>
-	   <% end -%>     
+	   <% end -%> 

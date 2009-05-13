@@ -4,4 +4,8 @@
 /* shows and hides ajax indicator */ 
 var $j = jQuery;
  
-$j.ajaxSetup({'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")} });  
+$j.ajaxSetup({'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")} }); 
+
+$j(document).ready(function() { 
+	setTimeout(function () { $j('#flash-message').fadeOut(); }, 4000); 
+}); 

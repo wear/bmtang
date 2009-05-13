@@ -32,6 +32,7 @@ namespace :deploy do
     run "rm -rf #{deploy_to}/public/index.html"
     run "rm -rf #{deploy_to}/public/cache"
     run "rm -rf #{deploy_to}/public/public/stylesheets/all.css"
+    run "rm -rf #{deploy_to}/public/public/stylesheets/landing.css"
     run "rm -rf #{deploy_to}/public/public/javascripts/all.js"
   end
   
