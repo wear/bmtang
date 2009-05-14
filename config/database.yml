@@ -19,5 +19,5 @@ production:
   adapter: mysql
   database: elearning
   username: root
-  password: U8GpKX9N5e3tIg3leCvc
+  password: 
 

@@ -1,0 +1,100 @@
+"l<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>半亩方塘 - 学如驾车登山，不进就退；学如逆水行舟，不进则退</title>
+	<script src="/javascripts/home_packaged.js?1242271002" type="text/javascript"></script>
+<script src="/javascripts/widgets/tooltip.js?1240809787" type="text/javascript"></script> 
+	<link href="/stylesheets/home_packaged.css?1242271002" media="screen" rel="stylesheet" type="text/css" />
+</head> 
+<body>
+	<div class='container'>
+		<div class='head'>
+		</div>
+		<div class='nav span-24'>
+	<div class='span-5 logo'>
+		<a href="/"><img alt="Logo" src="/images/logo.png?1240168360" /></a>
+	</div>
+	<div class='line span-1'>
+		<img alt="Line_1" src="/images/bg/line_1.gif?1240235738" /> 
+	</div>
+	<div class='span-10 login'>
+		 <h2><a href="/">首页</a> <a href="#">课堂</a> <a href="#">同学</a> <a href="#">便条</a></h2>
+	</div>
+	<div class='line span-1'>
+		<img alt="Line_1" src="/images/bg/line_1.gif?1240235738" /> 
+	</div>
+	<div class='span-6 last login'>
+	   			      <h2>欢迎! <a href="/login">登录</a> or <a href="/signup">注册</a></h2>
+				</div>
+</div>
+		<div class='content'>
+			 <ul class='group_list'>  
+	<li>
+		<a href="/groups/1" class="title">shanghaionrails</a> <br />
+		<div class='group_logo'>
+		   <a href="/groups/1"><img alt="Unknow-group" height="64" src="/images/unknow-group.gif?1241764408" width="64" /></a> 
+		</div>
+		for all rubyonrails fans
+	</li> 
+	<li>
+		<a href="/groups/2" class="title">phthon-group</a> <br />
+		<div class='group_logo'>
+		   <a href="/groups/2"><img alt="2_large" src="/assets/0000/0001/2_large.jpg?1241765869" /></a> 
+		</div>
+		
+	</li> 
+	<li>
+		<a href="/groups/3" class="title">flash-group</a> <br />
+		<div class='group_logo'>
+		   <a href="/groups/3"><img alt="Unknow-group" height="64" src="/images/unknow-group.gif?1241764408" width="64" /></a> 
+		</div>
+		for all flash fans
+	</li> 
+	<li>
+		<a href="/groups/4" class="title">java-group</a> <br />
+		<div class='group_logo'>
+		   <a href="/groups/4"><img alt="Unknow-group" height="64" src="/images/unknow-group.gif?1241764408" width="64" /></a> 
+		</div>
+		for all php fans
+	</li> 
+	<li>
+		<a href="/groups/5" class="title">php-group</a> <br />
+		<div class='group_logo'>
+		   <a href="/groups/5"><img alt="Unknow-group" height="64" src="/images/unknow-group.gif?1241764408" width="64" /></a> 
+		</div>
+		for all php fans
+	</li> 
+	<li>
+		<a href="/groups/6" class="title">ruby-group</a> <br />
+		<div class='group_logo'>
+		   <a href="/groups/6"><img alt="Unknow-group" height="64" src="/images/unknow-group.gif?1241764408" width="64" /></a> 
+		</div>
+		Ruby是一种功能强大的面向对象的脚本语言,她可以使您方便快捷地进行面向对...
+	</li> 
+<li class='new_group'>   
+	<a href="/groups/new" class="title">创建小组</a> <br /> 
+	<div class='group_logo'>
+	<a href="/groups/new"><img alt="New_group" src="/images/new_group.jpg?1240169824" /></a>
+	</div>
+</li>                                 
+</ul> 
+		</div>  
+		<div id="footer" class='span-24'> 
+	<div class='span-16' id='copyright'>
+		半亩方塘 © 2008-2009    中文(简体)
+	</div> 
+	<div class='span-7 last'>
+	<ul>
+		<li><a href="/" title="半亩方塘首页">首页</a></li>
+						<li><a href="/login">登录</a></li>
+						<li><a href="/about" title="translation missing: zh, what_is半亩方塘?">关于 </a></li>
+		   <li><a href="/faq" title="translation missing: zh, frequent_asked_questions">帮助</a></li>
+	</ul>
+	</div>	
+</div>
+	</div> 
+</body>
+
+</html>

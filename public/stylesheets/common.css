@@ -1,3 +1,10 @@
+body {
+  font-size: 12px;
+  COLOR: #222227;
+  LINE-HEIGHT: 150%;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  background: url(/images/bg/bg.png);
+}
 
 a {
 	font-size: 12px;

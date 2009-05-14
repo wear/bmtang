@@ -24,7 +24,7 @@ set :deploy_to, "/home/#{user}/sites/#{application}"
 namespace :deploy do
   task :finishing_touches, :roles => :app do
    # run "cp -pf #{deploy_to}/to_copy/environment.rb #{current_path}/config/environment.rb"
-    run "cp -pf #{deploy_to}/config/database.yml.example #{current_path}/config/database.yml"
+    run "cp -pf #{deploy_to}/config/database.yml.example #{release_path}/config/database.yml"
   end                        
   
   desc "remove all cached file" 
@@ -38,13 +38,20 @@ namespace :deploy do
   
  desc "Restart Application"
  task :restart, :roles => :app do
-   run "touch #{current_path}/tmp/restart.txt"
+   run "touch #{release_path}/tmp/restart.txt"
  end   
  
  desc "override start/stop Application to fit mod_rails" 
  [:start, :stop].each do |t|
      desc "#{t} task is a no-op with mod_rails"
      task t, :roles => :app do ; end
+ end
+ 
+ desc "Create asset packages for production" 
+ task :after_update_code, :roles => [:web] do
+   run <<-EOF
+     cd #{release_path} && rake asset:packager:build_all
+   EOF
  end
 
 end

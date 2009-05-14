@@ -1,0 +1,30 @@
+--- 
+javascripts: 
+- base: 
+  - jquery
+  - jquery-ui
+  - jrails 
+  - application   
+  - ui.tabs
+  - facebox
+#  - prototype
+#  - effects
+#  - dragdrop
+#  - controls
+  - ui.tabs  
+- home:
+  - jquery
+  - jrails
+stylesheets: 
+- base: 
+  - blueprint/screen 
+  - common
+  - main
+  - ui-theme 
+  - facebox
+
+- home:
+  - blueprint/screen  
+  - common
+  - landing
+

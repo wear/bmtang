@@ -1,59 +1,49 @@
 /*
-   landing.css
-   elearning
+landing.css
+elearning
+Created by Stephen kong on 2009-04-01.
+Copyright 2009 __MyCompanyName__. All rights reserved.
+*/
    
-   Created by Stephen kong on 2009-04-01.
-   Copyright 2009 __MyCompanyName__. All rights reserved.
-*/                               
-   
-
-body {  
-	FONT-SIZE: 12px;
-	COLOR: #222227;
-	LINE-HEIGHT: 150%;
-	FONT-FAMILY: Arial, Helvetica, sans-serif;
-	background-image: url(/images/bg/bg.png); 
-} 
-
-.logo{ 
+.logo{
    text-align:center;
 }
-
-
+ 
+ 
 .login{
-	padding-top:10px;
-} 
-
-.login h2{
-	font-size:14px;
-	color:white;
+  padding-top:10px;
 }
-
+ 
+.login h2{
+  font-size:14px;
+  color:white;
+}
+ 
 .content{
   background: #F2F2F2;
   height: 280px;
 }
-
+ 
 .group_list{
    margin:10px 100px 10px 10px;
-}            
-
-.group_list li{ 
-	float:left;
-	list-style-type: none;
-	padding:10px;
-	width:100px; 
-	text-align:center;
-} 
-
-.title{
-	font-size:14px;
-} 
-
-.group_list li img{
-	margin:10px 0px;
 }
-
+ 
+.group_list li{
+  float:left;
+  list-style-type: none;
+  padding:10px;
+  width:100px;
+  text-align:center;
+}
+ 
+.title{
+  font-size:14px;
+}
+ 
+.group_list li img{
+  margin:10px 0px;
+}
+ 
 li.new_group{
-	float:right;
+  float:right;
 }

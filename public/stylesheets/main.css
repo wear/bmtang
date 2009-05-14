@@ -1,12 +1,4 @@
-@import url('common.css');   
-
-body { 
-	FONT-SIZE: 12px;
-	COLOR: #222227;
-	LINE-HEIGHT: 150%;
-	FONT-FAMILY: Arial, Helvetica, sans-serif;
-	background-image: url(/images/bg/bg.png);
-} 
+@import url('common.css');    
 
 h4,h5 {
 	margin:0px;
