@@ -5,7 +5,7 @@
 		<li><%=link_to c.name, "/groups/show/#{@group.id}?type=#{c.name}" %></li>
 		<% end -%>
  		<% if logged_in? &&  current_user.becomes(LearnUser).is_member_of?(@group) -%>
-		   <li> <%=link_to '书签', group_wiki_bookmarks_path(@group) %> </li>
+		   <li> <%=link_to '书签', group_bookmarks_path(@group) %> </li>
 		<% end -%> 
 <% end -%>     
 <script type="text/javascript" charset="utf-8">

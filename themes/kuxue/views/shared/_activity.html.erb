@@ -23,7 +23,7 @@
 				<% when 'WikiContent::Version' %>
 				更新了资料库页面 <%=link_to "#{activity.item.page.pretty_title}",page_group_wiki_path(@group,:page => activity.item.page.pretty_title)%> 到版本<%= link_to "#{activity.item.version}", page_group_wiki_path(@group,:page => activity.item.page.pretty_title, :version => activity.item.version) %> 
 				<% when 'Bookmark' %>
-				添加了<%=link_to '书签',group_wiki_bookmark_path(@group,activity.item) %>
+				添加了<%=link_to '书签',group_bookmark_path(@group,activity.item) %>
 			<% else %>
 				<%#=render :partial => 'shared/unhandled_item', :locals => {:activity => activity}%>
 			 <% end %>

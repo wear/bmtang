@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect '/xiaonei.xml', :controller => 'xiaonei', :action => 'index', :format => 'xml'
   map.resources :bookmarks
 
 
@@ -41,10 +42,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts, :path_prefix => '/group/:group_id/category/:category_id/users/:user_id',:name_prefix => 'group_'   
   map.resources :groups,:member => { :join => :get,:members => :get,:activity => :get,:pending_members => :get, :managers => :get, } do |group|
     group.resource :wiki,:member => {:page => :get,:preview => :put, :annotate => :get,:new_page => :get,
-      :create_page => :post, :protect => :post, :rename => [:get,:post], :history => :get, :diff => :get, :special => :get, :page_list => :get } do |w|
-        w.resources :bookmarks
-      end
-    
+      :create_page => :post, :protect => :post, :rename => [:get,:post], :history => :get, :diff => :get, :special => :get, :page_list => :get }
+    group.resources :bookmarks
   end                                                                                                                      
   map.login_box '/login_box', :controller => 'sessions', :action => 'login_box'
   map.group_member '/groups/:id/members/:user_id',:controller => 'groups', :action => 'member'

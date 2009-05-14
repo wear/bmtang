@@ -1,0 +1,37 @@
+# 
+# This is OpensocialGadget Configuration File 
+# 
+
+prefs:
+  title: title test
+  description: description test
+  author: Arai, Motoki
+  author_email: araimotoki+test@gmail.com
+  author_location: Japan
+
+keys:
+  "999999999999":
+    container: ORKUT
+    secret: xxxxxxxxxxxxxxxxxxxxxxxx
+    outgoing_key: orkut.com:999999999999
+
+views:
+  home:
+    url: http://your.domain.com/test/home
+    width: 10px
+    height: 11px
+
+  canvas:
+    url: http://your.domain.com/test/canvas
+    width: 20px
+    height: 21px
+
+  profile:
+    url: http://your.domain.com/test/profile
+    width: 30px
+    height: 31px
+
+  preview:
+    url: http://your.domain.com/test/preview
+    width: 40px
+    height: 41px

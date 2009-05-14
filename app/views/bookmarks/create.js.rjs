@@ -1,5 +1,1 @@
-unless ActiveRecord::RecordNotSaved 
-  page << "jQuery.facebox.close();"  
-else                               
-  page.replace_html "errors", error_messages_for('bookmark')
-end
+page.replace_html "#bookmark-errors", error_messages_for('bookmark')

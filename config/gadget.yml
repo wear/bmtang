@@ -1,0 +1,37 @@
+# 
+# This is OpenSocialGadget Configuration File 
+# 
+
+prefs:
+  title: Title
+  description: Description
+  author: Author
+  author_email: account@bmtang.cn
+  author_location: Japan
+
+keys:
+  "9315f74059ef4ff6b4bcc4f0a37a5a0a":
+    container: XIAONEI
+    secret: b7e32eb422114fc8b5dd3030ac9918a7
+    outgoing_key: http://api.xiaonei.com/restserver.do
+
+views:
+  home:
+    url: http://bmtang.cn/xiaonei/home
+    width: 100%
+    height: 450px
+
+  canvas:
+    url: http://bmtang.cn/xiaonei/canvas
+    width: 100%
+    height: 450px
+
+  profile:
+    url: http://bmtang.cn/xiaonei/profile
+    width: 100%
+    height: 200px
+
+  preview:
+    url: http://bmtang.cn/xiaonei/preview
+    width: 100%
+    height: 450px

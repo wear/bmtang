@@ -1,0 +1,99 @@
+= OpenSocialGadget
+
+Ruby on Rails plugin for OpenSocial Gadget based on opensocial-ruby-client
+(http://code.google.com/p/opensocial-ruby-client)
+
+== Pre Installation
+
+The following gems and their dependencies are required by this client library: 
+* oauth
+* json
+* rails (optional, for incoming signed makeRequest validation)
+* mocha (optional, for running tests) 
+* opensocial-ruby-client
+
+ gem install oauth json mocha rails
+
+Download the newest version of the opensocial-ruby-client gem on the downloads page:
+* http://code.google.com/p/opensocial-ruby-client/downloads/list
+
+ gem install opensocial-x.x.x.gem
+
+== Installation
+
+ script/plugin install git://github.com/araimotoki/opensocial_gadget.git
+
+== Usage
+
+Generate gadget controller.
+  script/generate opensocial_gadget <CONTROLLERNAME(Gadget)>
+
+Your gadget application url is:
+ http://your.domain/<CONTROLLERNAME(gadget)>.xml
+
+== Configration
+
+* config/gadget.yml
+
+Setup your HMAC consumer key and secret:
+
+If your HMAC consumer key and secret are there:
+orkut.com
+OAuth Consumer Key: "000000000000"
+OAuth Consumer Secret: "xxxxxxxxxxxxxxxxxxxxxxxx"
+
+keys:
+  "000000000000":
+    container: ORKUT
+    secret: xxxxxxxxxxxxxxxxxxxxxxxx
+    outgoing_key: orkut.com:000000000000
+
+Setup your gadget config, each views:
+
+views:
+  home:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 600px
+
+  canvas:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 600px
+
+  profile:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 200px
+
+  preview:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 600px
+
+
+== Sample code
+
+script/generate controller Test
+
+* app/controllers/test_controller.rb
+
+class TestController < ApplicationController
+  include OpenSocialGadget::ControllerExtensions
+  def index
+    @app = opensocial_connection.get_appdata
+    @me = opensocial_connection.get_person
+    @friends = opensocial_connection.get_people
+  end
+end
+
+* app/views/test/index.html.erb
+
+<img src="<%= @me.thumbnail_url %>"><%= @me.long_name %><br>
+friends:<br>
+<% @friends.values.collect {|f| %>
+<img src="<%= f.thumbnail_url %>"><%= f.long_name %><br>
+<% } %>
+
+
+Copyright (c) 2009 ARAI Motoki / Drecom , released under the MIT license

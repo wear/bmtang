@@ -1,0 +1,103 @@
+= OpenSocialGadget
+
+Ruby on Rails plugin for OpenSocial Gadget based on opensocial-ruby-client
+(http://code.google.com/p/opensocial-ruby-client)
+
+== 必要なライブラリの導入
+
+以下のgemライブラリが必要です
+* oauth
+* json
+* mocha (optional, for running tests) 
+* opensocial-ruby-client
+
+ gem install oauth json mocha rails
+
+最新バージョンのopensocial-ruby-clientを以下のサイトから取得して導入します。
+* http://code.google.com/p/opensocial-ruby-client/downloads/list
+
+ gem install opensocial-x.x.x.gem
+
+== インストール
+
+ script/plugin install git://github.com/araimotoki/opensocial_gadget.git
+
+== つかいかた
+
+ガジェットのcontrollerを生成します
+  script/generate opensocial_gadget <CONTROLLERNAME(Gadget)>
+
+この場合、ガジェットXMLのURLは以下となります。
+ http://your.domain/<CONTROLLERNAME(gadget)>.xml
+
+== 設定
+
+* config/gadget.yml
+
+keysの項目に、OpenSocialサービスから取得したOAuthの「Consumer Key」と「Consumer Secret Key」を設定します。
+containerの項目には、"ORKUT","IGOOGLE","MYSPACE"のいずれかを指定します。
+
+次のキーが発行された場合、以下のように設定します。
+orkut.com
+OAuth Consumer Key: 000000000000
+OAuth Consumer Secret: xxxxxxxxxxxxxxxxxxxxxxxx
+
+keys:
+  "000000000000":
+    container: ORKUT
+    secret: xxxxxxxxxxxxxxxxxxxxxxxx
+    outgoing_key: orkut.com:000000000000
+
+※containerには、"ORKUT","IGOOGLE","MYSPACE"のいずれかを指定します。
+
+なお、keysは複数設定でき、1つのガジェットアプリケーションで複数のOpenSocialサービスに対応させることができます。
+
+viewsには、オープンソーシャルの仕様で決まっているhome,canvas,profile,previewのそれぞれのビューに何を表示するかと枠の大きさを指定します。例えば以下のように設定します。
+
+views:
+  home:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 600px
+
+  canvas:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 600px
+
+  profile:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 200px
+
+  preview:
+    url: http://your.domain/controller/action
+    width: 100%
+    height: 600px
+
+
+== サンプル
+
+script/generate controller Test
+
+* app/controllers/test_controller.rb
+
+class TestController < ApplicationController
+  include OpenSocialGadget::ControllerExtensions
+  def index
+    @app = opensocial_connection.get_appdata
+    @me = opensocial_connection.get_person
+    @friends = opensocial_connection.get_people
+  end
+end
+
+* app/views/test/index.html.erb
+
+<img src="<%= @me.thumbnail_url %>"><%= @me.long_name %><br>
+friends:<br>
+<% @friends.values.collect {|f| %>
+<img src="<%= f.thumbnail_url %>"><%= f.long_name %><br>
+<% } %>
+
+
+Copyright (c) 2009 ARAI Motoki / Drecom , released under the MIT license

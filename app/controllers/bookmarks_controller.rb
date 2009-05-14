@@ -10,7 +10,7 @@ class BookmarksController < BaseController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @bookmarks }
-      format.js { render :partial => 'bookmarks/list'}
+      format.js { render :partial => 'bookmarks/list' }
     end
   end
 
@@ -31,7 +31,8 @@ class BookmarksController < BaseController
     @bookmark = Bookmark.new
     @page = @wiki.find_page(params[:page])
     respond_to do |format|
-      format.html { render :layout => false    }
+      format.html { render :layout => false    } 
+      format.js {render_to_facebox }
       format.xml  { render :xml => @bookmark }
     end
   end
@@ -50,12 +51,12 @@ class BookmarksController < BaseController
       if @bookmark.save
         flash[:notice] = 'Bookmark was successfully created.'
         format.html { redirect_to(@bookmark) }
-        format.js { }
+        format.js {redirect_from_facebox(session[:return_to]) }
         format.xml  { render :xml => @bookmark, :status => :created, :location => @bookmark }
       else 
         format.html { render :action => "new" }
         format.xml  { render :xml => @bookmark.errors, :status => :unprocessable_entity } 
-        format.js { }
+        format.js {  }
       end
     end
   end

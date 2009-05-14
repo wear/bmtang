@@ -22,18 +22,28 @@ set :use_sudo, false
 set :deploy_to, "/home/#{user}/sites/#{application}"    
 
 namespace :deploy do
-  task :finishing_touches, :roles => :app do
+  
+  task :default do
+    transaction do
+      update_code
+      symlink
+      copy_configs
+      migrate
+    end
+    
+    restart
+  end
+  
+  task :copy_configs, :roles => :app do
    # run "cp -pf #{deploy_to}/to_copy/environment.rb #{current_path}/config/environment.rb"
-    run "cp -pf #{deploy_to}/config/database.yml.example #{current_path}/config/database.yml"
+    run "cp -pf #{release_path}/config/database.yml.example #{current_path}/config/database.yml"
+    run "ln -s #{shared_path}/photos #{current_path}/public/photos"
   end                        
   
   desc "remove all cached file" 
   task :delete_cache, :roles => :app do
-    run "rm -rf #{deploy_to}/public/index.html"
-    run "rm -rf #{deploy_to}/public/cache"
-    run "rm -rf #{deploy_to}/public/public/stylesheets/all.css"
-    run "rm -rf #{deploy_to}/public/public/stylesheets/landing.css"
-    run "rm -rf #{deploy_to}/public/public/javascripts/all.js"
+    run "rm -rf #{current_path}/public/index.html"
+    run "rm -rf #{current_path}/public/cache"
   end
   
  desc "Restart Application"

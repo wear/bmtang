@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs<%%= @prefs.inject('') { |s, (key, value)| s += " #{key}=\"#{value}\"" } %>>
+    <Require feature="opensocial-0.8" />
+    <Require feature="views" />
+    <Require feature="dynamic-height"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script>
+        function displayFrame(response) {
+          document.getElementById('frame').innerHTML = response.text;
+          gadgets.window.adjustHeight();
+        };
+        function init() {
+          server = '<%%= url_for :only_path => false, :action => "iframe", :id=> "" %>' + gadgets.views.getCurrentView().getName()
+          
+          var params = {};
+          params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED;
+          params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "HMAC";
+          params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+          params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.POST;
+          
+          gadgets.io.makeRequest(server, displayFrame, params);
+        }
+        gadgets.util.registerOnLoadHandler(init);
+      </script>
+      <div id='frame'></div>
+    ]]> 
+  </Content>
+</Module>

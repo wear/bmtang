@@ -21,7 +21,7 @@
 <% unless logged_in? -%>  
 	<%=facebox_link_to image_tag('icon/bot_shuqian.gif'),:url => login_box_path,:method => :get %>
 <% else -%>       
-	<%=facebox_link_to image_tag('icon/bot_shuqian.gif'),:url => new_bookmark_path %>
+	<%=facebox_link_to image_tag('icon/bot_shuqian.gif'),:url => new_group_bookmark_path(@page.wiki.group),:method => :get %>
 <% end -%>  
 <% other_formats_links do |f| %>
 	<%= f.link_to 'HTML', :url => {:page => @page.title, :version => @content.version} %>
