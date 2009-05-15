@@ -50,40 +50,6 @@ class SessionsController < BaseController
     end
   end
   
-  def connect
-   # params[:fname] is a trigger by which we identify the right request
-   if (params[:fname]=='_opener') 
-
-     jsoned = params[:session]
-     data = JSON.parse(jsoned) # data is sent in JSON, we need to parse it
-     session[:connect] = data
-
- 	# look for a user based on the facebook_uid supplied by login
-     user = User.find_by_facebook_uid(data['uid'])
-
-
-     if (!user)
-       # create a new dummy user for the Facebook User if not present
-       # if we want users to be able to log in without Facebook Connect
-       # then it would be a good idea to allow them the change these details
-
-       user = User.new
-       user.facebook_uid = data['uid']
-       user.login = 'fb_' + data['uid']
-       user.password = Time.now.to_i.to_s
-       user.password_confirmation = user.password         
-
-       user.email = data['uid'] + '@users.facebook.com'
-       user.save!
-     end
-
- 	# log the user in
-     self.current_user= user
-
-   end
-   render :layout => false
-   # render the cross-domain communication channel
-  end
   
 
   def destroy

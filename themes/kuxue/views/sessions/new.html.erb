@@ -9,14 +9,8 @@
 <p><%= submit_tag :log_in.l %></p>
 <% end -%>
 
-<fb:login-button autologoutlink="true"></fb:login-button>
-
-<% content_for :sidebar do -%>  
-	<% unless AppConfig.closed_beta_mode -%> 
-		<%=render :partial => 'shared/login_sidebar'%>
-	<% end -%>	
-<% end -%>    
-
-<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/XdCommReceiver.debug.js" type="text/javascript">
+<%= fb_connect_javascript_tag %>
+<%= init_fb_connect "XFBML"%>
+<%= fb_login_button%>
 
 

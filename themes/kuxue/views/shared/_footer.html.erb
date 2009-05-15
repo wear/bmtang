@@ -15,22 +15,4 @@
 	</ul>
 	</div>	
 </div>   
-<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
 
-<script type="text/javascript">  
-FB_RequireFeatures(["XFBML", "CanvasUtil", "Api"], function(){
-  FB.Facebook.init('42076c41f155897d30ddfebed513ef7b', '/sessions/connect');
-		
-  FB.Connect.requireSession(fu)
-  FB.Facebook.get_sessionState().waitUntilReady(function(session) {
-
-	var is_now_logged_into_facebook = session ? true : false;
-    var is_session_loaded = <%= (session[:connect] ? true : false) %>
-
-	if (is_now_logged_into_facebook!=is_session_loaded) {
-	  // user logged in and changed status
-	  window.location = '/';	
-	}		
-  });
-})
-</script>
