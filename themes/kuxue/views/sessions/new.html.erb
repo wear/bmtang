@@ -1,3 +1,4 @@
+
 <h3><%=:log_in_to_site.l(:site => AppConfig.community_name)%></h3>
 <% form_tag sessions_path, :class => 'MainForm' do -%>
 <p><label for="username"><%=:username.l%></label><br />
@@ -8,11 +9,14 @@
 <p><%= submit_tag :log_in.l %></p>
 <% end -%>
 
+<fb:login-button autologoutlink="true"></fb:login-button>
 
 <% content_for :sidebar do -%>  
 	<% unless AppConfig.closed_beta_mode -%> 
 		<%=render :partial => 'shared/login_sidebar'%>
 	<% end -%>	
-<% end -%> 
+<% end -%>    
+
+<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/XdCommReceiver.debug.js" type="text/javascript">
 
 

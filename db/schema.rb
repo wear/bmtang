@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090427063557) do
+ActiveRecord::Schema.define(:version => 20090515082056) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -213,6 +213,7 @@ ActiveRecord::Schema.define(:version => 20090427063557) do
     t.datetime "updated_at"
     t.string   "domain"
     t.text     "description"
+    t.integer  "access"
     t.integer  "member_count", :default => 0
     t.string   "logo"
     t.integer  "appearance"
@@ -241,7 +242,7 @@ ActiveRecord::Schema.define(:version => 20090427063557) do
   create_table "invitations", :force => true do |t|
     t.string   "email_addresses"
     t.string   "message"
-    t.integer  "user_id"
+    t.string   "user_id"
     t.datetime "created_at"
   end
 
@@ -450,6 +451,7 @@ ActiveRecord::Schema.define(:version => 20090427063557) do
     t.integer  "sb_posts_count",                          :default => 0
     t.datetime "sb_last_seen_at"
     t.integer  "role_id"
+    t.integer  "facebook_uid"
   end
 
   add_index "users", ["activated_at"], :name => "index_users_on_activated_at"
@@ -460,7 +462,7 @@ ActiveRecord::Schema.define(:version => 20090427063557) do
   add_index "users", ["vendor"], :name => "index_users_on_vendor"
 
   create_table "votes", :force => true do |t|
-    t.integer  "user_id"
+    t.string   "user_id"
     t.integer  "poll_id"
     t.integer  "choice_id"
     t.datetime "created_at"

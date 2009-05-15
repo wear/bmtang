@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect '/xiaonei.xml', :controller => 'xiaonei', :action => 'index', :format => 'xml'
+
   map.resources :bookmarks
 
 
