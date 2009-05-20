@@ -36,11 +36,12 @@ test:
     server_alive_interval: 0
 
 production:
-  api_key: 
-  secret_key: 
-  canvas_page_name: 
-  callback_url: 
-  set_asset_host_to_callback_url: true   
+  api_key: 42076c41f155897d30ddfebed513ef7b
+  secret_key: 53a71f0af21f2a62fb05bed269d7c623 
+  canvas_page_name: bmtang
+  callback_url: http://bmtang.cn
+  pretty_errors: true
+  set_asset_host_to_callback_url: true
   tunnel:
     public_host_username: 
     public_host: 

@@ -7,10 +7,10 @@
 <%= password_field_tag 'password', nil, :size => 35%></p>
 <p><label for="remember_me"><%=:remember_me.l%><%= check_box_tag 'remember_me'%></label></p>
 <p><%= submit_tag :log_in.l %></p>
-<% end -%>
+<% end -%> 
 
 <%= fb_connect_javascript_tag %>
 <%= init_fb_connect "XFBML"%>
 <%= fb_login_button%>
-
+  
 

@@ -4,7 +4,10 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include LocalizedApplication  
-  include FaceboxRender
+  include FaceboxRender 
+  before_filter :set_facebook_session
+  helper_method :facebook_session
+  
 
   helper :all # include all helpers, all the time
 
