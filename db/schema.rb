@@ -213,7 +213,6 @@ ActiveRecord::Schema.define(:version => 20090515082056) do
     t.datetime "updated_at"
     t.string   "domain"
     t.text     "description"
-    t.integer  "access"
     t.integer  "member_count", :default => 0
     t.string   "logo"
     t.integer  "appearance"
@@ -242,7 +241,7 @@ ActiveRecord::Schema.define(:version => 20090515082056) do
   create_table "invitations", :force => true do |t|
     t.string   "email_addresses"
     t.string   "message"
-    t.string   "user_id"
+    t.integer  "user_id"
     t.datetime "created_at"
   end
 
@@ -462,7 +461,7 @@ ActiveRecord::Schema.define(:version => 20090515082056) do
   add_index "users", ["vendor"], :name => "index_users_on_vendor"
 
   create_table "votes", :force => true do |t|
-    t.string   "user_id"
+    t.integer  "user_id"
     t.integer  "poll_id"
     t.integer  "choice_id"
     t.datetime "created_at"
@@ -494,7 +493,7 @@ ActiveRecord::Schema.define(:version => 20090515082056) do
 
   create_table "wiki_pages", :force => true do |t|
     t.integer  "wiki_id",                       :null => false
-    t.string   "title",                         :null => false
+    t.string   "title",      :default => "",    :null => false
     t.datetime "created_on",                    :null => false
     t.boolean  "protected",  :default => false, :null => false
     t.integer  "parent_id"
@@ -512,9 +511,9 @@ ActiveRecord::Schema.define(:version => 20090515082056) do
   add_index "wiki_redirects", ["wiki_id", "title"], :name => "wiki_redirects_wiki_id_title"
 
   create_table "wikis", :force => true do |t|
-    t.integer "group_id",                  :null => false
-    t.string  "start_page",                :null => false
-    t.integer "status",     :default => 1, :null => false
+    t.integer "group_id",                   :null => false
+    t.string  "start_page", :default => "", :null => false
+    t.integer "status",     :default => 1,  :null => false
   end
 
   add_index "wikis", ["group_id"], :name => "wikis_group_id"
