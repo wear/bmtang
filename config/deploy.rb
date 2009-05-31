@@ -5,9 +5,9 @@ set :git_account, 'wear'
 
 set :scm_passphrase,  Proc.new { Capistrano::CLI.password_prompt('Git Password:') }
 
-role :web, '221.130.199.22'
-role :app, '221.130.199.22'
-role :db, '221.130.199.22', :primary => true
+role :web, '114.80.67.87'
+role :app, '114.80.67.87'
+role :db, '114.80.67.87', :primary => true
 
 default_run_options[:pty] = true
 set :repository,  "git@github.com:wear/bmtang.git"
@@ -28,7 +28,7 @@ namespace :deploy do
       update_code
       symlink
       copy_configs
-      migrate
+   #   migrate
     end
     
     restart
