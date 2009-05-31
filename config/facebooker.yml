@@ -12,13 +12,13 @@ development:
   api_key: 42076c41f155897d30ddfebed513ef7b
   secret_key: 53a71f0af21f2a62fb05bed269d7c623 
   canvas_page_name: bmtang
-  callback_url: http://bmtang.cn
+  callback_url: http://192.168.12.209:3002
   pretty_errors: true
-  set_asset_host_to_callback_url: true
+  set_asset_host_to_callback_url: false
   tunnel:
-    public_host_username: wear
-    public_host: 221.130.199.22
-    public_port: 4007
+    public_host_username: root
+    public_host: 192.168.12.209
+    public_port: 3002
     local_port: 3000
     server_alive_interval: 0
 
@@ -39,12 +39,12 @@ production:
   api_key: 42076c41f155897d30ddfebed513ef7b
   secret_key: 53a71f0af21f2a62fb05bed269d7c623 
   canvas_page_name: bmtang
-  callback_url: http://bmtang.cn
+  callback_url: http://muutang.cn
   pretty_errors: true
   set_asset_host_to_callback_url: true
   tunnel:
-    public_host_username: 
-    public_host: 
-    public_port: 4007
+    public_host_username: root
+    public_host: 192.168.12.209
+    public_port: 3002
     local_port: 3000
     server_alive_interval: 0

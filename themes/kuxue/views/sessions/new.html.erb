@@ -5,12 +5,21 @@
 <%= text_field_tag 'login', nil, :size => 35%></p> 
 <p><label for="password"><%=:password.l%></label><br />
 <%= password_field_tag 'password', nil, :size => 35%></p>
-<p><label for="remember_me"><%=:remember_me.l%><%= check_box_tag 'remember_me'%></label></p>
-<p><%= submit_tag :log_in.l %></p>
-<% end -%> 
+<p><label for="remember_me"><%=:remember_me.l%><%= check_box_tag 'remember_me'%></label></p> 
 
-<%= fb_connect_javascript_tag %>
-<%= init_fb_connect "XFBML"%>
-<%= fb_login_button%>
+<p>
+   ...or use:
+ </p>
+
+ <p>
+   <label for="openid_identifier">Sign in with your Gmail Account:</label>
+   <%=link_to image_tag("google.png"),'/openids' %>
+ </p>
+
+<p><%= submit_tag :log_in.l %></p>
+<% end -%>      
+
+
+
   
 

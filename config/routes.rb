@@ -46,6 +46,7 @@ ActionController::Routing::Routes.draw do |map|
     group.resources :bookmarks
   end                                                                                                                      
   map.login_box '/login_box', :controller => 'sessions', :action => 'login_box'
+  map.openids '/openids', :controller => 'sessions', :action => 'openids'
   map.group_member '/groups/:id/members/:user_id',:controller => 'groups', :action => 'member'
   map.edit_group_member '/groups/:id/members/:user_id/edit',:controller => 'groups', :action => 'edit_member'
   map.update_group_member '/groups/:id/members/:user_id/update',:controller => 'groups', :action => 'update_member'
