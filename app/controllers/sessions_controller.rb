@@ -51,6 +51,7 @@ class SessionsController < BaseController
     end
   end
   
+  # need activate 
   def openids
     openid_url = 'https://www.google.com/accounts/o8/id'
     authenticate_with_open_id(openid_url, {:required => [ 'email' ] }) do |result, identity_url, registration|
@@ -74,8 +75,8 @@ class SessionsController < BaseController
           @user.login = @email
           @user.email = @email
           @user.save(false)
-          @user.activate
-        end    
+        end  
+
        flash.now[:notice] = :thanks_youre_now_logged_in.l    
         self.current_user = @user
         successful_login    
