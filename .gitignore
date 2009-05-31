@@ -3,8 +3,9 @@ log/*.log
 tmp/**/* 
 public/assets/**/*
 public/photos/**/*   
-config/database.yml
+config/database.
 db/*.sqlite3
+db/schema.rb
 public/javascripts/all.js
 public/javascripts/app.js
 public/stylesheets/all.css
