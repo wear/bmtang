@@ -507,7 +507,7 @@ ActiveRecord::Schema.define(:version => 20090525065712) do
 
   create_table "wiki_pages", :force => true do |t|
     t.integer  "wiki_id",                       :null => false
-    t.string   "title",      :default => "",    :null => false
+    t.string   "title",                         :null => false
     t.datetime "created_on",                    :null => false
     t.boolean  "protected",  :default => false, :null => false
     t.integer  "parent_id"
@@ -525,9 +525,9 @@ ActiveRecord::Schema.define(:version => 20090525065712) do
   add_index "wiki_redirects", ["wiki_id", "title"], :name => "wiki_redirects_wiki_id_title"
 
   create_table "wikis", :force => true do |t|
-    t.integer "group_id",                   :null => false
-    t.string  "start_page", :default => "", :null => false
-    t.integer "status",     :default => 1,  :null => false
+    t.integer "group_id",                  :null => false
+    t.string  "start_page",                :null => false
+    t.integer "status",     :default => 1, :null => false
   end
 
   add_index "wikis", ["group_id"], :name => "wikis_group_id"
